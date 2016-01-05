@@ -1,0 +1,21 @@
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// Colors
+$brand-primary:         rgb(0,71,133);
+$light-gray:			rgb(229,232,234);
+$newmark-gray:			rgb(72,83,91);
+$web-blue:				rgb(25,148,185);
+$web-blue-darker:		darken($web-blue, 10%);
+$web-orange:			rgb(244,121,41);
+$web-orange-darker:		darken($web-orange, 10%);
+$web-green:				rgb(68,142,57);
+$web-green-darker:		darken($web-green, 10%);
+$web-yellow:			rgb(255,212,28);
+$web-yellow-darken:		darken($web-yellow, 10%);
+$web-brown:				rgb(90,60,55);
+$web-brown-darker:		darken($web-brown, 10%);
