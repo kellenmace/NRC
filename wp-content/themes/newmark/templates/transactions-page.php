@@ -14,7 +14,7 @@
 		<a href="<?php the_permalink(); ?>">
 			<div class="col-md-3">
 				<figure class="transaction-card">
-					<img src="http://lorempixel.com/215/145">
+					<img class="img-responsive" src="<?php the_post_thumbnail_url('medium'); ?>">
 					<h5><?php the_field('amount'); ?></h5>
 					<p>For <?php the_title(); ?></p>
 					<p>in <?php the_field('location'); ?></p>

@@ -3,7 +3,7 @@
 
 <div class="row">
 	<div class="col-md-7">
-		<img src="http://lorempixel.com/440/395">
+		<img class="img-responsive" src="<?php the_post_thumbnail_url('full'); ?>">
 	</div>
 	<div class="col-md-3">
 		<div class="transaction-details">

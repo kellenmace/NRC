@@ -6,7 +6,9 @@
           <span class="sr-only"></span>
           <span class="menu-bars"></span>
         </button>
-        <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"> <img class="img-responsive" src="<?php the_field('logo', 'option') ?>" alt="Newmark Realty Capital"></a>
+        <div class="row">
+          <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"> <img class="img-responsive" src="<?php the_field('logo', 'option') ?>" alt="Newmark Realty Capital"></a>
+        </div>
       </div>
       <?php
       if (has_nav_menu('primary_navigation')) :
