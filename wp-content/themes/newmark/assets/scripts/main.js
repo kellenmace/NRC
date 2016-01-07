@@ -38,6 +38,48 @@
       init: function() {
         // JavaScript to be fired on the about us page
       }
+    },
+    'transactions':{
+      init: function(){
+      },
+      finalize: function(){
+        console.log("function fired");
+        //quick search regex
+        var qsRegex;
+
+        //init Isotope
+        var $grid = $('.grid').isotope({
+          itemSelector: '.grid-item',
+          layoutMode:   'fitRows',
+          fitRows:      {
+            gutter: 15
+          },
+          filter:       function(){
+            return qsRegex ? $(this).text().match(qsRegex) : true;
+          }
+        });
+
+        //get value of search field to pass through filter
+        var $quicksearch = $('.quicksearch').keyup(debounce( function(){
+          qsRegex = new RegExp( $quicksearch.val(), 'gi');
+          $grid.isotope();
+        }, 200));
+
+        //debounce so filtering doesn't trigger every millisecond
+        function debounce( fn, threshold){
+          var timeout;
+          return function debounced(){
+            if ( timeout ) {
+              clearTimeout( timeout );
+            }
+            function delayed(){
+              fn();
+              timeout = null;
+            }
+            timeout = setTimeout( delayed, threshold || 100);
+          };
+        }
+      }
     }
   };
 

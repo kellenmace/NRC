@@ -1,7 +1,32 @@
+.search{
+	$input-font-size: 26px;
+	position: relative;
+	margin-bottom: 10px;
+	input{
+		padding: 10px 15px;
+		text-indent: 40px;
+		border: none;
+		background: $light-gray;
+		&[type="text"]{
+			width: 100%;
+			font-size: $input-font-size;
+			@include font-normal-italic;
+		}
+	}
+	.fa-search{
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		font-size: $input-font-size;
+		color: rgb(200,200,200);
+	}
+}
+
 .transaction-card{
 	display: inline-block;
 	background: $light-gray;
 	box-shadow: 0 8px 6px -6px black;
+	width: 250px;
 	figcaption{
 		padding-left: 8px;
 		padding-bottom: 8px;
