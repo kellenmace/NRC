@@ -52,7 +52,7 @@
           itemSelector: '.grid-item',
           layoutMode:   'fitRows',
           fitRows:      {
-            gutter: 15
+            gutter: 10
           },
           filter:       function(){
             return qsRegex ? $(this).text().match(qsRegex) : true;

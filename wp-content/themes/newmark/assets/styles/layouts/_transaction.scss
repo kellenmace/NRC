@@ -27,6 +27,7 @@
 	background: $light-gray;
 	box-shadow: 0 8px 6px -6px black;
 	width: 250px;
+	margin-bottom: 20px;
 	figcaption{
 		padding-left: 8px;
 		padding-bottom: 8px;
@@ -35,9 +36,7 @@
 		}
 	}
 	.transaction-type{
-		// background: $web-blue;
 		.transaction-type-text{
-			// background: $web-blue-darker;
 			width: 50%;
 			color: white;
 			text-align: center;

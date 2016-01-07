@@ -3,11 +3,12 @@
 body{
 	@include font-medium;
 	color: $newmark-gray;
+	-webkit-font-smoothing: anti-aliased;
 	.page-title{
 		color: $brand-primary;
 	}
 	p{
-		font-size: 15px;
+		font-size: 16px;
 	}
 }
 

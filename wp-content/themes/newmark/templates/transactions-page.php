@@ -10,10 +10,15 @@
 	</div>
 </div>
 <div class="row">
+	<div class="col-md-12">
+		<h4>Enter search term or select producer to filter results below</h4>
+	</div>
+</div>
+<div class="row">
 	<div class="col-md-9">
 		<div class="search">
 			<span class="fa fa-search"></span>
-			<input type="text" class="quicksearch" placeholder="Enter search term here. e.g. Phoenix, self-storage, Heagerty, permanent" />
+			<input type="text" class="quicksearch" placeholder="e.g. Phoenix, retail, Heagerty, permanent" />
 		</div>
 	</div>
 </div>
@@ -22,10 +27,6 @@
 	<?php $loop = new WP_Query( array( 'post_type' => 'transaction', 'posts_per_page' => -1) ); ?>
 	<?php while ($loop->have_posts()) : $loop->the_post(); ?>
 	<?php
-		// if(get_field('property_type') == 'industrial'){
-		// 	$transaction_class = 'industrial';
-		// 	$transaction_text = 'Indust.';
-		// }
 		$transaction_type = get_field('property_type');
 		switch ($transaction_type) {
 			case 'industrial':
