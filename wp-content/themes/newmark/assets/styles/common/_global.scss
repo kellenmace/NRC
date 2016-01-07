@@ -1,4 +1,13 @@
+
+
 body{
+	@include font-medium;
 	color: $newmark-gray;
+	.page-title{
+		color: $brand-primary;
+	}
+	p{
+		font-size: 15px;
+	}
 }
 

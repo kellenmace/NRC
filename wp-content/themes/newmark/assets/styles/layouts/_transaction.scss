@@ -2,13 +2,17 @@
 	display: inline-block;
 	background: $light-gray;
 	box-shadow: 0 8px 6px -6px black;
-	p,h5{
-		padding-left: 5px
+	figcaption{
+		padding-left: 8px;
+		padding-bottom: 8px;
+		p{
+			margin-bottom: 0px;
+		}
 	}
 	.transaction-type{
-		background: $web-blue;
-		.transation-type-text{
-			background: $web-blue-darker;
+		// background: $web-blue;
+		.transaction-type-text{
+			// background: $web-blue-darker;
 			width: 50%;
 			color: white;
 			text-align: center;
@@ -16,6 +20,36 @@
 			margin-left: 50%;
 			margin-bottom: 0;
 			padding: 3px 0;
+		}
+		&.retail{
+			background: $web-blue;
+			.transaction-type-text{
+				background: $web-blue-darker;
+			}
+		}
+		&.mixed{
+			background: $web-green;
+			.transaction-type-text{
+				background: $web-green-darker;
+			}
+		}
+		&.industrial{
+			background: $web-brown;
+			.transaction-type-text{
+				background: $web-brown-darker;
+			}
+		}
+		&.mutli-family{
+			background: $web-orange;
+			.transaction-type-text{
+				background: $web-orange-darker;
+			}
+		}
+		&.office{
+			background: $web-yellow;
+			.transaction-type-text{
+				background: $web-yellow-darker;
+			}
 		}
 	}
 }
