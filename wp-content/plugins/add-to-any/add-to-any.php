@@ -3,7 +3,7 @@
 Plugin Name: AddToAny Share Buttons
 Plugin URI: https://www.addtoany.com/
 Description: Share buttons for your pages including AddToAny's universal sharing button, Facebook, Twitter, Google+, Pinterest, WhatsApp and many more.  [<a href="options-general.php?page=add-to-any.php">Settings</a>]
-Version: 1.6.9
+Version: 1.6.10
 Author: AddToAny
 Author URI: https://www.addtoany.com/
 Text Domain: add-to-any
@@ -774,6 +774,7 @@ function A2A_SHARE_SAVE_head_script() {
 		
 		. "a2a_config.callbacks=a2a_config.callbacks||[];"
 		. "a2a_config.callbacks.push({ready:wpa2a.script_onready});"
+		. "a2a_config.templates=a2a_config.templates||{};"
 		. A2A_menu_locale()
 		. $script_configs
 		
@@ -962,7 +963,7 @@ function A2A_SHARE_SAVE_stylesheet() {
 	// Use stylesheet?
 	if ( ! isset( $options['inline_css'] ) || $options['inline_css'] != '-1' && ! is_admin() ) {
 	
-		wp_enqueue_style( 'A2A_SHARE_SAVE', $A2A_SHARE_SAVE_plugin_url_path . '/addtoany.min.css', false, '1.11' );
+		wp_enqueue_style( 'A2A_SHARE_SAVE', $A2A_SHARE_SAVE_plugin_url_path . '/addtoany.min.css', false, '1.12' );
 	
 		// wp_add_inline_style requires WP 3.3+
 		if ( '3.3' <= get_bloginfo( 'version' ) ) {
@@ -1061,7 +1062,10 @@ function A2A_SHARE_SAVE_refresh_cache() {
 			$file_name = substr( strrchr( $file_url, '/' ), 1, 99 );
 			
 			// Place files in uploads/addtoany directory
-			wp_get_http( $file_url, $upload_dir['basedir'] . '/addtoany/' . $file_name );
+			wp_remote_get( $file_url, array(
+				'filename' => $upload_dir['basedir'] . '/addtoany/' . $file_name,
+				'stream'   => true, // Required to use `filename` arg
+			) );
 		}
 	}
 }
