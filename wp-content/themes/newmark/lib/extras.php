@@ -31,3 +31,13 @@ function excerpt_more() {
   return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+/**
+ * Add .vcf upload ability
+ */
+add_filter('upload_mimes', __NAMESPACE__ . '\\custom_upload_mimes');
+function custom_upload_mimes ( $existing_mimes=array() ) {
+  // add your extension to the array
+  $existing_mimes['vcf'] = 'text/x-vcard';
+  return $existing_mimes;
+}

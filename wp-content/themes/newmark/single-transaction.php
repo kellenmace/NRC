@@ -33,27 +33,40 @@
 			?>
 			<div class="table-responsive">
 			<table class="table">
-					<tr>
-						<th>Financing Type: </th>
-						<td><?php the_field('financing_type'); ?></td>
-					</tr>
+				<tr>
+					<th>Financing Type: </th>
+					<td><?php the_field('financing_type'); ?></td>
+				</tr>
 				<tr>
 					<th>Property Type: </th>
 					<td><?php echo $label; ?></td>
 				</tr>
-					<tr>
-						<th>Term: </th>
-						<td><?php the_field('term'); ?></td>
-					</tr>
-					<tr>
-						<th>Amortized: </th>
-						<td><?php the_field('amortized'); ?></td>
-					</tr>
+				<tr>
+					<th>Term: </th>
+					<td><?php the_field('term'); ?></td>
+				</tr>
+				<tr>
+					<th>Amortized: </th>
+					<td><?php the_field('amortized'); ?></td>
+				</tr>
 			</table>
 			</div>
 
 			<h4>Transaction Contacts</h4>
-
+			<?php
+				$producers = get_field('transaction_contacts');
+				if($producers):
+			?>
+				<ul class="list-unstyled">
+					<?php foreach( $producers as $p) : ?>
+					<?php $locations = get_field('office_location'); ?>
+						<li>
+							<p><?php echo get_the_title($p->ID); ?></p>
+							<!-- <p><?php echo get_the_title($locations->ID); ?></p> -->
+						</li>
+					<?php endforeach; ?>
+				</ul>
+			<?php endif; ?>
 
 			<h4>Share this Transaction</h4>
 			<div class="a2a_kit a2a_kit_size_25 a2a_default_style">

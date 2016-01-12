@@ -28,13 +28,6 @@
 							<h3><?php the_field('first_name'); ?> <?php the_field('last_name'); ?></h3>
 							<p><?php the_field('title'); ?></p>
 						</figcaption>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="transaction-type <?php echo $transaction_class; ?>">
-									<p class="transaction-type-text"><?php echo $transaction_text; ?></p>
-								</div>
-							</div>
-						</div>
 					</figure>
 				</div>
 			</div>
