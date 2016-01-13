@@ -13,7 +13,7 @@
 </div>
 <?php endwhile;  wp_reset_query();?>
 
-<h2 class="page-title">Transactions</h2>
+<h1 class="page-title">Transactions</h1>
 <a href="<?php bloginfo('url'); ?>/transactions"><p>< &nbsp;Back to more transactions</p></a>
 
 <div class="row">
@@ -59,9 +59,22 @@
 			?>
 				<ul class="list-unstyled">
 					<?php foreach( $producers as $p) : ?>
-					<?php $locations = get_field('office_location'); ?>
+						<?php 
+							$office_location = get_posts(array(
+							                             'post_type' => 'producer',
+							                             'meta_query' => array(
+							                                                   'key' => 'office_location',
+							                                                   'value' => '"' . get_the_ID() . '"',
+							                                                   'compare' => 'LIKE'
+							                                                   )
+							                             )
+							);
+						?>
 						<li>
 							<p><?php echo get_the_title($p->ID); ?></p>
+							<?php foreach( $office_location as $o) : ?>
+								<p><?php echo get_the_title($o->ID); ?></p>
+							<?php endforeach; ?>
 						</li>
 					<?php endforeach; ?>
 				</ul>

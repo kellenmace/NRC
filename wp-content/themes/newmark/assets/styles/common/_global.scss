@@ -3,7 +3,7 @@
 body{
 	@include font-medium;
 	color: $newmark-gray;
-	-webkit-font-smoothing: anti-aliased;
+	-webkit-font-smoothing: antialiased;
 	.page-title{
 		color: $brand-primary;
 	}
