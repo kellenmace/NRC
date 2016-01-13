@@ -62,7 +62,6 @@
 					<?php $locations = get_field('office_location'); ?>
 						<li>
 							<p><?php echo get_the_title($p->ID); ?></p>
-							<!-- <p><?php echo get_the_title($locations->ID); ?></p> -->
 						</li>
 					<?php endforeach; ?>
 				</ul>

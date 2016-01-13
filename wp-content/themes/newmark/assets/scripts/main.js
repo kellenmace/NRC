@@ -43,7 +43,7 @@
       init: function(){
       },
       finalize: function(){
-        console.log("function fired");
+        // console.log("function fired");
         //quick search regex
         var qsRegex;
 
@@ -54,16 +54,10 @@
           fitRows:      {
             gutter: 10
           },
-          filter:       function(){
+          filter: function(){
             return qsRegex ? $(this).text().match(qsRegex) : true;
           }
         });
-
-        //get value of search field to pass through filter
-        var $quicksearch = $('.quicksearch').keyup(debounce( function(){
-          qsRegex = new RegExp( $quicksearch.val(), 'gi');
-          $grid.isotope();
-        }, 200));
 
         //debounce so filtering doesn't trigger every millisecond
         function debounce( fn, threshold){
@@ -79,6 +73,12 @@
             timeout = setTimeout( delayed, threshold || 100);
           };
         }
+
+        //get value of search field to pass through filter
+        var $quicksearch = $('.quicksearch').keyup(debounce( function(){
+          qsRegex = new RegExp( $quicksearch.val(), 'gi');
+          $grid.isotope();
+        }, 200));
       }
     }
   };
