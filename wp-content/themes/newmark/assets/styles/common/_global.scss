@@ -1,0 +1,14 @@
+
+
+body{
+	@include font-medium;
+	color: $newmark-gray;
+	-webkit-font-smoothing: antialiased;
+	.page-title{
+		color: $brand-primary;
+	}
+	p{
+		font-size: 16px;
+	}
+}
+

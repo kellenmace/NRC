@@ -1,0 +1,29 @@
+nav{
+	.navbar-header{
+		.navbar-brand{
+			padding-left: 0;
+		}
+	}
+	$menu-bars-spacing: -6px;
+	.navbar-toggle{
+		width: 30px;
+		padding-left: 2px;
+		padding-top: 4px;
+		.menu-bars{
+			position: absolute;
+			display: block;
+			background-color: $brand-primary;
+			content: '';
+			width: 25px;
+			height: 3px;
+			&:before{
+				@extend .menu-bars;
+				top: $menu-bars-spacing;
+			}
+			&:after{
+				@extend .menu-bars;
+				bottom: $menu-bars-spacing;
+			}
+		}
+	}
+}
