@@ -1,13 +1,83 @@
+$producer-image-height: 205.188px;
+
+.single-producer{
+	background: url('../images/team-background.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	// min-height: 100vh;
+}
+
+#single-producer-page{
+	min-height: 110vh;
+}
+
 .producer-title-box{
 	background: gray;
 	color: white;
 	padding: 15px;
-	height: 300px;
+	height: $producer-image-height;
+	@media only screen and (max-width: 1199px){
+		height: ($producer-image-height - 38)
+	}
 }
 
 .producer-info-box{
 	background: $brand-primary;
 	color: white;
-	padding: 15px;
-	height: 300px;
+	padding: 30px 15px;
+	height: $producer-image-height;
+	a{
+		color: white;
+		&:hover{
+			color: gray;
+		}
+	}
+	@media only screen and (max-width: 1199px){
+		height: ($producer-image-height - 38)
+	}
+}
+
+.producer-tabs{
+	margin-top: 30px;
+	.nav-tabs{
+		border: none;
+		li{
+			width: (100% / 3);
+			text-align: center;
+			&:nth-child(odd){
+				background-color: gray;
+			}
+			&:nth-child(even){
+				background-color: #eee;
+			}
+			h3{
+				margin-top: 10px;
+			}
+			a{
+				border-radius: 0;
+				&:hover{
+					background-color: $brand-primary;
+					color: white;
+				}
+				&:active{
+					background-color: white;
+				}
+			}
+			&.active{
+				background-color: white;
+				a{
+					border: none;
+					border-bottom: 1px solid rgba(255,255,255,0.9);
+				}
+			}
+		}
+	}
+
+	.tab-pane{
+		background: rgba(255,255,255,0.9);
+		.producer-bio{
+			padding-top: 15px;
+		}
+	}
 }
