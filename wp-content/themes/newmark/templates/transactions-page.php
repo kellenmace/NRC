@@ -21,6 +21,16 @@
 			<input type="text" class="quicksearch" placeholder="e.g. Phoenix, retail, Heagerty, permanent" />
 		</div>
 	</div>
+	<div class="col-md-3">
+		<select class="filters-select">
+			<?php
+				$loop = new WP_Query( array( 'post_type' => 'producer', 'posts_per_page' => -1) ); 
+				while($loop->have_posts()) : $loop->the_post();
+			?>
+				<option value="<?php the_title(); ?>"><?php the_title(); ?></option>
+			<?php endwhile; ?>
+		</select>
+	</div>
 </div>
 <div class="row">
 <div class="grid">
@@ -64,6 +74,19 @@
 							<h3>$<?php the_field('amount'); ?></h3>
 							<p>For <?php the_title(); ?></p>
 							<p>in <?php the_field('location'); ?></p>
+							<div class="hidden-tags">
+								<?php
+									$producers = get_field('transaction_contacts');
+									$financing_type = get_field('financing_type');
+									foreach($producers as $p){
+										echo get_the_title($p->ID) . ' ';
+									};
+									if($financing_type){
+										echo $financing_type . ' ';
+									};
+									the_field('state');
+								?>
+							</div>
 						</figcaption>
 						<div class="row">
 							<div class="col-md-12">

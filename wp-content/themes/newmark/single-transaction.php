@@ -23,14 +23,19 @@
 	</div>
 	<div class="col-md-4">
 		<div class="transaction-details">
+			<?php
+				$state_field = get_field_object('state');
+				$state_value = get_field('state');
+				$state_label = $state_field['choices'][$state_value];
+			?>
 			<h1>$<?php the_field('amount'); ?></h1>
 			<h4>For <?php the_title(); ?> <br>
-			in <?php the_field('location'); ?></h4>
+			in <?php the_field('city'); ?>, <?php echo $state_label; ?></h4>
 
 			<?php
-				$field = get_field_object('property_type');
-				$value = get_field('property_type');
-				$label = $field['choices'][$value];
+				$property_field = get_field_object('property_type');
+				$property_value = get_field('property_type');
+				$property_label = $property_field['choices'][$property_value];
 			?>
 			<div class="table-responsive">
 			<table class="table">
@@ -40,7 +45,7 @@
 				</tr>
 				<tr>
 					<th>Property Type: </th>
-					<td><?php echo $label; ?></td>
+					<td><?php echo $property_label; ?></td>
 				</tr>
 				<tr>
 					<th>Term: </th>
