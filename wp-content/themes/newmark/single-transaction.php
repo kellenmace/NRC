@@ -13,6 +13,7 @@
 </div>
 <?php endwhile;  wp_reset_query();?>
 
+<div id="single-transaction-page">
 <h1 class="page-title">Transactions</h1>
 <a href="<?php bloginfo('url'); ?>/transactions"><p>< &nbsp;Back to more transactions</p></a>
 
@@ -52,15 +53,15 @@
 			</table>
 			</div>
 
-			<h4>Transaction Contacts</h4>
+			<h3>Transaction Contacts</h3>
 			<?php
 				$producers = get_field('transaction_contacts');
 				if($producers):
 			?>
 				<ul class="list-unstyled">
 					<?php foreach( $producers as $p) : ?>
-						<?php 
-							$office_location = get_posts(array(
+						<?php
+							/*$office_location = get_posts(array(
 							                             'post_type' => 'producer',
 							                             'meta_query' => array(
 							                                                   'key' => 'office_location',
@@ -68,19 +69,21 @@
 							                                                   'compare' => 'LIKE'
 							                                                   )
 							                             )
-							);
+							);*/
+							$office_location = get_field('office_location', $p->ID);
 						?>
 						<li>
-							<p><?php echo get_the_title($p->ID); ?></p>
+							<p><?php echo get_the_title($p->ID); ?><br>
 							<?php foreach( $office_location as $o) : ?>
-								<p><?php echo get_the_title($o->ID); ?></p>
+								<?php echo get_the_title($o->ID); ?> Office<br>
+								<?php echo get_field('phone_number', $o->ID); ?></p>
 							<?php endforeach; ?>
 						</li>
 					<?php endforeach; ?>
 				</ul>
 			<?php endif; ?>
 
-			<h4>Share this Transaction</h4>
+			<h3>Share this Transaction</h3>
 			<div class="a2a_kit a2a_kit_size_25 a2a_default_style">
 				<a class="a2a_button_print"></a>
 			    <a class="a2a_button_email"></a>
@@ -142,4 +145,5 @@
 			</div>
 		</div>
 	</div>
+</div>
 </div>
