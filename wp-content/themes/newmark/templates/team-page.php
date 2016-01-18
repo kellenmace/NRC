@@ -17,7 +17,7 @@
 
 <div class="row">
 <div class="grid-producer">
-	<?php $loop = new WP_Query( array( 'post_type' => 'producer', 'posts_per_page' => -1) ); ?>
+	<?php $loop = new WP_Query( array( 'post_type' => 'producer', 'posts_per_page' => -1, 'meta_key' => 'last_name', 'orderby' => 'meta_value', 'order' => 'ASC') ); ?>
 	<?php while ($loop->have_posts()) : $loop->the_post(); ?>
 		<a href="<?php the_permalink(); ?>">
 			<div class="producer-item">

@@ -13,8 +13,7 @@ $producer-image-height: 205.188px;
 }
 
 .producer-title-box{
-	background: gray;
-	color: white;
+	background: $light-gray;
 	padding: 15px;
 	height: $producer-image-height;
 	@media only screen and (max-width: 1199px){
@@ -30,7 +29,7 @@ $producer-image-height: 205.188px;
 	a{
 		color: white;
 		&:hover{
-			color: gray;
+			color: $light-gray;
 		}
 	}
 	@media only screen and (max-width: 1199px){
@@ -46,7 +45,7 @@ $producer-image-height: 205.188px;
 			width: (100% / 3);
 			text-align: center;
 			&:nth-child(odd){
-				background-color: gray;
+				background-color: $light-gray;
 			}
 			&:nth-child(even){
 				background-color: #eee;

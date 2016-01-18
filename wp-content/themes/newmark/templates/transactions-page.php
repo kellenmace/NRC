@@ -48,7 +48,7 @@
 				$transaction_text = 'Mixed';
 				break;
 			case 'multi':
-				$transaction_class = 'multi-family';
+				$transaction_class = 'multi';
 				$transaction_text = 'Multi';
 				break;
 			case 'retail':
@@ -71,9 +71,14 @@
 					<figure class="transaction-card">
 						<img class="img-responsive" src="<?php the_post_thumbnail_url('medium'); ?>">
 						<figcaption>
+							<?php
+								$state_field = get_field_object('state');
+								$state_value = get_field('state');
+								$state_label = $state_field['choices'][$state_value];
+							?>
 							<h3>$<?php the_field('amount'); ?></h3>
 							<p>For <?php the_title(); ?></p>
-							<p>in <?php the_field('location'); ?></p>
+							<p>in <?php the_field('city'); ?>, <?php echo $state_label; ?></p>
 							<div class="hidden-tags">
 								<?php
 									$producers = get_field('transaction_contacts');
