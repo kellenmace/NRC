@@ -109,7 +109,7 @@
 						$transaction_text = 'Mixed';
 						break;
 					case 'multi':
-						$transaction_class = 'multi-family';
+						$transaction_class = 'multi';
 						$transaction_text = 'Multi';
 						break;
 					case 'retail':
