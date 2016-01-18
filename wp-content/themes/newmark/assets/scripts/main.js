@@ -48,15 +48,17 @@
         var qsRegex;
 
         //init Isotope
-        var $grid = $('.grid').isotope({
-          itemSelector: '.grid-item',
-          layoutMode:   'fitRows',
-          fitRows:      {
-            gutter: 10
-          },
-          filter: function(){
-            return qsRegex ? $(this).text().match(qsRegex) : true;
-          }
+        var $grid = $('.grid').imagesLoaded(function() {
+          $grid.isotope({
+            itemSelector: '.grid-item',
+            layoutMode:   'fitRows',
+            fitRows:      {
+              gutter: 10
+            },
+            filter: function(){
+              return qsRegex ? $(this).text().match(qsRegex) : true;
+            }
+          });
         });
 
         //debounce so filtering doesn't trigger every millisecond

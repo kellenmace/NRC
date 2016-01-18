@@ -15,22 +15,23 @@
 	</div>
 </div>
 <div class="row">
-	<div class="col-md-9">
+	<div class="col-md-12">
 		<div class="search">
 			<span class="fa fa-search"></span>
 			<input type="text" class="quicksearch" placeholder="e.g. Phoenix, retail, Heagerty, permanent" />
 		</div>
 	</div>
-	<div class="col-md-3">
+	<!-- <div class="col-md-3">
 		<select class="filters-select">
+			<option value=" "></option>
 			<?php
-				$loop = new WP_Query( array( 'post_type' => 'producer', 'posts_per_page' => -1) ); 
+				$loop = new WP_Query( array( 'post_type' => 'producer', 'posts_per_page' => -1, 'meta_key' => 'last_name', 'orderby' => 'meta_value', 'order' => 'ASC') );
 				while($loop->have_posts()) : $loop->the_post();
 			?>
-				<option value="<?php the_title(); ?>"><?php the_title(); ?></option>
+				<option value="<?php the_field('first_name'); ?><?php the_field('last_name'); ?>"><?php the_title(); ?></option>
 			<?php endwhile; ?>
 		</select>
-	</div>
+	</div> -->
 </div>
 <div class="row">
 <div class="grid">
@@ -84,7 +85,7 @@
 									$producers = get_field('transaction_contacts');
 									$financing_type = get_field('financing_type');
 									foreach($producers as $p){
-										echo get_the_title($p->ID) . ' ';
+										echo get_field('first_name', $p->ID) . get_field('last_name', $p->ID) . ' ';
 									};
 									if($financing_type){
 										echo $financing_type . ' ';
