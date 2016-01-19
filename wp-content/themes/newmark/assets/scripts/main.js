@@ -83,6 +83,47 @@
         }, 200));
       }
     },
+    'production_team':{
+      init: function(){
+      },
+      finalize: function(){
+        //flatten object by concatenating values
+        function concatValues( obj ){
+          var value = '';
+          for ( var prop in obj) {
+            value += obj[prop];
+          }
+          return value;
+        }
+
+        var $grid = $('.grid-producer').imagesLoaded(function(){
+            $grid.isotope({
+              itemSelector: '.producer-card',
+              layout: 'fitRows',
+              fitRows: {
+                gutter: 10
+              }
+            });
+          }
+        );
+
+        //filters init
+        var filters = {};
+
+        $('.filters').on( 'click', '.btn', function(){
+          var $this = $(this);
+          var $buttonGroup = $this.parents('.btn-group');
+          var filterGroup = $buttonGroup.attr('data-filter-group');
+
+          filters[ filterGroup ] = $this.attr('data-filter');
+
+          var filterValue = concatValues( filters );
+
+          $grid.isotope({ filter: filterValue });
+        });
+
+      }
+    },
     'single_producer': {
       init: function(){
       },

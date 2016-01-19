@@ -1,7 +1,19 @@
-.producer-card{
-	background-color: $light-gray;
-	figcaption{
-		padding: 0 15px 5px 15px;
+.production-team{
+	background: url('../images/team-background.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	min-height: 110vh;
+}
+
+
+.grid-producer{
+	.producer-card{
+		background-color: $light-gray;
+		width: 250px;
+		figcaption{
+			padding: 0 15px 5px 15px;
+		}
+		margin-bottom: 30px;
 	}
-	margin-bottom: 30px;
 }
