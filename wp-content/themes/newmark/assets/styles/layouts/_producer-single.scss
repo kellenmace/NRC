@@ -10,6 +10,13 @@ $producer-image-height: 205.188px;
 
 #single-producer-page{
 	min-height: 110vh;
+	.grid {
+		margin-top: 30px;
+		.transaction-card {
+			margin-left: 0;
+			margin-bottom: 30px;
+		}
+	}
 }
 
 .producer-title-box{
@@ -75,6 +82,7 @@ $producer-image-height: 205.188px;
 
 	.tab-pane{
 		background: rgba(255,255,255,0.9);
+		margin-bottom: 50px;
 		.producer-bio{
 			padding-top: 15px;
 		}

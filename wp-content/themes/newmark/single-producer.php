@@ -33,10 +33,10 @@
 			<div role="tabpanel">
 			    <!-- Nav tabs -->
 			    <ul class="nav nav-tabs" role="tablist">
-			        <li role="presentation" class="active">
+			        <li role="presentation">
 			            <a href="#bio" aria-controls="bio" role="tab" data-toggle="tab"><h3>Bio</h3></a>
 			        </li>
-			        <li role="presentation">
+			        <li role="presentation" class="active">
 			            <a href="#transactions" aria-controls="transactions" role="tab" data-toggle="tab"><h3>Transactions</h3></a>
 			        </li>
 			        <li role="presentation">
@@ -46,7 +46,7 @@
 
 			    <!-- Tab panes -->
 			    <div class="tab-content">
-			        <div role="tabpanel" class="tab-pane active" id="bio">
+			        <div role="tabpanel" class="tab-pane" id="bio">
 			        	<div class="row">
 			        		<div class="col-md-10 col-md-offset-1">
 					        	<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
@@ -55,8 +55,89 @@
 			        		</div>
 			        	</div>
 			        </div>
-			        <div role="tabpanel" class="tab-pane" id="transactions">
-			        	<p>transactions</p>
+			        <div role="tabpanel" class="tab-pane active" id="transactions">
+			        	<div class="row">
+			        		<div class="col-xs-offset-2 col-sm-offset-1 col-md-10">
+			        			<div class="row">
+			        				<div class="grid">
+										<?php
+											$transactions = get_posts(array(
+												'post_type' => 'transaction',
+												'meta_query' => array(
+													array(
+														'key' => 'transaction_contacts', // name of custom field
+														'value' => '"' . get_the_ID() . '"', // matches exaclty "123", not just 123. This prevents a match for "1234"
+														'compare' => 'LIKE'
+													)
+												)
+											));
+										?>
+										<?php if($transactions) : ?>
+											<?php foreach($transactions as $t) : ?>
+												<?php
+														$transaction_type = get_field('property_type', $t->ID);
+														switch ($transaction_type) {
+															case 'industrial':
+																$transaction_class = 'industrial';
+																$transaction_text = 'Indust.';
+																break;
+															case 'mixed':
+																$transaction_class = 'mixed';
+																$transaction_text = 'Mixed';
+																break;
+															case 'multi':
+																$transaction_class = 'multi';
+																$transaction_text = 'Multi';
+																break;
+															case 'retail':
+																$transaction_class = 'retail';
+																$transaction_text = 'Retail';
+																break;
+															case 'office':
+																$transaction_class = 'office';
+																$transaction_text = 'Indust.';
+																break;
+															default:
+																$transaction_class = 'default';
+																$transaction_text = 'default';
+																break;
+														}
+													 ?>
+														<a href="<?php the_permalink($t->ID); ?>">
+															<div class="grid-item">
+																<div class="col-md-3">
+																	<figure class="transaction-card">
+																		<?php $image = wp_get_attachment_url(get_post_thumbnail_id($t->ID), 'medium'); ?>
+																		<img class="img-responsive" src="<?php echo $image; ?>">
+																		<figcaption>
+																			<?php
+																				$state_field = get_field_object('state', $t->ID);
+																				$state_value = get_field('state', $t->ID);
+																				$state_label = $state_field['choices'][$state_value];
+																			?>
+																			<h3>$<?php the_field('amount', $t->ID); ?></h3>
+																			<p>For <?php echo get_the_title($t->ID); ?></p>
+																			<p>in <?php the_field('city', $t->ID); ?>, <?php echo $state_label; ?></p>
+																		</figcaption>
+																		<div class="row">
+																			<div class="col-md-12">
+																				<div class="transaction-type <?php echo $transaction_class; ?>">
+																					<p class="transaction-type-text"><?php echo $transaction_text; ?></p>
+																				</div>
+																			</div>
+																		</div>
+																	</figure>
+																</div>
+															</div>
+														</a>
+											<?php endforeach; ?>
+										<?php else : ?>
+											<p>No Transactions Found for this Producer</p>
+										<?php endif; ?>
+									</div>
+			        			</div>
+			        		</div>
+			        	</div>
 			        </div>
 			        <div role="tabpanel" class="tab-pane" id="resources">
 			        	<p>resources</p>

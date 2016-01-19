@@ -82,6 +82,50 @@
           $grid.isotope();
         }, 200));
       }
+    },
+    'single_producer': {
+      init: function(){
+      },
+      finalize: function(){
+        // console.log("function fired");
+        //quick search regex
+        var qsRegex;
+
+        //init Isotope
+        var $grid = $('.grid').imagesLoaded(function() {
+          $grid.isotope({
+            itemSelector: '.grid-item',
+            layoutMode:   'fitRows',
+            fitRows:      {
+              gutter: 10
+            },
+            filter: function(){
+              return qsRegex ? $(this).text().match(qsRegex) : true;
+            }
+          });
+        });
+
+        //debounce so filtering doesn't trigger every millisecond
+        function debounce( fn, threshold){
+          var timeout;
+          return function debounced(){
+            if ( timeout ) {
+              clearTimeout( timeout );
+            }
+            function delayed(){
+              fn();
+              timeout = null;
+            }
+            timeout = setTimeout( delayed, threshold || 100);
+          };
+        }
+
+        //get value of search field to pass through filter
+        var $quicksearch = $('.quicksearch').keyup(debounce( function(){
+          qsRegex = new RegExp( $quicksearch.val(), 'gi');
+          $grid.isotope();
+        }, 200));
+      }
     }
   };
 
