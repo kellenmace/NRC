@@ -14,15 +14,15 @@
 		<h4>Click to Filter</h4>
 		<div class="filters">
 			<div class="btn-group" data-filter-group="region">
-				<button class="btn region is-checked" data-filter="*">All</button>
-				<button class="btn region" data-filter=".nor-cal">Northern California</button>
-				<button class="btn region" data-filter=".so-cal">Southern California</button>
-				<button class="btn region" data-filter=".pac-nw">Pacific Northwest</button>
+				<button class="btn region is-checked" data-filter="">All</button>
+				<button class="btn region" data-filter=".nor_cal">Northern California</button>
+				<button class="btn region" data-filter=".so_cal">Southern California</button>
+				<button class="btn region" data-filter=".pac_nw">Pacific Northwest</button>
 				<button class="btn region" data-filter=".arizona">Arizona</button>
 				<button class="btn region" data-filter=".nevada">Nevada</button>
 			</div>
 			<div class="btn-group" data-filter-group="location">
-				<button class="btn location is-checked" data-filter="*">All</button>
+				<button class="btn location" data-filter="">All</button>
 				<button class="btn location" data-filter=".san-francisco">San Francisco</button>
 				<button class="btn location" data-filter=".sacramento">Sacramento</button>
 				<button class="btn location" data-filter=".los-angeles">Los Angeles</button>

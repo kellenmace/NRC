@@ -108,28 +108,22 @@
         );
 
         //filters init
-        var filters = {};
+        // var filters = {};
 
         $('.filters').on( 'click', '.btn', function(){
           var $this = $(this);
-          var $buttonGroup = $this.parents('.btn-group');
-          var filterGroup = $buttonGroup.attr('data-filter-group');
+          // var $buttonGroup = $this.parents('.btn-group');
+          // var filterGroup = $buttonGroup.attr('data-filter-group');
 
-          filters[ filterGroup ] = $this.attr('data-filter');
-
-          var filterValue = concatValues( filters );
+          var filterValue = $this.attr('data-filter');
 
           $grid.isotope({ filter: filterValue });
         });
 
-        //add active is-checked class to buttons
-        $('.btn-group').each( function( i, buttonGroup ) {
-            var $buttonGroup = $( buttonGroup );
-            $buttonGroup.on( 'click', 'button', function() {
-              $buttonGroup.find('.is-checked').removeClass('is-checked');
-              $( this ).addClass('is-checked');
-            });
-          });
+        $('.btn:not(:last)').on('click', function(){
+          $('.btn').removeClass('is-checked');
+          $(this).addClass('is-checked');
+        });
 
       }
     },
