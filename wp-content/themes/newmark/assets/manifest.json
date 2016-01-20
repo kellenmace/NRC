@@ -22,6 +22,6 @@
     }
   },
   "config": {
-    "devUrl": "http://localhost:8888"
+    "devUrl": "http://192.168.0.11:8888"
   }
 }
