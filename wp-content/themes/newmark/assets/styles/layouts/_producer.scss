@@ -4,9 +4,6 @@
 	background-repeat: no-repeat;
 	background-position: bottom;
 	min-height: 110vh;
-	.btn {
-		border-radius: 0px;
-	}
 }
 
 
@@ -29,6 +26,7 @@
 		margin-bottom: 25px;
 	}
 	.btn{
+		color: $medium-gray;
 		border-radius: 0;
 		&.location{
 			width: (100% / 5);
