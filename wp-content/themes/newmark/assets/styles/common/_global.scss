@@ -17,6 +17,12 @@ body{
 	p{
 		font-size: 16px;
 	}
+	a{
+		color: $newmark-gray;
+		&:hover{
+			color: $brand-primary;
+		}
+	}
 }
 
 // *{

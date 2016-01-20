@@ -9,6 +9,9 @@
 
 .grid-producer{
 	margin-bottom: 400px;
+	// h3{
+	// 	color: $newmark-gray;
+	// }
 	.producer-card{
 		background-color: $light-gray;
 		width: 250px;
@@ -26,7 +29,6 @@
 		margin-bottom: 25px;
 	}
 	.btn{
-		color: $medium-gray;
 		border-radius: 0;
 		&.location{
 			width: (100% / 5);
@@ -43,5 +45,6 @@
 		&:nth-child(even){
 			background-color: $medium-gray;
 		}
+		color: $brand-primary;
 	}
 }
