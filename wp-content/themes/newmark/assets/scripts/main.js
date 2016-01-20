@@ -101,7 +101,7 @@
               itemSelector: '.producer-item',
               layout: 'fitRows',
               fitRows: {
-                gutter: 10
+                gutter: 15
               }
             });
           }
