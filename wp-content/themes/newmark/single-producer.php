@@ -14,16 +14,16 @@
 	</div>
 	<div class="col-md-4">
 		<div class="producer-info-box">
+			<p><?php the_field('phone_number'); ?></p>
+			<p><a href="<?php the_field('vcard'); ?>"><i class="fa fa-envelope-o"> vCard</i></a></p>
 			<?php
 				$location = get_field('office_location');
 				if($location) :
 					foreach($location as $l) :
 			?>
-						<p><?php echo get_field('phone_number', $l->ID); ?></p>
-						<p><a href="<?php the_field('vcard'); ?>"><i class="fa fa-envelope-o"> vCard</i></a>
-						<p><?php echo get_field('address', $l->ID); ?></p>
-					<?php endforeach; ?>
-				<?php endif; ?>
+				<!-- <p><?php //echo get_field('phone_number', $l->ID); ?></p> -->
+				<p><?php echo get_field('address', $l->ID); ?></p>
+			<?php endforeach; endif;?>
 		</div>
 	</div>
 </div>
