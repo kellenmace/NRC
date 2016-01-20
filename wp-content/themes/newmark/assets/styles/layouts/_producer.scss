@@ -11,6 +11,7 @@
 
 
 .grid-producer{
+	margin-bottom: 400px;
 	.producer-card{
 		background-color: $light-gray;
 		width: 250px;
@@ -18,5 +19,31 @@
 			padding: 0 15px 5px 15px;
 		}
 		margin-bottom: 30px;
+	}
+}
+
+.btn-group{
+	width: 98%;
+	margin-bottom: 15px;
+	&:nth-child(2){
+		margin-bottom: 25px;
+	}
+	.btn{
+		border-radius: 0;
+		&.location{
+			width: (100% / 5);
+			@media only screen and (max-width: 767px){
+				width: (100% / 2.5)
+			}
+		}
+		&.region{
+			width: (100% / 6);
+		}
+		&:nth-child(odd){
+			background-color: $light-gray;
+		}
+		&:nth-child(even){
+			background-color: $medium-gray;
+		}
 	}
 }

@@ -14,15 +14,24 @@
 		<h4>Click to Filter</h4>
 		<div class="filters">
 			<div class="btn-group" data-filter-group="location">
-				<button class="btn" data-filter="*">All</button>
-				<button class="btn" data-filter=".san-francisco">San Francisco</button>
-				<button class="btn" data-filter=".sacramento">Sacramento</button>
-				<button class="btn" data-filter=".los-angeles">Los Angeles</button>
-				<button class="btn" data-filter=".newport-beach">Newport Beach</button>
-				<button class="btn" data-filter=".seattle">Seattle</button>
-				<button class="btn" data-filter=".spokane">Spokane</button>
-				<button class="btn" data-filter=".phoenix">Phoenix</button>
-				<button class="btn" data-filter=".las-vegas">Las Vegas</button>
+				<button class="btn location" data-filter="*">All</button>
+				<button class="btn location" data-filter=".san-francisco">San Francisco</button>
+				<button class="btn location" data-filter=".sacramento">Sacramento</button>
+				<button class="btn location" data-filter=".los-angeles">Los Angeles</button>
+				<button class="btn location" data-filter=".newport-beach">Newport Beach</button>
+				<button class="btn location" data-filter=".seattle">Seattle</button>
+				<button class="btn location" data-filter=".spokane">Spokane</button>
+				<button class="btn location" data-filter=".phoenix">Phoenix</button>
+				<button class="btn location" data-filter=".las-vegas">Las Vegas</button>
+				<button class="btn location">&nbsp;</button>
+			</div>
+			<div class="btn-group" data-filter-group="location">
+				<button class="btn region" data-filter="*">All</button>
+				<button class="btn region" data-filter=".nor-cal">Northern California</button>
+				<button class="btn region" data-filter=".so-cal">Southern California</button>
+				<button class="btn region" data-filter=".pac-nw">Pacific Northwest</button>
+				<button class="btn region" data-filter=".arizona">Arizona</button>
+				<button class="btn region" data-filter=".nevada">Nevada</button>
 			</div>
 		</div>
 	</div>
