@@ -1,7 +1,36 @@
 nav{
+	li{
+		a{
+			&:hover{
+				background-color: none;
+			}
+			&:active {
+				background-color: none;
+			}
+			&:focus {
+				background-color: none;
+			}
+		}
+	}
 	.navbar-header{
 		.navbar-brand{
 			padding-left: 0;
+			@include iphone6-plus-landscape{
+				width: 35%;
+			}
+			@include iphone6-landscape{
+				width: 40%;
+			}
+			@include iphone6-plus-portrait{
+				width: 59%;
+			}
+			@include iphone6-portrait{
+				width: 70%;
+			}
+			@include iphone5-portrait{
+				width: 70%;
+			    padding-top: 18px;
+			}
 		}
 	}
 	$menu-bars-spacing: -6px;
@@ -9,6 +38,9 @@ nav{
 		width: 30px;
 		padding-left: 2px;
 		padding-top: 4px;
+		@include mobile {
+			padding-top: 21px;
+		}
 		.menu-bars{
 			position: absolute;
 			display: block;

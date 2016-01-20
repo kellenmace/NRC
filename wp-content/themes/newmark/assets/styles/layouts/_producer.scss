@@ -4,6 +4,16 @@
 	background-repeat: no-repeat;
 	background-position: bottom;
 	min-height: 110vh;
+	h3{
+		@include ipad {
+			margin-top: 10px;
+			margin-bottom: 2px;
+		}
+		@include iphone {
+			margin-top: 10px;
+			margin-bottom: 2px;
+		}
+	}
 }
 
 
@@ -14,16 +24,43 @@
 	// }
 	.producer-card{
 		background-color: $light-gray;
-		width: 250px;
+		width: 261px;
+		@include ipad-landscape{
+			width: 211px;
+		}
+		@include ipad-portrait{
+			width: 220px;
+		}
+		@include iphone6-plus-landscape{
+			width: 215px;
+		}
+		@include iphone6-landscape{
+			width: 191px;
+		}
+		@include iphone5-landscape{
+			width: 253px;
+		}
+		@include iphone6-plus-portrait{
+			width: 177px;
+		}
+		@include iphone6-portrait{
+			width: 156px;
+		}
+		@include iphone5-portrait{
+			width: 130px;
+		}
 		figcaption{
 			padding: 0 15px 5px 15px;
+			@include iphone{
+				padding-bottom: 2px;
+			}
 		}
 		margin-bottom: 30px;
 	}
 }
 
 .btn-group{
-	width: 98%;
+	width: 100%;
 	margin-bottom: 15px;
 	&:nth-child(2){
 		margin-bottom: 25px;
@@ -32,18 +69,96 @@
 		border-radius: 0;
 		&.location{
 			width: (100% / 5);
-			@media only screen and (max-width: 767px){
-				width: (100% / 2.5)
+			@include ipad-portrait{
+				&:nth-child(10){
+					display: none;
+				}
+			}
+			@include mobile{
+				width: (100% / 3);
+			}
+			@include iphone6-plus-landscape{
+				&:nth-child(10){
+					display: none;
+				}
+			}
+			@include iphone6-landscape{
+				&:nth-child(10){
+					display: none;
+				}
+			}
+			@include iphone5-landscape{
+				&:nth-child(10){
+					display: none;
+				}
+			}
+			@include iphone6-plus-portrait{
+				&:nth-child(10){
+					display: none;
+				}
+			}
+			@include iphone6-portrait{
+				&:nth-child(10){
+					display: none;
+				}
+			}
+			@include iphone5-portrait{
+				width: (100% / 2);
 			}
 		}
 		&.region{
 			width: (100% / 6);
+			@include mobile{
+				width: (100% / 3);
+			}
+			@include iphone6-portrait{
+				width: (100% / 2);
+			}
+			@include iphone5-portrait{
+				width: (100% / 2);
+			}
+			@include iphone6-portrait{
+			background-color: $light-gray;
+			&:nth-child(2){
+				background-color: $medium-gray;
+			}
+			&:nth-child(3){
+				background-color: $medium-gray;
+			}
+			&:nth-child(4){
+				background-color: $light-gray;
+			}
+			&:nth-child(6){
+				background-color: $medium-gray;
+			}
+		}
 		}
 		&:nth-child(odd){
 			background-color: $light-gray;
 		}
 		&:nth-child(even){
 			background-color: $medium-gray;
+			@include iphone5-portrait{
+				background: none;
+			}
+		}
+		@include iphone5-portrait{
+			background-color: $light-gray;
+			&:nth-child(2){
+				background-color: $medium-gray;
+			}
+			&:nth-child(3){
+				background-color: $medium-gray;
+			}
+			&:nth-child(6){
+				background-color: $medium-gray;
+			}
+			&:nth-child(7){
+				background-color: $medium-gray;
+			}
+			&:nth-child(10){
+				background-color: $medium-gray;
+			}
 		}
 		color: $brand-primary;
 	}

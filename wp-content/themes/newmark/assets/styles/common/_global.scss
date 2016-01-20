@@ -1,10 +1,14 @@
 body{
 	padding-top: 70px;
-	@include font-medium;
 	color: $newmark-gray;
 	-webkit-font-smoothing: antialiased;
+	@include font-medium;
 	.navbar-fixed-top{
 		background-color: white;
+		min-height: 75px;
+		@include iphone6-plus-landscape{
+			min-height: 87px;
+		}
 	}
 	&.home{
 		.navbar-fixed-top{
@@ -13,15 +17,33 @@ body{
 	}
 	.page-title{
 		color: $brand-primary;
+		@include mobile{
+			margin-top: 30px;
+		}
+		@include iphone6-plus-landscape{
+			margin-top: 15px;
+		}
+		@include iphone5-landscape{
+			margin-top: 5px;
+		}
+		@include iphone-portrait{
+			margin-top: 0px;
+		}
 	}
 	p{
-		font-size: 16px;
+		@include responsive-font(1.25vw, 15px);
 	}
 	a{
 		color: $newmark-gray;
 		&:hover{
 			color: $brand-primary;
 		}
+	}
+	h2{
+		@include responsive-font(2.1vw, 24px);
+	}
+	h3{
+		@include responsive-font(1.7vw, 18px);
 	}
 }
 
