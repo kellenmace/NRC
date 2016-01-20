@@ -95,7 +95,7 @@
 																break;
 															case 'office':
 																$transaction_class = 'office';
-																$transaction_text = 'Indust.';
+																$transaction_text = 'Office';
 																break;
 															default:
 																$transaction_class = 'default';

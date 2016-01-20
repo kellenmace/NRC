@@ -98,7 +98,7 @@
 
         var $grid = $('.grid-producer').imagesLoaded(function(){
             $grid.isotope({
-              itemSelector: '.producer-card',
+              itemSelector: '.producer-item',
               layout: 'fitRows',
               fitRows: {
                 gutter: 10

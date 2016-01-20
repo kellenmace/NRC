@@ -1,11 +1,16 @@
 <?php $loop = new WP_Query( array( 'post_type' => 'transaction', 'posts_per_page' => -1) ); ?>
 <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+<?php
+	$state_field = get_field_object('state');
+	$state_value = get_field('state');
+	$state_label = $state_field['choices'][$state_value];
+?>
 <div class="modal fade" id="<?php global $post; echo $post->post_name; ?>-modal">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-body">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h1>$<?php the_field('amount'); ?> for <?php the_title(); ?> in <?php the_field('location'); ?></h1>
+				<h1>$<?php the_field('amount'); ?> for <?php the_title(); ?> in <?php the_field('city'); ?>, <?php echo $state_label; ?></h1>
 				<p><?php the_content(); ?></p>
 			</div>
 		</div>
@@ -118,7 +123,7 @@
 						break;
 					case 'office':
 						$transaction_class = 'office';
-						$transaction_text = 'Indust.';
+						$transaction_text = 'Office';
 						break;
 					default:
 						$transaction_class = 'default';

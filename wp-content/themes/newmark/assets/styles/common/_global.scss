@@ -1,9 +1,18 @@
 
 
 body{
+	padding-top: 70px;
 	@include font-medium;
 	color: $newmark-gray;
 	-webkit-font-smoothing: antialiased;
+	.navbar-fixed-top{
+		background-color: white;
+	}
+	&.home{
+		.navbar-fixed-top{
+			background-color: transparent;
+		}
+	}
 	.page-title{
 		color: $brand-primary;
 	}
@@ -11,4 +20,10 @@ body{
 		font-size: 16px;
 	}
 }
+
+// *{
+// 	background: black;
+// 	color: green;
+// 	outline: 1px solid red;
+// }
 
