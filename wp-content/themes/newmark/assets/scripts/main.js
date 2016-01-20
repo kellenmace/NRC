@@ -122,6 +122,15 @@
           $grid.isotope({ filter: filterValue });
         });
 
+        //add active is-checked class to buttons
+        $('.btn-group').each( function( i, buttonGroup ) {
+            var $buttonGroup = $( buttonGroup );
+            $buttonGroup.on( 'click', 'button', function() {
+              $buttonGroup.find('.is-checked').removeClass('is-checked');
+              $( this ).addClass('is-checked');
+            });
+          });
+
       }
     },
     'single_producer': {
