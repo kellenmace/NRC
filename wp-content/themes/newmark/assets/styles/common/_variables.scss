@@ -19,3 +19,15 @@ $web-yellow:			rgb(255,212,28);
 $web-yellow-darker:		darken($web-yellow, 10%);
 $web-brown:				rgb(90,60,55);
 $web-brown-darker:		darken($web-brown, 10%);
+
+//Responsive pixel values for mixins
+$iphone5-vertical: 320px;
+$iphone6-vertical: 375px;
+$iphone6-plus-vertical: 414px;
+$iphone5-landscape: 568px;
+$iphone6-landscape: 667px;
+$iphone6-plus-landscape: 736px;
+$ipad-vertical: 768px;
+$ipad-landscape: 1024px;
+$desktop-1600px: 1600px;
+$desktop-1920px: 1920px;
