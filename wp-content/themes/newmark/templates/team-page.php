@@ -31,7 +31,7 @@
 				<button class="btn location" data-filter=".spokane">Spokane</button>
 				<button class="btn location" data-filter=".phoenix">Phoenix</button>
 				<button class="btn location" data-filter=".las-vegas">Las Vegas</button>
-				<button class="btn location">&nbsp;</button>
+				<div class="btn location">&nbsp;</div>
 			</div>
 		</div>
 	</div>

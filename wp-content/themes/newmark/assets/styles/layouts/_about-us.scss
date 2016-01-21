@@ -1,0 +1,48 @@
+.about-us{
+	// background-color: orange;
+	// height: 200vh;
+	padding-bottom: 400px;
+}
+
+.about-us-fixed-nav{
+	background-color: white;
+	position: fixed;
+	z-index: 100;
+	top: 70px;
+	width: 81.1%;
+	li{
+		&:nth-child(odd){
+			background-color: $light-gray;
+		}
+		&:nth-child(even){
+			background-color: $medium-gray;
+		}
+		a{
+			padding: 5px 10px;
+		}
+	}
+}
+
+.bottom-test{
+	position: absolute;
+	top: 50%;
+	// width: 81%;
+	background-color: blue;
+}
+
+.section-1{
+	background-color:red;
+	height: 50vh;
+}
+.section-2{
+	background-color:orange;
+	height: 50vh;
+}
+.section-3{
+	background-color:green;
+	height: 50vh;
+}
+.section-4{
+	background-color:blue;
+	height: 50vh;
+}
