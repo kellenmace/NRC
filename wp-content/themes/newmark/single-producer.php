@@ -57,7 +57,7 @@
 			        </div>
 			        <div role="tabpanel" class="tab-pane active" id="transactions">
 			        	<div class="row">
-			        		<div class="col-md-12">
+			        		<div class="col-xs-offset-2 col-sm-offset-1 col-md-10">
 			        			<div class="row">
 			        				<div class="grid">
 										<?php
