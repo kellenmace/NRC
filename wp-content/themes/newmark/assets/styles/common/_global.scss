@@ -31,7 +31,7 @@ body{
 		}
 	}
 	p{
-		@include responsive-font(1.25vw, 15px);
+		@include responsive-font(1.25vw, 14px);
 	}
 	a{
 		color: $newmark-gray;
@@ -44,6 +44,40 @@ body{
 	}
 	h3{
 		@include responsive-font(1.7vw, 18px);
+	}
+	blockquote{
+		background-color: $brand-primary;
+	    width: 40%;
+	    color: white;
+	    padding: 20px 20px;
+	    border: none;
+	    float: right;
+        margin: 5px 25px;
+        @include iphone-portrait{
+        	width: 60%;
+        	margin-right: 15px;
+        }
+        @include iphone5-portrait{
+        	width: 290px;
+        	float: none;
+        	margin: 5px 0px;
+        }
+	    p{
+	    	@include responsive-font(1.7vw, 18px);
+	    }
+	}
+	// Terrible hacky way to change titles
+	.all-screens{
+		display: block;
+		@include iphone5-portrait{
+			display: none;
+		}
+	}
+	.iphone5-portrait-screen-only{
+		display: none;
+		@include iphone5-portrait{
+			display: block;
+		}
 	}
 }
 
