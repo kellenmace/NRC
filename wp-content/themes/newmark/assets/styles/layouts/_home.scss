@@ -7,6 +7,18 @@
 	top: 0;
 	left: 0;
 	z-index: -1;
+	@include ipad-landscape{
+		background-position-x: 55%;
+	}
+	@include ipad-portrait{
+		background-position-x: 35%;
+	}
+	@include iphone6-plus-portrait, iphone6-portrait, iphone-5-portrait{
+		background-position-x: 20%;
+	}
+	@include iphone5-landscape{
+		background-size: 130%;
+	}
 }
 
 .navbar-brand{
