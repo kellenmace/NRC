@@ -51,6 +51,26 @@ $producer-image-height: 205.188px;
 	}
 }
 
+.producer-info-box{
+	background: $brand-primary;
+	color: white;
+	padding: 30px 15px;
+	height: $producer-image-height;
+	a{
+		color: white;
+		&:hover{
+			color: $medium-gray;
+		}
+	}
+	@media only screen and (max-width: 1199px){
+		height: ($producer-image-height - 38)
+	}
+	@include iphone{
+		padding: 15px;
+		height: ($producer-image-height - 68)
+	}
+}
+
 .producer-title-box{
 	background: $light-gray;
 	padding: 15px;
@@ -70,7 +90,10 @@ $producer-image-height: 205.188px;
 	@include iphone6-plus-portrait{
 		height: ($producer-image-height - 70);
 	}
-	@include iphone6-portrait, iphone5-landscape{
+	@include iphone6-portrait{
+		height: ($producer-image-height - 83);
+	}
+	@include iphone5-landscape{
 		height: ($producer-image-height - 83);
 	}
 	@include iphone5-portrait{
@@ -91,26 +114,6 @@ $producer-image-height: 205.188px;
 		@include iphone5-portrait{
 			margin-top: 5px;
 		}
-	}
-}
-
-.producer-info-box{
-	background: $brand-primary;
-	color: white;
-	padding: 30px 15px;
-	height: $producer-image-height;
-	a{
-		color: white;
-		&:hover{
-			color: $medium-gray;
-		}
-	}
-	@media only screen and (max-width: 1199px){
-		height: ($producer-image-height - 38)
-	}
-	@include iphone{
-		padding: 15px;
-		height: ($producer-image-height - 68)
 	}
 }
 

@@ -64,6 +64,17 @@ body{
         }
 	    p{
 	    	@include responsive-font(1.7vw, 18px);
+		    	&:before{
+	        	content: "“";
+	        	margin-left: -7px;
+	        	@include responsive-font(2.1vw, 24px);
+	        }
+	        	&:after{
+        		content: "”";
+        		@include responsive-font(2.1vw, 24px);
+        		line-height: 1.7vw;
+	        }
+	        padding-left: 7px;
 	    }
 	}
 	// Terrible hacky way to change titles
