@@ -13,8 +13,14 @@ nav{
 		}
 	}
 	.navbar-header{
+		@include ipad{
+			width: 50%;
+		}
 		.navbar-brand{
 			padding-left: 0;
+			@include ipad{
+				width: 75%;
+			}
 			@include iphone6-plus-landscape{
 				width: 35%;
 			}

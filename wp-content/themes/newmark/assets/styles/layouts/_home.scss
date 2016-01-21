@@ -24,8 +24,14 @@
 		background-size: 150%;
 		background-position-x: 20%;
 	}
-	@include iphone6-plus-portrait, iphone6-portrait, iphone-5-portrait{
-		background-position-x: 0%;
+	@include iphone6-plus-portrait{
+		background-position-x: 0;
+	}
+	@include iphone6-portrait{
+		background-position-x: 0; 
+	}
+	@include iphone5-portrait{
+		background-position-x: 0; 
 	}
 }
 
@@ -44,7 +50,10 @@ h2.homepage-slogan {
 	@include iphone{
 		margin: 0;
 	}
-	@include iphone6-plus-landscape, iphone6-landscape{
+	@include iphone6-plus-landscape{
+		width: 38vw;
+	}
+	@include iphone5-landscape{
 		width: 38vw;
 	}
 	@include iphone5-landscape{
@@ -53,7 +62,10 @@ h2.homepage-slogan {
 	@include iphone6-plus-portrait{
 		width: 64vw;
 	}
-	@include iphone6-portrait, iphone5-portrait{
+	@include iphone6-portrait{
+		width: 77vw;
+	}
+	@include iphone5-portrait{
 		width: 77vw;
 	}
 }
