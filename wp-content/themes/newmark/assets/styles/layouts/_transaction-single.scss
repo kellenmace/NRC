@@ -44,14 +44,13 @@ $table-height: 4px;
 	@include ipad-landscape {
 		width: 100%;
 	};
-
 }
 
 .transaction-image{
 	width: 100%;
 
 
-	// Resizes Image to 55%
+	// Resizes main image to 55%
 	@include ipad-landscape {
 		width: 55%;
 	};
@@ -88,6 +87,13 @@ $table-height: 4px;
 		p {
 			font-size: 15px;
 		}
+		background: $light-gray;
+		padding: 15px 0 0 30px;
+
+		@include anything-smaller-991 {
+			margin-top: 30px;
+		};
+
 		@include ipad-landscape {
 			h1 {
 				font-size: 35px;
@@ -110,8 +116,6 @@ $table-height: 4px;
 				}
 			}
 		};
-		background: $light-gray;
-		padding: 15px 0 0 50px;
 		.table {
 			tbody {
 				tr {
@@ -124,14 +128,17 @@ $table-height: 4px;
 				}
 			}
 			margin-bottom: 0;
-			@include ipad-landscape {
-				width: 40%;
+			@include anything-smaller-1024 {
+				width: 48%;
+				margin: 10px 0 0 0;
 			};
+
 		}
 
 
 		.table-responsive{
-			padding-right: 50px;
+			padding-right: 40px;
+			@include disable-bootstrap-styling;
 			tr {
 				th{
 					padding-right: 2em;
@@ -139,10 +146,15 @@ $table-height: 4px;
 			}
 		}
 		.transaction-type{
-			@include ipad-landscape {
-				width: 60%;
+			@include anything-smaller-1024 {
+				width: 35%;
 				float: right;
 			};
+
+			@include anything-smaller-476 {
+				width: 50%;
+			};
+
 			.transaction-type-text{
 				width: 50%;
 				color: white;
@@ -189,6 +201,9 @@ $table-height: 4px;
 
 .transaction-more-info{
 	margin-top: 30px;
+	@include ipad-portrait {
+		margin-bottom: 55px;
+	};
 	.transaction-excerpt{
 		background: $brand-primary;
 		color: white;

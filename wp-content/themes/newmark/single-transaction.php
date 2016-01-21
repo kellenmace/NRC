@@ -29,7 +29,7 @@
 	<div class="col-md-4 transaction-details-col">
 		<div class="transaction-details">
 			<div class="row">
-				<div class="transaction-details-response col-xs-6 col-sm-6 col-md-6 col-lg-12">
+				<div class="transaction-details-response col-xs-12 col-sm-6 col-md-6 col-lg-12">
 					<?php
 					$state_field = get_field_object('state');
 					$state_value = get_field('state');
@@ -66,7 +66,7 @@
 						</div>
 
 				</div>
-				<div class="transaction-details-response col-xs-6 col-sm-6 col-md-6 col-lg-12">
+				<div class="transaction-details-response col-xs-12 col-sm-6 col-md-6 col-lg-12">
 					<h4>Transaction Contacts</h4>
 					<?php
 					$producers = get_field('transaction_contacts');

@@ -43,18 +43,49 @@
   font-size: $responsive;
 }
 
+@mixin disable-bootstrap-styling {
+	@media screen and (max-width: 767px) {
+	    border:none;
+		}
+}
+
+
 @mixin large-screen {
   @media (min-width: #{$desktop-1600px + 1px}) and (max-width: #{$desktop-1920px}) {
     @content;
   }
 }
 
-
 @mixin bigger-ipad-smaller-large {
 	@media (min-width: 1025px) and ( max-width: $desktop-1200px) {
 		@content;
 	}
 }
+
+@mixin anything-smaller-1024 {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin anything-smaller-991 {
+	@media (max-width: 991px) {
+		@content;
+	}
+}
+
+@mixin anything-smaller-768 {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin anything-smaller-476 {
+	@media (max-width: 476px) {
+		@content;
+	}
+}
+
 @mixin ipad {
   @media (min-width: #{$iphone6-plus-landscape + 1px}) and (max-width: #{$ipad-landscape}) {
     @content;
