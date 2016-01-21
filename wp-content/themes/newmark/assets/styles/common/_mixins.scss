@@ -48,6 +48,13 @@
     @content;
   }
 }
+
+
+@mixin bigger-ipad-smaller-large {
+	@media (min-width: 1025px) and ( max-width: $desktop-1200px) {
+		@content;
+	}
+}
 @mixin ipad {
   @media (min-width: #{$iphone6-plus-landscape + 1px}) and (max-width: #{$ipad-landscape}) {
     @content;

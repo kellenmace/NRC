@@ -81,7 +81,28 @@
           qsRegex = new RegExp( $quicksearch.val(), 'gi');
           $grid.isotope();
         }, 200));
+
+
+
+
+
+
       }
+    },
+    'single_transaction': {
+      finalize: function() {
+        if($('li.contacts-list-responsive').length < 2) {
+            // alert('this is smaller');
+            $('.shared-transaction-responsive').css('margin-top', '85px')
+        } else if ($('li.contacts-list-responsive').length > 2) {
+          $('li.contacts-list-responsive').css("display", "inline-block");
+          $('li.contacts-list-responsive').css("padding-right", "40px");
+          $('.transaction-details h3').css("margin-bottom", "0px");
+        }
+
+      }
+
+
     },
     'production_team':{
       init: function(){
