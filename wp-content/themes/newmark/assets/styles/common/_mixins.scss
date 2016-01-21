@@ -62,6 +62,12 @@
 	}
 }
 
+@mixin anything-smaller-1200 {
+	@media (max-width: 1200px) {
+		@content;
+	}
+}
+
 @mixin anything-smaller-1024 {
 	@media (max-width: 1024px) {
 		@content;

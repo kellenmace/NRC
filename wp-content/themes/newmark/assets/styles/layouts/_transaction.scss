@@ -12,7 +12,7 @@
 		border: none;
 		background: $light-gray;
 		&[type="text"]{
-			width: 99%;
+			width: 100%;
 			font-size: $input-font-size;
 			@include font-normal-italic;
 		}
@@ -30,9 +30,8 @@
 	display: inline-block;
 	background: $light-gray;
 	box-shadow: 0 8px 6px -6px black;
-	width: 250px;
+	width: 262px;
 	margin-bottom: 20px;
-	margin-left: 4px;
 	figcaption{
 		padding-left: 8px;
 		padding-bottom: 8px;
@@ -40,6 +39,37 @@
 			margin-bottom: 0px;
 		}
 	}
+	@include ipad-portrait {
+		width: 220px;
+	};
+	@include ipad-landscape {
+		width: 212px;
+	};
+	@include iphone6-plus-portrait {
+		width: 177px;
+	};
+	@include iphone6-plus-landscape {
+		width: 215px;
+	};
+	@include iphone6-portrait {
+		width: 157px;
+	};
+	@include iphone6-landscape {
+		width: 303px;
+	};
+	@include iphone5-portrait {
+		width: 130px;
+	};
+	@include iphone5-landscape {
+		width: 254px;
+	};
+
+	// @include anything-smaller-1200 {
+	// 	width: 220px;
+	// };
+	// @include anything-smaller-768 {
+	// 	width: 236px;
+	// };
 	.transaction-type{
 		.transaction-type-text{
 			width: 50%;
