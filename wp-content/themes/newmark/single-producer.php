@@ -157,6 +157,8 @@
 
 									<?php if( $link ): ?>
 										<a href="<?php echo $link; ?>" target="_blank"><?php echo $title; ?></a>
+									<?php elseif ( $file ): ?>
+										<a download href="<?php echo $file; ?>"><?php echo $title; ?></a>
 									<?php endif; ?>
 
 								</li>

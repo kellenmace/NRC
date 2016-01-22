@@ -163,3 +163,21 @@ $producer-image-height: 205.188px;
 		}
 	}
 }
+
+#resources{
+	ul{
+		padding: 0;
+		li{
+			list-style: none;
+			margin-right: 2%;
+			display: inline-block;
+			background-color: $light-gray;
+			width: 23%;
+			height: 13vw;
+			a{
+				@include responsive-font(1.7vw, 18px);
+				padding: 3vw 0 0 .75vw;
+			}
+		}
+	}
+}
