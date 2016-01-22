@@ -63,7 +63,7 @@
           $('#contact').removeClass(lastClass);
           $('#contact').addClass(newClass);
 
-        })
+        });
       }
     },
     'transactions':{
@@ -120,7 +120,7 @@
       finalize: function() {
         if($('li.contacts-list-responsive').length < 2) {
             // alert('this is smaller');
-            $('.shared-transaction-responsive').css('margin-top', '85px')
+            $('.shared-transaction-responsive').css('margin-top', '85px');
         } else if ($('li.contacts-list-responsive').length > 2) {
           $('li.contacts-list-responsive').css("display", "inline-block");
           $('li.contacts-list-responsive').css("padding-right", "40px");
