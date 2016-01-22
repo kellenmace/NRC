@@ -92,6 +92,10 @@
 	}
 }
 
+
+
+// Apple Devices
+
 @mixin ipad {
   @media (min-width: #{$iphone6-plus-landscape + 1px}) and (max-width: #{$ipad-landscape}) {
     @content;
@@ -151,4 +155,11 @@
   @media (min-width: #{0px}) and (max-width: #{$iphone5-vertical}) {
     @content;
   }
+}
+
+
+// Samsung devices
+
+@mixin galaxy{
+	@media (max-width: 360px)
 }
