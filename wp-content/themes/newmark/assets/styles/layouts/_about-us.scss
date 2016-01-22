@@ -1,16 +1,17 @@
 $about-font-size: 22px;
+
+//adjusting top padding to account for fixed subnav
 .about-us{
-	// background-color: orange;
-	// height: 200vh;
-	// padding-bottom: 100px;
 	padding-top: 99px;
 	color: $brand-primary;
 }
 
+//about us page wrapper
 .about-us-page-wrap{
 	padding-bottom: 100px;
 }
 
+//fixed subnav styles
 .about-us-fixed-nav{
 	background-color: white;
 	position: fixed;
@@ -18,12 +19,10 @@ $about-font-size: 22px;
 	top: 70px;
 	left: 0;
 	right: 0;
-	// width: 81.1%;
 	margin-right: auto;
 	margin-left: auto;
 	padding-left: 30px;
 	padding-right: 30px;
-	// visibility: hidden;
 	@media only screen and (min-width: 768px){
 		width: 750px;
 	}
@@ -45,7 +44,7 @@ $about-font-size: 22px;
 			a{
 				color: white;
 				&:hover{
-					color: #333;
+					color: white;
 				}
 			}
 		}
@@ -55,22 +54,16 @@ $about-font-size: 22px;
 				background-color: $brand-primary;
 				color: white;
 			}
+			&:hover{
+				background-color: $brand-primary;
+				color: white;
+			}
 		}
 
 	}
 }
 
-.bottom-test{
-	position: absolute;
-	top: 50%;
-	// width: 81%;
-	background-color: blue;
-}
-
-.about-section{
-	// padding: 20px 50px;
-}
-
+//about section
 #about-newmark{
 	background: url('../images/about-background.jpg');
 	.about-content{
@@ -84,9 +77,13 @@ $about-font-size: 22px;
 		}
 	}
 }
+
+//transactions and rates section
 #transactions-and-rates{
-	background-color: purple;
+	background: url('../images/about-transactions-rates-background.jpg');
 }
+
+//services section
 #services{
 	background: url('../images/about-services-background.jpg');
 	padding-top: 15px;
@@ -109,14 +106,14 @@ $about-font-size: 22px;
 				border-radius: 0;
 				&:hover{
 					background-color: $brand-primary;
+					border-color: $brand-primary;
 					color: white;
 				}
 			}
 			&.active{
 				a{
-					// outline: 2px solid $brand-primary;
-					// background-color: inherit;
 					background-color: $brand-primary;
+					border: 1px solid transparent;
 					color: white;
 				}
 			}
@@ -132,6 +129,8 @@ $about-font-size: 22px;
 		}
 	}
 }
+
+//lenders section
 #lenders{
 	background: url('../images/about-lenders-background.jpg');
 	h1, h2, h3, h4, h5, h6{
@@ -148,6 +147,8 @@ $about-font-size: 22px;
 		padding: 15px 15px;
 	}
 }
+
+//contact section
 #contact{
 	background-color: white;
 	background-size: cover;
@@ -207,9 +208,12 @@ $about-font-size: 22px;
 				}
 			}
 			a{
+				margin-right: 0;
+				border-radius: 0;
 				&:hover{
 					border-radius: 0;
 					background-color: $brand-primary;
+					border-color: $brand-primary;
 					color: white;
 				}
 			}
@@ -217,8 +221,9 @@ $about-font-size: 22px;
 	}
 }
 
+//applies to all sections
 #about-newmark, #transactions-and-rates, #services, #lenders, #contact {
-	height: 70vh;
+	height: 65vh;
 	background-size: cover;
 	background-position: center center;
 }
