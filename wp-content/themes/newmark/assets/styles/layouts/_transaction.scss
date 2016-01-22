@@ -39,6 +39,9 @@
 			margin-bottom: 0px;
 		}
 	}
+
+	// Apple devices
+
 	@include ipad-portrait {
 		width: 220px;
 	};
@@ -64,12 +67,69 @@
 		width: 254px;
 	};
 
-	// @include anything-smaller-1200 {
-	// 	width: 220px;
-	// };
-	// @include anything-smaller-768 {
-	// 	width: 236px;
-	// };
+	// Samsung Devices
+
+	@include galaxy {
+		width: 150px;
+	};
+
+	// Nokia Devices
+
+	@include nexus10 {
+		width: 220px;
+	};
+
+	@include nexus4-portrait {
+		width: 162px;
+	};
+
+	@include nexus5-portrait {
+		width: 150px;
+	};
+
+	@include nexus6-portrait {
+		width: 176px;
+	};
+
+	@include nexus7-portrait {
+		width: 270px;
+	};
+
+	@include nexus-4-landscape {
+		width: 269px;
+	};
+
+	@include nexus-5-landscape {
+		width: 269px;
+	};
+
+	@include nexus-6-landscape {
+		width: 200px;
+	};
+
+	@include nexus-7-landscape {
+		width: 220px;
+	};
+
+
+	// Nokia Devices
+
+	@include lumia-portrait {
+		width: 130px;
+	};
+
+	@include n9-portrait {
+		width: 150px;
+	};
+
+	@include lumia-landscape {
+		width: 236px;
+	};
+
+	@include n9-landscape {
+		width: 290px;
+	};
+
 	.transaction-type{
 		.transaction-type-text{
 			width: 50%;
