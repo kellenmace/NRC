@@ -142,7 +142,7 @@
 			        <div role="tabpanel" class="tab-pane" id="resources">
 						<?php if( have_rows('resources_download') ): ?>
 
-							<ul class="">
+							<ul>
 
 							<?php while( have_rows('resources_download') ): the_row(); 
 
@@ -153,15 +153,12 @@
 
 								?>
 
-								<li class="">
-
 									<?php if( $link ): ?>
-										<a href="<?php echo $link; ?>" target="_blank"><?php echo $title; ?></a>
+										<a href="<?php echo $link; ?>" target="_blank"><li><?php echo $title; ?></li></a>
 									<?php elseif ( $file ): ?>
-										<a download href="<?php echo $file; ?>"><?php echo $title; ?></a>
+										<a download href="<?php echo $file; ?>"><li><?php echo $title; ?></li></a>
 									<?php endif; ?>
 
-								</li>
 
 							<?php endwhile; ?>
 
