@@ -1,0 +1,229 @@
+$about-font-size: 22px;
+
+//adjusting top padding to account for fixed subnav
+.about-us{
+	padding-top: 99px;
+	color: $brand-primary;
+}
+
+//about us page wrapper
+.about-us-page-wrap{
+	padding-bottom: 100px;
+}
+
+//fixed subnav styles
+.about-us-fixed-nav{
+	background-color: white;
+	position: fixed;
+	z-index: 100;
+	top: 70px;
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 30px;
+	padding-right: 30px;
+	@media only screen and (min-width: 768px){
+		width: 750px;
+	}
+	@media only screen and (min-width: 992px){
+		width: 970px;
+	}
+	@media only screen and (min-width: 1200px){
+		width: 1170px;
+	}
+	li{
+		&:nth-child(odd){
+			background-color: $light-gray;
+		}
+		&:nth-child(even){
+			background-color: $medium-gray;
+		}
+		&.active{
+			background-color: $brand-primary;
+			a{
+				color: white;
+				&:hover{
+					color: white;
+				}
+			}
+		}
+		a{
+			padding: 5px 10px;
+			&:focus{
+				background-color: $brand-primary;
+				color: white;
+			}
+			&:hover{
+				background-color: $brand-primary;
+				color: white;
+			}
+		}
+
+	}
+}
+
+//about section
+#about-newmark{
+	background: url('../images/about-background.jpg');
+	.about-content{
+		@include center-center;
+		color: $brand-primary;
+		h1{
+			margin-top: 0;
+		}
+		p{
+			font-size: $about-font-size;
+		}
+	}
+}
+
+//transactions and rates section
+#transactions-and-rates{
+	background: url('../images/about-transactions-rates-background.jpg');
+}
+
+//services section
+#services{
+	background: url('../images/about-services-background.jpg');
+	padding-top: 15px;
+	.nav-tabs{
+		margin-left: 15px;
+		margin-right: 15px;
+		li{
+			width: (100% / 5);
+			&:nth-child(odd){
+				background-color: white;
+			}
+			&:nth-child(even){
+				background-color: $medium-gray	;
+			}
+			a{
+				padding-top: 10px;
+				padding-left: 15px;
+				padding-right: 0;
+				margin-right: 0;
+				border-radius: 0;
+				&:hover{
+					background-color: $brand-primary;
+					border-color: $brand-primary;
+					color: white;
+				}
+			}
+			&.active{
+				a{
+					background-color: $brand-primary;
+					border: 1px solid transparent;
+					color: white;
+				}
+			}
+		}
+	}
+	.mortgage-content, .loan-content, .debt-content, .acquisition-content, .consulting-content{
+		padding-top: 7%;
+		h1{
+			margin-top: 10px;
+		}
+		p{
+			font-size: $about-font-size;
+		}
+	}
+}
+
+//lenders section
+#lenders{
+	background: url('../images/about-lenders-background.jpg');
+	h1, h2, h3, h4, h5, h6{
+		margin-top: 0;
+	}
+	p{
+		font-size: $about-font-size;
+	}
+	.lenders-content{
+		padding-top: 7%;
+	}
+	.lenders-list{
+		background-color: rgba(255,255,255,0.7);
+		padding: 15px 15px;
+	}
+}
+
+//contact section
+#contact{
+	background-color: white;
+	background-size: cover;
+	background-position: center center;
+	padding-top: 15px;
+	transition: all 0.3s ease-in-out;
+	&.san-francisco{
+		background-image: url('../images/about-contact-san-francisco.jpg');
+		transition: all 0.3s ease-in-out;
+	}
+	&.sacramento{
+		background-image: url('../images/about-contact-sacramento.jpg');
+		transition: all 0.3s ease-in-out;
+	}
+	&.los-angeles{
+		background-image: url('../images/about-contact-los-angeles.jpg');
+		transition: all 0.3s ease-in-out;
+	}
+	&.newport-beach{
+		background-image: url('../images/about-contact-newport-beach.jpg');
+		transition: all 0.3s ease-in-out;
+	}
+	&.seattle{
+		background-image: url('../images/about-contact-seattle.jpg');
+		transition: all 0.3s ease-in-out;
+	}
+	&.spokane{
+		background-image: url('../images/about-contact-spokane.jpg');
+		transition: all 0.3s ease-in-out;
+	}
+	&.phoenix{
+		background-image: url('../images/about-contact-phoenix.jpg');
+		transition: all 0.3s ease-in-out;
+	}
+	&.las-vegas{
+		background-image: url('../images/about-contact-las-vegas.jpg');
+		transition: all 0.3s ease-in-out;
+	}
+	.nav-tabs{
+		margin-left: 15px;
+		margin-right: 15px;
+		li{
+			width: (100% / 8);
+			text-align: center;
+			&:nth-child(odd){
+				background-color: white;
+			}
+			&:nth-child(even){
+				background-color: $medium-gray;
+			}
+			&.active{
+				a{
+					border: 1px solid transparent;
+					border-radius: 0;
+					background-color: $brand-primary;
+					color: white;
+				}
+			}
+			a{
+				margin-right: 0;
+				border-radius: 0;
+				&:hover{
+					border-radius: 0;
+					background-color: $brand-primary;
+					border-color: $brand-primary;
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+//applies to all sections
+#about-newmark, #transactions-and-rates, #services, #lenders, #contact {
+	height: 65vh;
+	background-size: cover;
+	background-position: center center;
+}

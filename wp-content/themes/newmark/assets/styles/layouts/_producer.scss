@@ -45,5 +45,9 @@
 		&:nth-child(even){
 			background-color: $medium-gray;
 		}
+		&.is-checked{
+			background-color: $brand-primary;
+			color: white;
+		}
 	}
 }
