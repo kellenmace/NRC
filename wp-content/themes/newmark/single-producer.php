@@ -3,19 +3,19 @@
 <a href="<?php bloginfo('url'); ?>/production-team"><p>< &nbsp;Back to production team</p></a>
 
 <div class="row">
-	<div class="col-md-3">
+	<div class="col-md-3 col-sm-4 col-xs-4">
 		<img class="img-responsive" src="<?php the_post_thumbnail_url('large'); ?>">
 	</div>
-	<div class="col-md-5">
+	<div class="col-md-5 col-sm-3 col-xs-8">
 		<div class="producer-title-box">
 			<h2><?php the_title(); ?></h2>
 			<h3><?php the_field('title'); ?></h3>
 		</div>
 	</div>
-	<div class="col-md-4">
+	<div class="col-md-4 col-sm-5 col-xs-12">
 		<div class="producer-info-box">
 			<p><?php the_field('phone_number'); ?></p>
-			<p><a href="<?php the_field('vcard'); ?>"><i class="fa fa-envelope-o"> vCard</i></a></p>
+			<p><a href="mailto:<?php the_field('email'); ?>"><i class="fa fa-envelope-o"></i></a>&nbsp;&nbsp;<a href="<?php the_field('vcard'); ?>">vCard</a></p>
 			<?php
 				$location = get_field('office_location');
 				if($location) :
@@ -37,7 +37,7 @@
 			            <a href="#bio" aria-controls="bio" role="tab" data-toggle="tab"><h3>Bio</h3></a>
 			        </li>
 			        <li role="presentation" class="active">
-			            <a href="#transactions" aria-controls="transactions" role="tab" data-toggle="tab"><h3>Transactions</h3></a>
+			            <a href="#transactions" aria-controls="transactions" role="tab" data-toggle="tab"><h3 class="all-screens">Transactions</h3><h3 class="iphone5-portrait-screen-only">TRX</h3></a>
 			        </li>
 			        <li role="presentation">
 			            <a href="#resources" aria-controls="resources" role="tab" data-toggle="tab"><h3>Resources</h3></a>
@@ -57,7 +57,7 @@
 			        </div>
 			        <div role="tabpanel" class="tab-pane active" id="transactions">
 			        	<div class="row">
-			        		<div class="col-xs-offset-2 col-sm-offset-1 col-md-10">
+			        		<div class="col-md-12">
 			        			<div class="row">
 			        				<div class="grid">
 										<?php
@@ -140,7 +140,32 @@
 			        	</div>
 			        </div>
 			        <div role="tabpanel" class="tab-pane" id="resources">
-			        	<p>resources</p>
+						<?php if( have_rows('resources_download') ): ?>
+
+							<ul class="">
+
+							<?php while( have_rows('resources_download') ): the_row(); 
+
+								// vars
+								$file = get_sub_field('external_file_upload');
+								$title = get_sub_field('resource_title');
+								$link = get_sub_field('external_link');
+
+								?>
+
+								<li class="">
+
+									<?php if( $link ): ?>
+										<a href="<?php echo $link; ?>" target="_blank"><?php echo $title; ?></a>
+									<?php endif; ?>
+
+								</li>
+
+							<?php endwhile; ?>
+
+							</ul>
+
+						<?php endif; ?>
 			        </div>
 			    </div>
 			</div>

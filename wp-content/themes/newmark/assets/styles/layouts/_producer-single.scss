@@ -1,6 +1,7 @@
 $producer-image-height: 205.188px;
 
 .single-producer{
+	background-color: black;
 	background: url('../images/team-background.jpg');
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -10,21 +11,43 @@ $producer-image-height: 205.188px;
 
 #single-producer-page{
 	min-height: 110vh;
+	.col-xs-4, .col-xs-8{
+		@include iphone-portrait{
+			width: 50%;
+		}
+	}
 	.grid {
 		margin-top: 30px;
 		.transaction-card {
 			margin-left: 0;
 			margin-bottom: 30px;
+			width: 262px;
+			// background-color: white;
+			@include ipad-landscape{
+				width: 212px;
+			}
+			@include ipad-portrait{
+				width: 220px;
+			}
+			@include iphone6-plus-landscape{
+				width: 215px;
+			}
+			@include iphone6-landscape{
+				width: 192px;
+			}
+			@include iphone5-landscape{
+				width: 159px;
+			}
+			@include iphone6-plus-portrait{
+				width: 177px;
+			}
+			@include iphone6-portrait{
+				width: 157px;
+			}
+			@include iphone5-portrait{
+				width: 130px;
+			}
 		}
-	}
-}
-
-.producer-title-box{
-	background: $light-gray;
-	padding: 15px;
-	height: $producer-image-height;
-	@media only screen and (max-width: 1199px){
-		height: ($producer-image-height - 38)
 	}
 }
 
@@ -36,11 +59,61 @@ $producer-image-height: 205.188px;
 	a{
 		color: white;
 		&:hover{
-			color: $light-gray;
+			color: $medium-gray;
 		}
 	}
 	@media only screen and (max-width: 1199px){
 		height: ($producer-image-height - 38)
+	}
+	@include iphone{
+		padding: 15px;
+		height: ($producer-image-height - 68)
+	}
+}
+
+.producer-title-box{
+	background: $light-gray;
+	padding: 15px;
+	height: $producer-image-height;
+	@media only screen and (max-width: 1199px){
+		height: ($producer-image-height - 38);
+	}
+	@include iphone{
+		margin-bottom: 30px;
+	}
+	@include iphone6-plus-landscape{
+		height: ($producer-image-height - 42);
+	}
+	@include iphone6-landscape{
+		height: ($producer-image-height - 60);
+	}
+	@include iphone6-plus-portrait{
+		height: ($producer-image-height - 70);
+	}
+	@include iphone6-portrait{
+		height: ($producer-image-height - 83);
+	}
+	@include iphone5-landscape{
+		height: ($producer-image-height - 83);
+	}
+	@include iphone5-portrait{
+		height: ($producer-image-height - 106);
+	}
+	h2{
+		@include iphone-portrait, iphone5-landscape{
+			margin-top: 5px;
+		}
+		@include iphone5-portrait{
+			margin: 0;
+		}
+	}
+	h3{
+		@include iphone-portrait, iphone5-landscape{
+			margin-top: 15px;
+		}
+		@include iphone5-portrait{
+			margin-top: 5px;
+		}
 	}
 }
 
@@ -62,6 +135,7 @@ $producer-image-height: 205.188px;
 			}
 			a{
 				border-radius: 0;
+				border: none;
 				&:hover{
 					background-color: $brand-primary;
 					color: white;
@@ -71,10 +145,11 @@ $producer-image-height: 205.188px;
 				}
 			}
 			&.active{
-				background-color: white;
 				a{
 					border: none;
 					border-bottom: 1px solid rgba(255,255,255,0.9);
+					background-color: $brand-primary;
+					color: white;
 				}
 			}
 		}
