@@ -140,7 +140,32 @@
 			        	</div>
 			        </div>
 			        <div role="tabpanel" class="tab-pane" id="resources">
-			        	<p>resources</p>
+						<?php if( have_rows('resources_download') ): ?>
+
+							<ul class="">
+
+							<?php while( have_rows('resources_download') ): the_row(); 
+
+								// vars
+								$file = get_sub_field('external_file_upload');
+								$title = get_sub_field('resource_title');
+								$link = get_sub_field('external_link');
+
+								?>
+
+								<li class="">
+
+									<?php if( $link ): ?>
+										<a href="<?php echo $link; ?>" target="_blank"><?php echo $title; ?></a>
+									<?php endif; ?>
+
+								</li>
+
+							<?php endwhile; ?>
+
+							</ul>
+
+						<?php endif; ?>
 			        </div>
 			    </div>
 			</div>
