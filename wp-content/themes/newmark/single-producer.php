@@ -163,7 +163,9 @@
 							<?php endwhile; ?>
 
 							</ul>
-
+						<?php else: ?>
+							<p><?php echo "This producer has no recent resources."; ?></p>
+							
 						<?php endif; ?>
 			        </div>
 			    </div>
