@@ -39,7 +39,8 @@
         // JavaScript to be fired on the about us page
       },
       finalize: function(){
-        $('a[href*=#]:not([href=#mortgage-banking], [href=#loan-servicing], [href=#debt-advisory], [href=#acquisition-brokerage], [href=#consulting])').click(function() {
+        //Smooth Scroll function with in-page anchor links not selected
+        $('a[href*=#]:not([href=#mortgage-banking], [href=#loan-servicing], [href=#debt-advisory], [href=#acquisition-brokerage], [href=#consulting], [href=#san-francisco], [href=#sacramento], [href=#los-angeles], [href=#newport-beach], [href=#seattle], [href=#spokane], [href=#phoenix], [href=#las-vegas])').click(function() {
           if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -51,6 +52,18 @@
             }
           }
         });
+
+        //change background image of location tabs
+        $('#contact li a').click(function(){
+          var lastClass = $('#contact').attr('class').split(' ').pop();
+          var newClass = $(this).attr('aria-controls');
+          console.log(newClass + " Class added");
+          console.log(lastClass + " class removed");
+
+          $('#contact').removeClass(lastClass);
+          $('#contact').addClass(newClass);
+
+        })
       }
     },
     'transactions':{

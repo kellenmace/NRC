@@ -2,12 +2,9 @@ $about-font-size: 22px;
 .about-us{
 	// background-color: orange;
 	// height: 200vh;
-	padding-bottom: 400px;
+	// padding-bottom: 100px;
 	padding-top: 99px;
-}
-
-#about-us-page-scrolling-content{
-	position: relative;
+	color: $brand-primary;
 }
 
 .about-us-fixed-nav{
@@ -50,6 +47,10 @@ $about-font-size: 22px;
 		}
 		a{
 			padding: 5px 10px;
+			&:focus{
+				background-color: $brand-primary;
+				color: white;
+			}
 		}
 
 	}
@@ -68,9 +69,6 @@ $about-font-size: 22px;
 
 #about-newmark{
 	background: url('../images/about-background.jpg');
-	background-size: cover;
-	background-position: center center;
-	height: 50vh;
 	.about-content{
 		@include center-center;
 		color: $brand-primary;
@@ -84,13 +82,9 @@ $about-font-size: 22px;
 }
 #transactions-and-rates{
 	background-color: purple;
-	height: 50vh;
 }
 #services{
 	background: url('../images/about-services-background.jpg');
-	background-size: cover;
-	background-position: center center;
-	height: 50vh;
 	padding-top: 15px;
 	.nav-tabs{
 		margin-left: 15px;
@@ -109,11 +103,17 @@ $about-font-size: 22px;
 				padding-right: 0;
 				margin-right: 0;
 				border-radius: 0;
+				&:hover{
+					background-color: $brand-primary;
+					color: white;
+				}
 			}
 			&.active{
 				a{
-					// border: none;
-					// border-bottom: 1px solid transparent;
+					// outline: 2px solid $brand-primary;
+					// background-color: inherit;
+					background-color: $brand-primary;
+					color: white;
 				}
 			}
 		}
@@ -129,10 +129,77 @@ $about-font-size: 22px;
 	}
 }
 #lenders{
-	background-color: green;
-	height: 50vh;
+	background: url('../images/about-lenders-background.jpg');
+	h1, h2, h3, h4, h5, h6{
+		margin-top: 0;
+	}
+	p{
+		font-size: $about-font-size;
+	}
+	.lenders-content{
+		padding-top: 7%;
+	}
+	.lenders-list{
+		background-color: rgba(255,255,255,0.7);
+		padding: 15px 15px;
+	}
 }
 #contact{
-	background-color: blue;
-	height: 50vh;
+	background-color: white;
+	background-size: cover;
+	background-position: center center;
+	padding-top: 15px;
+	transition: all 0.3s ease-in-out;
+	&.san-francisco{
+		background-image: url('../images/about-contact-san-francisco.jpg');
+		transition: all 0.3s ease-in-out;
+	}
+	&.sacramento{
+		background-image: url('../images/about-contact-sacramento.jpg');
+		transition: all 0.3s ease-in-out;
+	}
+	&.los-angeles{
+		background-image: url('../images/about-contact-los-angeles.jpg');
+		transition: all 0.3s ease-in-out;
+	}
+	&.newport-beach{
+		background-image: url('../images/about-contact-newport-beach.jpg');
+		transition: all 0.3s ease-in-out;
+	}
+	&.seattle{
+		background-image: url('../images/about-contact-seattle.jpg');
+		transition: all 0.3s ease-in-out;
+	}
+	&.spokane{
+		background-image: url('../images/about-contact-spokane.jpg');
+		transition: all 0.3s ease-in-out;
+	}
+	&.phoenix{
+		background-image: url('../images/about-contact-phoenix.jpg');
+		transition: all 0.3s ease-in-out;
+	}
+	&.las-vegas{
+		background-image: url('../images/about-contact-las-vegas.jpg');
+		transition: all 0.3s ease-in-out;
+	}
+	.nav-tabs{
+		margin-left: 15px;
+		margin-right: 15px;
+		li{
+			width: (100% / 8);
+			text-align: center;
+			&:nth-child(odd){
+				background-color: white;
+			}
+			&:nth-child(even){
+				background-color: $medium-gray;
+			}
+		}
+	}
+}
+
+#about-newmark, #transactions-and-rates, #services, #lenders, #contact {
+	height: 70vh;
+	background-size: cover;
+	background-position: center center;
 }
