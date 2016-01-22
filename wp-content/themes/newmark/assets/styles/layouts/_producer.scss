@@ -67,6 +67,7 @@
 	}
 	.btn{
 		border-radius: 0;
+		color: $brand-primary;
 		&.location{
 			width: (100% / 5);
 			@include ipad-portrait{
@@ -172,6 +173,9 @@
 				background-color: $medium-gray;
 			}
 		}
-		color: $brand-primary;
+		&.is-checked{
+			background-color: $brand-primary;
+			color: white;
+		}
 	}
 }
