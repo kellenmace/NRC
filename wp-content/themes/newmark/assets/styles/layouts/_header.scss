@@ -1,10 +1,14 @@
+$menu-bars-spacing: -6px;
+
 nav{
 	.navbar-header{
 		.navbar-brand{
 			padding-left: 0;
 		}
 	}
-	$menu-bars-spacing: -6px;
+	.navbar-right{
+		padding-bottom: 20px;
+	}
 	.navbar-toggle{
 		width: 30px;
 		padding-left: 2px;
