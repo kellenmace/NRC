@@ -7,6 +7,10 @@ $about-font-size: 22px;
 	color: $brand-primary;
 }
 
+.about-us-page-wrap{
+	padding-bottom: 100px;
+}
+
 .about-us-fixed-nav{
 	background-color: white;
 	position: fixed;
@@ -193,6 +197,21 @@ $about-font-size: 22px;
 			}
 			&:nth-child(even){
 				background-color: $medium-gray;
+			}
+			&.active{
+				a{
+					border: 1px solid transparent;
+					border-radius: 0;
+					background-color: $brand-primary;
+					color: white;
+				}
+			}
+			a{
+				&:hover{
+					border-radius: 0;
+					background-color: $brand-primary;
+					color: white;
+				}
 			}
 		}
 	}
