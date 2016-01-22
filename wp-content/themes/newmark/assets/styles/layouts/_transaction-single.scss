@@ -1,3 +1,6 @@
+$table-height: 4px;
+
+
 .single-transaction{
 	background: url('../images/transactions-background.jpg');
 	background-size: 100% auto;
@@ -37,67 +40,170 @@
 	}
 }
 
-.transaction-image{
-	width: 100%;
+.single-transaction-image-col {
+	@include ipad-landscape {
+		width: 100%;
+	};
 }
 
-.transaction-details{
-	background: $light-gray;
-	padding: 15px 0 0 50px;
-	.table{
-		margin-bottom: 0;
-	}
-	.table-responsive{
-		padding-right: 50px;
-		th{
-			padding-right: 2em;
+.transaction-image{
+	width: 100%;
+
+
+	// Resizes main image to 55%
+	@include ipad-landscape {
+		width: 55%;
+	};
+}
+
+
+
+.transaction-details-col {
+	.row {
+		.transaction-details-response {
+			// Changes stacking if greater than 1024 but smaller than 1200
+			@include bigger-ipad-smaller-large {
+				width: 100%;
+			};
 		}
 	}
-	.transaction-type{
-		.transaction-type-text{
-			width: 50%;
-			color: white;
-			text-align: center;
-			text-transform: uppercase;
-			margin-left: 50%;
+	@include ipad-landscape {
+		width: 100%;
+		margin: 30px 0 0 0;
+	};
+	.transaction-details{
+		h1 {
+			font-size: 30px;
+			margin: 0;
+		}
+		h3 {
+			line-height: 1.3;
+			margin: 8px 0;
+			font-size: 20px;
+		}
+		h4 {
+			font-size: 20px;
+		}
+		p {
+			font-size: 15px;
+		}
+		background: $light-gray;
+		padding: 15px 0 0 30px;
+
+		@include anything-smaller-991 {
+			margin-top: 30px;
+		};
+
+		@include ipad-landscape {
+			h1 {
+				font-size: 35px;
+				margin: 0;
+			}
+			h3 {
+				margin: 8px 0;
+				font-size: 24px;
+			}
+			h4 {
+				font-size: 20px;
+			}
+			p {
+				font-size: 16px;
+			}
+			ul {
+				li {
+					display: inline-block;
+					padding:  0 20px 0 0;
+				}
+			}
+		};
+		.table {
+			tbody {
+				tr {
+					th {
+						padding: $table-height;
+					}
+					td {
+						padding: $table-height;
+					}
+				}
+			}
 			margin-bottom: 0;
-			padding: 3px 0;
+			@include anything-smaller-1024 {
+				width: 48%;
+				margin: 10px 0 0 0;
+			};
+
 		}
-		&.retail{
-			background: $web-blue;
-			.transaction-type-text{
-				background: $web-blue-darker;
+
+
+		.table-responsive{
+			padding-right: 40px;
+			@include disable-bootstrap-styling;
+			tr {
+				th{
+					padding-right: 2em;
+				}
 			}
 		}
-		&.mixed{
-			background: $web-green;
+		.transaction-type{
+			@include anything-smaller-1024 {
+				width: 35%;
+				float: right;
+			};
+
+			@include anything-smaller-476 {
+				width: 50%;
+			};
+
 			.transaction-type-text{
-				background: $web-green-darker;
+				width: 50%;
+				color: white;
+				text-align: center;
+				text-transform: uppercase;
+				margin-left: 50%;
+				margin-bottom: 0;
+				padding: 3px 0;
 			}
-		}
-		&.industrial{
-			background: $web-brown;
-			.transaction-type-text{
-				background: $web-brown-darker;
+			&.retail{
+				background: $web-blue;
+				.transaction-type-text{
+					background: $web-blue-darker;
+				}
 			}
-		}
-		&.multi{
-			background: $web-orange;
-			.transaction-type-text{
-				background: $web-orange-darker;
+			&.mixed{
+				background: $web-green;
+				.transaction-type-text{
+					background: $web-green-darker;
+				}
 			}
-		}
-		&.office{
-			background: $web-yellow;
-			.transaction-type-text{
-				background: $web-yellow-darker;
+			&.industrial{
+				background: $web-brown;
+				.transaction-type-text{
+					background: $web-brown-darker;
+				}
+			}
+			&.multi{
+				background: $web-orange;
+				.transaction-type-text{
+					background: $web-orange-darker;
+				}
+			}
+			&.office{
+				background: $web-yellow;
+				.transaction-type-text{
+					background: $web-yellow-darker;
+				}
 			}
 		}
 	}
 }
+
 
 .transaction-more-info{
 	margin-top: 30px;
+	@include ipad-portrait {
+		margin-bottom: 55px;
+	};
 	.transaction-excerpt{
 		background: $brand-primary;
 		color: white;

@@ -12,7 +12,7 @@
 		border: none;
 		background: $light-gray;
 		&[type="text"]{
-			width: 99%;
+			width: 100%;
 			font-size: $input-font-size;
 			@include font-normal-italic;
 		}
@@ -30,9 +30,8 @@
 	display: inline-block;
 	background: $light-gray;
 	box-shadow: 0 8px 6px -6px black;
-	width: 250px;
+	width: 262px;
 	margin-bottom: 20px;
-	margin-left: 4px;
 	figcaption{
 		padding-left: 8px;
 		padding-bottom: 8px;
@@ -40,6 +39,97 @@
 			margin-bottom: 0px;
 		}
 	}
+
+	// Apple devices
+
+	@include ipad-portrait {
+		width: 220px;
+	};
+	@include ipad-landscape {
+		width: 212px;
+	};
+	@include iphone6-plus-portrait {
+		width: 177px;
+	};
+	@include iphone6-plus-landscape {
+		width: 215px;
+	};
+	@include iphone6-portrait {
+		width: 157px;
+	};
+	@include iphone6-landscape {
+		width: 303px;
+	};
+	@include iphone5-portrait {
+		width: 130px;
+	};
+	@include iphone5-landscape {
+		width: 254px;
+	};
+
+	// Samsung Devices
+
+	@include galaxy {
+		width: 150px;
+	};
+
+	// Nokia Devices
+
+	@include nexus10 {
+		width: 220px;
+	};
+
+	@include nexus4-portrait {
+		width: 162px;
+	};
+
+	@include nexus5-portrait {
+		width: 150px;
+	};
+
+	@include nexus6-portrait {
+		width: 176px;
+	};
+
+	@include nexus7-portrait {
+		width: 270px;
+	};
+
+	@include nexus-4-landscape {
+		width: 269px;
+	};
+
+	@include nexus-5-landscape {
+		width: 269px;
+	};
+
+	@include nexus-6-landscape {
+		width: 200px;
+	};
+
+	@include nexus-7-landscape {
+		width: 220px;
+	};
+
+
+	// Nokia Devices
+
+	@include lumia-portrait {
+		width: 130px;
+	};
+
+	@include n9-portrait {
+		width: 150px;
+	};
+
+	@include lumia-landscape {
+		width: 236px;
+	};
+
+	@include n9-landscape {
+		width: 290px;
+	};
+
 	.transaction-type{
 		.transaction-type-text{
 			width: 50%;
