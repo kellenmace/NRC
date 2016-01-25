@@ -56,11 +56,26 @@
 										</ul>
 									</div>
 			        		</div>
-			        		<div class="col-md-offset-2 col-md-4">
+			        		<div class="col-md-offset-1 col-md-5">
+		        				<?php if( have_rows('staff_contacts', $post_id) ): ?>
 			        			<div class="staff-contacts-info-box">
-			        				<!-- TODO: Repeat all staff contacts per post -->
-			        				<?php echo $staff_contacts['value']; ?>
+			        				<h3>Staff Contacts</h3>
+			        					<div class="row">
+			        				    <?php while( have_rows('staff_contacts', $post_id) ): the_row(); ?>
+											<div class="col-sm-6">
+				        				    	<div class="staff-contacts-individual">
+					        				        <p><?php the_sub_field('name'); ?></p>
+					        				        <ul class="list-unstyled">
+					        				        	<li><?php the_sub_field('title'); ?></li>
+					        				        	<li><?php the_sub_field('phone_number'); ?></li>
+					        				        	<li><a href="<?php the_sub_field('email'); ?>"><i class="fa fa-envelope"></i></a>&nbsp; &nbsp;<a href="<?php the_field('vcard') ?>">Vcard</a></li>
+					        				        </ul>
+				        				    	</div>
+			        				    	</div>
+			        				    <?php endwhile; ?>
+			        				    </div>
 			        			</div>
+		        				<?php endif; ?>
 			        		</div>
 			        	</div>
 			        </div>
@@ -87,7 +102,27 @@
 									</ul>
 								</div>
 			        		</div>
-			        		<div class="col-md-offset-2 col-md-4"></div>
+			        		<div class="col-md-offset-1 col-md-5">
+		        				<?php if( have_rows('staff_contacts', $post_id) ): ?>
+			        			<div class="staff-contacts-info-box">
+			        				<h3>Staff Contacts</h3>
+			        					<div class="row">
+			        				    <?php while( have_rows('staff_contacts', $post_id) ): the_row(); ?>
+											<div class="col-sm-6">
+				        				    	<div class="staff-contacts-individual">
+					        				        <p><?php the_sub_field('name'); ?></p>
+					        				        <ul class="list-unstyled">
+					        				        	<li><?php the_sub_field('title'); ?></li>
+					        				        	<li><?php the_sub_field('phone_number'); ?></li>
+					        				        	<li><a href="<?php the_sub_field('email'); ?>"><i class="fa fa-envelope"></i></a>&nbsp; &nbsp;<a href="<?php the_field('vcard') ?>">Vcard</a></li>
+					        				        </ul>
+				        				    	</div>
+			        				    	</div>
+			        				    <?php endwhile; ?>
+			        				    </div>
+			        			</div>
+		        				<?php endif; ?>
+			        		</div>
 			        	</div>
 			        </div>
 			        <div role="tabpanel" class="tab-pane fade" id="los-angeles">
@@ -113,7 +148,27 @@
 									</ul>
 								</div>
 			        		</div>
-			        		<div class="col-md-offset-2 col-md-4"></div>
+			        		<div class="col-md-offset-1 col-md-5">
+		        				<?php if( have_rows('staff_contacts', $post_id) ): ?>
+			        			<div class="staff-contacts-info-box">
+			        				<h3>Staff Contacts</h3>
+			        					<div class="row">
+			        				    <?php while( have_rows('staff_contacts', $post_id) ): the_row(); ?>
+											<div class="col-sm-6">
+				        				    	<div class="staff-contacts-individual">
+					        				        <p><?php the_sub_field('name'); ?></p>
+					        				        <ul class="list-unstyled">
+					        				        	<li><?php the_sub_field('title'); ?></li>
+					        				        	<li><?php the_sub_field('phone_number'); ?></li>
+					        				        	<li><a href="<?php the_sub_field('email'); ?>"><i class="fa fa-envelope"></i></a>&nbsp; &nbsp;<a href="<?php the_field('vcard') ?>">Vcard</a></li>
+					        				        </ul>
+				        				    	</div>
+			        				    	</div>
+			        				    <?php endwhile; ?>
+			        				    </div>
+			        			</div>
+		        				<?php endif; ?>
+			        		</div>
 			        	</div>
 			        </div>
 			        <div role="tabpanel" class="tab-pane fade" id="newport-beach">
@@ -139,7 +194,27 @@
 									</ul>
 								</div>
 			        		</div>
-			        		<div class="col-md-offset-2 col-md-4"></div>
+			        		<div class="col-md-offset-1 col-md-5">
+		        				<?php if( have_rows('staff_contacts', $post_id) ): ?>
+			        			<div class="staff-contacts-info-box">
+			        				<h3>Staff Contacts</h3>
+			        					<div class="row">
+			        				    <?php while( have_rows('staff_contacts', $post_id) ): the_row(); ?>
+											<div class="col-sm-6">
+				        				    	<div class="staff-contacts-individual">
+					        				        <p><?php the_sub_field('name'); ?></p>
+					        				        <ul class="list-unstyled">
+					        				        	<li><?php the_sub_field('title'); ?></li>
+					        				        	<li><?php the_sub_field('phone_number'); ?></li>
+					        				        	<li><a href="<?php the_sub_field('email'); ?>"><i class="fa fa-envelope"></i></a>&nbsp; &nbsp;<a href="<?php the_field('vcard') ?>">Vcard</a></li>
+					        				        </ul>
+				        				    	</div>
+			        				    	</div>
+			        				    <?php endwhile; ?>
+			        				    </div>
+			        			</div>
+		        				<?php endif; ?>
+			        		</div>
 			        	</div>
 			        </div>
 			        <div role="tabpanel" class="tab-pane fade" id="seattle">
@@ -165,7 +240,27 @@
 									</ul>
 								</div>
 			        		</div>
-			        		<div class="col-md-offset-2 col-md-4"></div>
+			        		<div class="col-md-offset-1 col-md-5">
+		        				<?php if( have_rows('staff_contacts', $post_id) ): ?>
+			        			<div class="staff-contacts-info-box">
+			        				<h3>Staff Contacts</h3>
+			        					<div class="row">
+			        				    <?php while( have_rows('staff_contacts', $post_id) ): the_row(); ?>
+											<div class="col-sm-6">
+				        				    	<div class="staff-contacts-individual">
+					        				        <p><?php the_sub_field('name'); ?></p>
+					        				        <ul class="list-unstyled">
+					        				        	<li><?php the_sub_field('title'); ?></li>
+					        				        	<li><?php the_sub_field('phone_number'); ?></li>
+					        				        	<li><a href="<?php the_sub_field('email'); ?>"><i class="fa fa-envelope"></i></a>&nbsp; &nbsp;<a href="<?php the_field('vcard') ?>">Vcard</a></li>
+					        				        </ul>
+				        				    	</div>
+			        				    	</div>
+			        				    <?php endwhile; ?>
+			        				    </div>
+			        			</div>
+		        				<?php endif; ?>
+			        		</div>
 			        	</div>
 			        </div>
 			        <div role="tabpanel" class="tab-pane fade" id="spokane">
@@ -191,7 +286,27 @@
 									</ul>
 								</div>
 			        		</div>
-			        		<div class="col-md-offset-2 col-md-4"></div>
+			        		<div class="col-md-offset-1 col-md-5">
+		        				<?php if( have_rows('staff_contacts', $post_id) ): ?>
+			        			<div class="staff-contacts-info-box">
+			        				<h3>Staff Contacts</h3>
+			        					<div class="row">
+			        				    <?php while( have_rows('staff_contacts', $post_id) ): the_row(); ?>
+											<div class="col-sm-6">
+				        				    	<div class="staff-contacts-individual">
+					        				        <p><?php the_sub_field('name'); ?></p>
+					        				        <ul class="list-unstyled">
+					        				        	<li><?php the_sub_field('title'); ?></li>
+					        				        	<li><?php the_sub_field('phone_number'); ?></li>
+					        				        	<li><a href="<?php the_sub_field('email'); ?>"><i class="fa fa-envelope"></i></a>&nbsp; &nbsp;<a href="<?php the_field('vcard') ?>">Vcard</a></li>
+					        				        </ul>
+				        				    	</div>
+			        				    	</div>
+			        				    <?php endwhile; ?>
+			        				    </div>
+			        			</div>
+		        				<?php endif; ?>
+			        		</div>
 			        	</div>
 			        </div>
 			        <div role="tabpanel" class="tab-pane fade" id="phoenix">
@@ -217,7 +332,27 @@
 									</ul>
 								</div>
 			        		</div>
-			        		<div class="col-md-offset-2 col-md-4"></div>
+			        		<div class="col-md-offset-1 col-md-5">
+		        				<?php if( have_rows('staff_contacts', $post_id) ): ?>
+			        			<div class="staff-contacts-info-box">
+			        				<h3>Staff Contacts</h3>
+			        					<div class="row">
+			        				    <?php while( have_rows('staff_contacts', $post_id) ): the_row(); ?>
+											<div class="col-sm-6">
+				        				    	<div class="staff-contacts-individual">
+					        				        <p><?php the_sub_field('name'); ?></p>
+					        				        <ul class="list-unstyled">
+					        				        	<li><?php the_sub_field('title'); ?></li>
+					        				        	<li><?php the_sub_field('phone_number'); ?></li>
+					        				        	<li><a href="<?php the_sub_field('email'); ?>"><i class="fa fa-envelope"></i></a>&nbsp; &nbsp;<a href="<?php the_field('vcard') ?>">Vcard</a></li>
+					        				        </ul>
+				        				    	</div>
+			        				    	</div>
+			        				    <?php endwhile; ?>
+			        				    </div>
+			        			</div>
+		        				<?php endif; ?>
+			        		</div>
 			        	</div>
 			        </div>
 			        <div role="tabpanel" class="tab-pane fade" id="las-vegas">
@@ -243,7 +378,27 @@
 									</ul>
 								</div>
 			        		</div>
-			        		<div class="col-md-offset-2 col-md-4"></div>
+			        		<div class="col-md-offset-1 col-md-5">
+	        				<?php if( have_rows('staff_contacts', $post_id) ): ?>
+			        			<div class="staff-contacts-info-box">
+			        				<h3>Staff Contacts</h3>
+			        					<div class="row">
+			        				    <?php while( have_rows('staff_contacts', $post_id) ): the_row(); ?>
+											<div class="col-sm-6">
+				        				    	<div class="staff-contacts-individual">
+					        				        <p><?php the_sub_field('name'); ?></p>
+					        				        <ul class="list-unstyled">
+					        				        	<li><?php the_sub_field('title'); ?></li>
+					        				        	<li><?php the_sub_field('phone_number'); ?></li>
+					        				        	<li><a href="<?php the_sub_field('email'); ?>"><i class="fa fa-envelope"></i></a>&nbsp; &nbsp;<a href="<?php the_field('vcard') ?>">Vcard</a></li>
+					        				        </ul>
+				        				    	</div>
+			        				    	</div>
+			        				    <?php endwhile; ?>
+			        				    </div>
+			        			</div>
+	        				<?php endif; ?>
+			        		</div>
 			        	</div>
 			        </div>
 			    </div>

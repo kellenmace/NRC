@@ -230,6 +230,26 @@ $about-sections-height: 65vh;
 			font-size: 16px;
 		}
 	}
+	.staff-contacts-info-box{
+		background-color: rgba(255,255,255,0.7);
+		height: ($about-sections-height * .70);
+		position: relative;
+		top: ($about-sections-height / 2.2);
+		transform: translateY(-50%);
+		padding: 10px 15px;
+		overflow-y: scroll;
+		.staff-contacts-individual{
+			height: 130px;
+			background-color: $medium-gray;
+			margin-bottom: 15px;
+			padding: 10px 15px;
+			color: white;
+			p{
+				// font-size: 14px;
+			}
+
+		}
+	}
 }
 
 //applies to all sections
