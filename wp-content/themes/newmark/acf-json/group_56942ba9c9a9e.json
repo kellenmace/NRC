@@ -64,6 +64,130 @@
             "maxlength": "",
             "readonly": 0,
             "disabled": 0
+        },
+        {
+            "key": "field_56a2b2d464a37",
+            "label": "Staff Contacts",
+            "name": "staff_contacts",
+            "type": "repeater",
+            "instructions": "Add Staff name, title, phone number and vCard in the fields below.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_56a2b31064a38",
+            "min": "",
+            "max": "",
+            "layout": "block",
+            "button_label": "Add Staff",
+            "sub_fields": [
+                {
+                    "key": "field_56a2b31064a38",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56a2b49464a39",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56a2b4ac64a3a",
+                    "label": "Phone Number",
+                    "name": "phone_number",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "(555) 555-5555",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56a2b757fb7e3",
+                    "label": "Email",
+                    "name": "email",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "###@newmarkrealtycapital.com",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56a2b4c464a3b",
+                    "label": "vCard",
+                    "name": "vcard",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -83,5 +207,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1453493131
+    "modified": 1453504962
 }
