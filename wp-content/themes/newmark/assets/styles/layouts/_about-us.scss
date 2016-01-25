@@ -10,6 +10,9 @@ $about-sections-height: 65vh;
 //about us page wrapper
 .about-us-page-wrap{
 	padding-bottom: 100px;
+	@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+		overflow-x: hidden;
+	}
 }
 
 //fixed subnav styles
@@ -36,9 +39,15 @@ $about-sections-height: 65vh;
 	li{
 		&:nth-child(odd){
 			background-color: $light-gray;
+			@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+				background: $light-gray-ie;	
+			}
 		}
 		&:nth-child(even){
 			background-color: $medium-gray;
+			@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+				background: $medium-gray-ie;	
+			}
 		}
 		&.active{
 			background-color: $brand-primary;
@@ -237,4 +246,13 @@ $about-sections-height: 65vh;
 	height: $about-sections-height;
 	background-size: cover;
 	background-position: center center;
+	@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+		height: 87vh;
+	}
 }
+
+// *{
+// 	outline: 1px solid red;
+// 	background-color: pink;
+// 	overflow-x: hidden;
+// }

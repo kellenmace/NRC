@@ -75,6 +75,9 @@ $producer-image-height: 205.188px;
 	background: $light-gray;
 	padding: 15px;
 	height: $producer-image-height;
+	@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+		background: $light-gray-ie;	
+	}
 	@media only screen and (max-width: 1199px){
 		height: ($producer-image-height - 38);
 	}
@@ -126,9 +129,15 @@ $producer-image-height: 205.188px;
 			text-align: center;
 			&:nth-child(odd){
 				background-color: $light-gray;
+				@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+					background: $light-gray-ie;	
+				}
 			}
 			&:nth-child(even){
 				background-color: #eee;
+				// @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+				// 	background: #efefef;	
+				// }
 			}
 			h3{
 				margin-top: 10px;
@@ -192,6 +201,9 @@ $producer-image-height: 205.188px;
 				width: 23%;
 				height: 13vw;
 				float: left;
+				@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+					background: $light-gray-ie;	
+				}
 				&:hover, &:visited, &:active, &:link{
 					text-decoration: none;
 					background-color: $brand-primary;
