@@ -32,6 +32,9 @@
 	box-shadow: 0 8px 6px -6px black;
 	width: 262px;
 	margin-bottom: 20px;
+	@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+		background: $light-gray-ie;	
+	}
 	figcaption{
 		padding-left: 8px;
 		padding-bottom: 8px;

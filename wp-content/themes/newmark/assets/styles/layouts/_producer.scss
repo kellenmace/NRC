@@ -25,6 +25,9 @@
 	.producer-card{
 		background-color: $light-gray;
 		width: 261px;
+		@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+			background: $light-gray-ie;	
+		}
 		@include ipad-landscape{
 			width: 211px;
 		}
@@ -136,9 +139,15 @@
 		}
 		&:nth-child(odd){
 			background-color: $light-gray;
+			@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+				background: $light-gray-ie;	
+			}
 		}
 		&:nth-child(even){
 			background-color: $medium-gray;
+			@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+				background: $medium-gray-ie;	
+			}
 			@include iphone5-portrait{
 				background: none;
 			}
