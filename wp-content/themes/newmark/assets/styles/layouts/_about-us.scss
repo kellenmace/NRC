@@ -1,4 +1,5 @@
 $about-font-size: 22px;
+$about-sections-height: 65vh;
 
 //adjusting top padding to account for fixed subnav
 .about-us{
@@ -219,11 +220,21 @@ $about-font-size: 22px;
 			}
 		}
 	}
+	.location-info-box{
+		background-color: rgba(255,255,255,0.7);
+		padding: 10px 15px;
+		position: relative;
+		top: ($about-sections-height / 2.2);
+		transform: translateY(-50%);
+		li{
+			font-size: 16px;
+		}
+	}
 }
 
 //applies to all sections
 #about-newmark, #transactions-and-rates, #services, #lenders, #contact {
-	height: 65vh;
+	height: $about-sections-height;
 	background-size: cover;
 	background-position: center center;
 }

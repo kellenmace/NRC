@@ -63,14 +63,16 @@
 										<?php
 											$transactions = get_posts(array(
 												'post_type' => 'transaction',
+												'posts_per_page' => -1, //all posts, not default 5
 												'meta_query' => array(
 													array(
 														'key' => 'transaction_contacts', // name of custom field
-														'value' => '"' . get_the_ID() . '"', // matches exaclty "123", not just 123. This prevents a match for "1234"
+														'value' => '"' . get_the_ID() . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
 														'compare' => 'LIKE'
 													)
 												)
 											));
+
 										?>
 										<?php if($transactions) : ?>
 											<?php foreach($transactions as $t) : ?>
@@ -144,7 +146,7 @@
 
 							<ul>
 
-							<?php while( have_rows('resources_download') ): the_row(); 
+							<?php while( have_rows('resources_download') ): the_row();
 
 								// vars
 								$file = get_sub_field('external_file_upload');
