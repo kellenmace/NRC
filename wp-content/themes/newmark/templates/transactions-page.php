@@ -18,7 +18,7 @@
 	<div class="col-md-12">
 		<div class="search">
 			<span class="fa fa-search"></span>
-			<input type="text" class="quicksearch" placeholder="e.g. Phoenix, retail, Heagerty, permanent" />
+			<input type="text" class="quicksearch" placeholder="e.g. Phoenix, retail, producer, permanent" />
 		</div>
 	</div>
 	<!-- <div class="col-md-3">

@@ -59,7 +59,7 @@
 									<td><?php the_field('term'); ?></td>
 								</tr>
 								<tr>
-									<th>Amortized: </th>
+									<th>Amortization: </th>
 									<td><?php the_field('amortized'); ?></td>
 								</tr>
 							</table>
