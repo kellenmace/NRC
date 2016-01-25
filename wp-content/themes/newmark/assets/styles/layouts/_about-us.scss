@@ -1,5 +1,9 @@
 $about-font-size: 22px;
 $about-sections-height: 65vh;
+@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+	$about-sections-height: 87vh;
+}
+
 
 //adjusting top padding to account for fixed subnav
 .about-us{
@@ -246,9 +250,6 @@ $about-sections-height: 65vh;
 	height: $about-sections-height;
 	background-size: cover;
 	background-position: center center;
-	@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
-		height: 87vh;
-	}
 }
 
 // *{
