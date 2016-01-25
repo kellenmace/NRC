@@ -42,13 +42,13 @@ $about-sections-height-ie: 87vh;
 		&:nth-child(odd){
 			background-color: $light-gray;
 			@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
-				background: $light-gray-ie;	
+				background: $light-gray-ie;
 			}
 		}
 		&:nth-child(even){
 			background-color: $medium-gray;
 			@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
-				background: $medium-gray-ie;	
+				background: $medium-gray-ie;
 			}
 		}
 		&.active{
@@ -83,9 +83,25 @@ $about-sections-height-ie: 87vh;
 		color: $brand-primary;
 		h1{
 			margin-top: 0;
+			@include mobile {
+				padding:0 20px;
+				font-size: 24px;
+			};
+			// @include iphone5-landscape {
+			// 	padding:0 20px;
+			// 	font-size: 24px;
+			// };
 		}
 		p{
 			font-size: $about-font-size;
+			@include mobile {
+				padding: 0 20px;
+				font-size: 16px;
+			};
+			// @include iphone5-landscape {
+			// 	padding: 0 20px;
+			// 	font-size: 16px;
+			// };
 		}
 	}
 }
@@ -93,16 +109,28 @@ $about-sections-height-ie: 87vh;
 //transactions and rates section
 #transactions-and-rates{
 	background: url('../images/about-transactions-rates-background.jpg');
+	@include mobile {
+		display: none;
+	};
 }
 
 //services section
 #services{
 	background: url('../images/about-services-background.jpg');
 	padding-top: 15px;
+	@include mobile {
+		height: 580px !important;
+	};
 	.nav-tabs{
 		margin-left: 15px;
 		margin-right: 15px;
+		@include mobile {
+			margin: 0;
+		};
 		li{
+			@include mobile {
+				width: 100%;
+			};
 			width: (100% / 5);
 			&:nth-child(odd){
 				background-color: white;
@@ -138,10 +166,22 @@ $about-sections-height-ie: 87vh;
 		padding-top: 7%;
 		h1{
 			margin-top: 10px;
+			@include mobile {
+				padding:0 20px;
+				font-size: 24px;
+			};
 		}
 		p{
 			font-size: $about-font-size;
-
+			@include mobile {
+				padding: 0 20px;
+				font-size: 16px;
+			};
+		}
+		h2 {
+			@include mobile {
+				padding: 0 20px;
+			};
 		}
 	}
 }
@@ -151,9 +191,17 @@ $about-sections-height-ie: 87vh;
 	background: url('../images/about-lenders-background.jpg');
 	h1, h2, h3, h4, h5, h6{
 		margin-top: 0;
+		@include mobile {
+			padding:0 20px;
+			font-size: 24px;
+		};
 	}
 	p{
 		font-size: $about-font-size;
+		@include mobile {
+			padding: 0 20px;
+			font-size: 16px;
+		};
 	}
 	.lenders-content{
 		padding-top: 7%;
@@ -166,6 +214,9 @@ $about-sections-height-ie: 87vh;
 
 //contact section
 #contact{
+	@include mobile {
+		padding: 0;
+	};
 	background-color: white;
 	background-size: cover;
 	background-position: center center;
@@ -206,7 +257,13 @@ $about-sections-height-ie: 87vh;
 	.nav-tabs{
 		margin-left: 15px;
 		margin-right: 15px;
+		@include mobile {
+			margin: 0;
+		};
 		li{
+			@include mobile {
+				width: 100%;
+			};
 			width: (100% / 8);
 			text-align: center;
 			&:nth-child(odd){
@@ -251,6 +308,26 @@ $about-sections-height-ie: 87vh;
 			font-size: 16px;
 		}
 	}
+	.staff-contacts-info-box{
+		background-color: rgba(255,255,255,0.7);
+		height: ($about-sections-height * .70);
+		position: relative;
+		top: ($about-sections-height / 2.2);
+		transform: translateY(-50%);
+		padding: 10px 15px;
+		overflow-y: scroll;
+		.staff-contacts-individual{
+			height: 130px;
+			background-color: $medium-gray;
+			margin-bottom: 15px;
+			padding: 10px 15px;
+			color: white;
+			p{
+				// font-size: 14px;
+			}
+
+		}
+	}
 }
 
 //applies to all sections
@@ -261,6 +338,9 @@ $about-sections-height-ie: 87vh;
 	@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
 		height: $about-sections-height-ie;
 	}
+	@include mobile {
+		height: 700px;
+	};
 }
 
 // *{
