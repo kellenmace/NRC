@@ -121,6 +121,9 @@ $about-sections-height-ie: 87vh;
 	@include iphone6-plus-landscape{
 		height: 76vh;
 	}
+	@include iphone6-plus-portrait{
+		height: 86vh;
+	}
 	@include iphone6-landscape{
 		height: 73vh;
 	}
@@ -135,7 +138,7 @@ $about-sections-height-ie: 87vh;
 	}
 }
 
-//about section - first 
+//about section - first section on page above scroll to subnav sections
 #about-newmark{
 	background: url('../images/about-background.jpg');
 	background-size: cover; 
@@ -226,35 +229,195 @@ $about-sections-height-ie: 87vh;
 	}
 }
 
-//transactions and rates section
+//transactions and rates section //second section down
+// note bootstrap columns are set in the template transactions-and-rates.php
 #transactions-and-rates{
 	background: url('../images/about-transactions-rates-background.jpg');
 	background-size: cover; //full width
 	background-repeat: no-repeat; //remove tiling of background image
 	background-position-x: 50%; //scoot image to be centered
+	.col-xs-offset-1{ //stack the two sections on vertical phone
+		@include iphone6-plus-portrait{
+			width: 0;
+			margin-left: 0;
+		}
+		@include iphone6-portrait{
+			width: 0;
+			margin-left: 0;
+		}
+		@include iphone5-landscape{
+			width: 0;
+			margin-left: 0;
+		}
+		@include iphone5-portrait{
+			width: 0;
+			margin-left: 0;
+		}
+	}
+	.col-xs-5{
+		@include iphone6-plus-portrait{
+			width: 100%;
+		}
+		@include iphone6-portrait{
+			width: 100%;
+		}
+		@include iphone5-landscape{
+			width: 50%;
+		}
+		@include iphone5-portrait{
+			width: 100%;
+		}
+	}
 	.recent-transactions-box{
 		background-color: rgba(255,255,255,0.7);
 		padding: 10px 15px;
 		position: relative;
+		height: ($about-sections-height / 2.2);
 		top: ($about-sections-height / 2.2);
 		transform: translateY(-50%);
+		@include ipad-landscape{ //adjust height and top position per screen
+			height: ($about-sections-height / 2.6);
+		}
+		@include ipad-portrait{
+			height: 63vw;
+			top: 39vw;
+		}
+		@include iphone6-plus-landscape{
+			height: 34vw;
+		    top: 20vw;
+		}
+		@include iphone6-plus-portrait{
+			height: 80vw;
+		    top: 42vw;
+		}
+		@include iphone6-landscape{
+			height: 30vw;
+		    top: 19vw;
+		}
+		@include iphone6-portrait{
+			height: 76vw;
+		    top: 42vw;
+		}
+		@include iphone5-landscape{
+		    height: 31vw;
+		    top: 17vw;
+		    padding-top: 0;
+		}
+		@include iphone5-portrait{
+			height: 70vw;
+		    top: 38vw;
+		}
+
+		h3{
+			margin-bottom: 20px; //spacing between recent transactions and carousel
+			@include iphone6-plus-landscape{
+				margin: 10px 0;
+			}
+			@include iphone6-landscape{
+				margin: 5px 0;
+			}
+			@include iphone6-portrait{
+				margin: 5px 0;
+			}
+			@include iphone5-landscape{
+				margin: 2px 0;
+			}
+			@include iphone5-portrait{
+				margin: 2px 0;
+			}
+		}
 		.row:nth-child(2){
 			margin-top: 15px;
+			@include iphone5-landscape{
+				margin-top: 5px;
+			}
 		}
 		.carousel-indicators{
-			bottom: 10px;
-			margin-left: -10%;
-			margin-bottom: 0;
+			top: 13.5vw; // position indicators below transactions
+			// margin-left: -10%;
+			// margin-bottom: 0;
+			@include ipad-landscape{
+				top: 15vw;
+			}
+			@include ipad-portrait{
+				top: 50vw;
+			}
+			@include iphone6-plus-landscape{
+				top: 23vw;
+			}
+			@include iphone6-plus-portrait{
+				top: 57vw;
+			}
+			@include iphone6-landscape{
+				top: 21vw;
+			}
+			@include iphone6-portrait{
+				top: 57vw;
+			}
+			@include iphone5-landscape{
+				top: 23.5vw;
+			}
+			@include iphone5-portrait{
+				top: 53.5vw;
+			}
+			li{ //mess with indicators to match design
+				width: 8px;
+				height: 8px;
+				border: none;
+				border-radius: 8px;
+    			background-color: $newmark-gray;
+    			margin: 0 2px;
+    		}
+    		li.active{
+    			background-color: $brand-primary;
+    		}
 		}
 	}
 	.transaction-rates{
 		background-color: rgba(0,71,133,0.8);
 		position: relative;
-		top: ($about-sections-height / 2);
+		top: ($about-sections-height / 2.1);
 		transform: translateY(-50%);
-		padding: 10px 0 30px 30px;
+		padding: 10px 30px 30px 30px;
+		@include ipad-portrait{ //position rates below on stacked version and overflow if not enough height
+			top: 32vw;
+		}
+		@include iphone6-plus-landscape{
+			height: 34vw;
+		    top: 20vw;
+		    overflow-y: scroll;
+		}
+		@include iphone6-plus-portrait{
+		    top: 32vw;
+		    height: 60vw;
+			overflow-y: scroll;
+		}
+		@include iphone6-landscape{
+			height: 30vw;
+		    top: 19vw;
+		    overflow-y: scroll;
+		}
+		@include iphone6-portrait{
+		    top: 27vw;
+		    height: 46vw;
+			overflow-y: scroll;
+		}
+		@include iphone5-landscape{
+		    height: 31vw;
+		    top: 17vw;
+		    overflow-y: scroll;
+		    padding-top: 0;
+		}
+		@include iphone5-portrait{
+		    top: 32vw;
+		    height: 58vw;
+			overflow-y: scroll;
+		}
 		h3{
 			color: white;
+			@include iphone5-landscape{ //match height position top down
+				margin: 2px 0;
+			}
 		}
 	}
 }
