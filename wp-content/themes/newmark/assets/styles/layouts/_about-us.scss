@@ -133,7 +133,7 @@ $about-sections-height-ie: 87vh;
 			padding: 0px 7vw 20vw 7vw; //shorten length of paragraph and center it slightly higher for vertical screens
 		}
 		@include iphone6-plus-landscape{
-			padding-top: 16vw;
+			padding-top: 20vw;
 		}
 		h1{
 			margin-top: 0;
@@ -226,9 +226,12 @@ $about-sections-height-ie: 87vh;
 			}
 			@include mobile {
 				margin: 0;
-			};
-			@include ipad-landscape, ipad-portrait{
+			}
+			@include ipad-landscape{
 				width: (100% / 3);
+			}
+			@include ipad-portrait{
+				width: (100% / 3);	
 			}
 		}
 	}
@@ -477,11 +480,14 @@ $about-sections-height-ie: 87vh;
 		transform: translateY(-50%);
 		padding: 10px 15px;
 		overflow-y: scroll;
+		@include ipad-landscape{
+			height: ($about-sections-height * .785);
+		}
 		@include ipad-portrait{
 			width: 44%;
 			float: right;
 			margin-right: 3%;
-			height: ($about-sections-height * .39);
+			height: ($about-sections-height * .55);
 		}
 		@include iphone6-plus-landscape{
 			top: 16vw;
