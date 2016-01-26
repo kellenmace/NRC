@@ -68,7 +68,7 @@
 					        				        <ul class="list-unstyled">
 					        				        	<li><?php the_sub_field('title'); ?></li>
 					        				        	<li><?php the_sub_field('phone_number'); ?></li>
-					        				        	<li><a href="<?php the_sub_field('email'); ?>"><i class="fa fa-envelope"></i></a>&nbsp; &nbsp;<a href="<?php the_field('vcard') ?>">Vcard</a></li>
+					        				        	<li><a href="<?php the_sub_field('email'); ?>"><i class="fa fa-envelope"></i></a>&nbsp; &nbsp;<a href="<?php the_sub_field('vcard'); ?>">Vcard</a></li>
 					        				        </ul>
 				        				    	</div>
 			        				    	</div>
