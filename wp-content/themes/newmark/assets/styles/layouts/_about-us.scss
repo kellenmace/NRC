@@ -52,7 +52,7 @@ $about-sections-height-ie: 87vh;
 		padding-right: 15px; //align tabs to the right on mobile devices
 	}
 	@include iphone6-plus-landscape{ //push static nav bar down below header bar
-		top: 68px;
+		top: 67px;
 	}
 	@include iphone6-portrait{
 		padding-left: 0;
@@ -429,11 +429,22 @@ $about-sections-height-ie: 87vh;
 	background-repeat: no-repeat; //remove tiling of background image
 	background-position-x: 75%; //scoot image over to show more blue and fill up bottom space
 	padding-top: 15px;
-	// @include mobile { //trying similar height for all sections on mobile
+	// @include mobile { // redacted trying similar height for all sections on mobile
 	// 	height: 580px !important;
 	// };
 	@include iphone6-plus-landscape{
-		background-position-y: -185%;
+		background-position-y: 0%; //adjust ribbon to similar position
+		padding-top: 3px;
+	}
+	@include iphone6-portrait{
+	    background-position-x: 62%;
+	}
+	@include iphone5-landscape{
+		padding-top: 10px;
+		background-position-y: 0%;
+	}
+	@include iphone5-portrait{
+		background-position-x: 57%;
 	}
 	.nav-tabs{
 		margin-left: 15px;
@@ -442,8 +453,12 @@ $about-sections-height-ie: 87vh;
 			border-bottom: none; //remove bottom line on stacked tabs
 			margin-top: 5px; //move tabs down for even spacing on the sides
 		}
+		@include iphone5-landscape{
+			width: 40%;
+			margin: 0;
+		}
 		li{
-			// @include mobile { leaving tab mode on ipad vertical
+			// @include mobile { redacted leaving tab mode on ipad vertical
 			// 	width: 100%;
 			// };
 			width: (100% / 5);
@@ -467,6 +482,21 @@ $about-sections-height-ie: 87vh;
 					border-color: $brand-primary;
 					color: white;
 				}
+				@include iphone6-plus-portrait{ //adjust padding here to change size of the tab button
+					padding: 5px 7px;
+				}
+				@include iphone6-landscape{
+					padding: 5px 3px;
+				}
+				@include iphone6-portrait{
+					padding: 5px 7px;
+				}
+				@include iphone5-landscape{
+					padding: 5px 7px;
+				}
+				@include iphone5-portrait{
+					padding: 5px 7px;
+				}
 			}
 			&.active{
 				a{
@@ -475,14 +505,32 @@ $about-sections-height-ie: 87vh;
 					color: white;
 				}
 			}
-			@include mobile {
-				margin: 0;
-			}
-			@include ipad-landscape{
+			// @include mobile { 
+			// 	margin: 0;
+			// }
+			@include ipad-landscape{ //adjust tabs to show more per device
 				width: (100% / 3);
 			}
 			@include ipad-portrait{
 				width: (100% / 3);
+			}
+			@include iphone6-plus-landscape{
+				width: (100% / 3);
+			}
+			@include iphone6-plus-portrait{
+				width: (100% / 1);
+			}
+			@include iphone6-landscape{
+				width: (100% / 3);
+			}
+			@include iphone6-portrait{
+				width: (100% / 1);
+			}
+			@include iphone5-landscape{
+				width: (100% / 1);
+			}
+			@include iphone5-portrait{
+				width: (100% / 1);
 			}
 		}
 	}
@@ -494,39 +542,130 @@ $about-sections-height-ie: 87vh;
 		@include iphone6-plus-landscape{
 			padding-top: 0vw;
 		}
+		@include iphone6-plus-portrait{
+			padding-top: 5%;
+		}
+		@include iphone6-landscape{
+			padding-top: 0vw;
+		}
+		@include iphone6-portrait{
+			padding-top: 3%;
+		}
+		@include iphone5-landscape{
+			padding: 11% 0 0 4vw;
+		    margin-left: 4vw;
+		}
+		@include iphone5-portrait{
+			padding-top: 0;
+		}
 		h1{
 			margin-top: 10px;
-			@include mobile {
-				// padding:0 20px; //global padding above for the content div
-				font-size: 36px;
-			}
-			@include iphone6-plus-landscape{
+			// @include mobile { //redacted font size too small on ipad
+			// padding:0 20px; 
+			// 	font-size: 36px;
+			// }
+			@include iphone6-plus-landscape{ //type adjustments on phone
 				font-size: 24px;
 				padding: 0;
 				margin: 0;
 			}
-		}
-		p{
-			font-size: $about-font-size;
-			@include mobile {
-				// padding:0 20px; //global padding above for the content div
+			@include iphone6-plus-portrait{ 
+				font-size: 24px;
+				padding: 0;
+				margin: 0;
+			}
+			@include iphone6-landscape{ 
+				font-size: 24px;
+				padding: 0;
+				margin: 0;
+			}
+			@include iphone6-portrait{ 
+				font-size: 24px;
+				padding: 0;
+				margin: 0;
+			}
+			@include iphone5-landscape{ 
 				font-size: 16px;
 				padding: 0;
-				
+				margin: 0;
 			}
-			@include iphone6-plus-landscape{
-				font-size: 14px;
-				line-height: 17px;
+			@include iphone5-portrait{ 
+				font-size: 22px;
+				padding: 0;
+				margin: 0;
 			}
 		}
 		h2 {
 			// @include mobile {
 			// 	// padding:0 20px; //global padding above for the content div
 			// };
-			@include iphone6-plus-landscape{
+			@include iphone6-plus-landscape{ //type adjustments on phone
 				font-size: 18px;
 				padding: 0;
 				margin: 15px 0 5px 0;
+			}
+			@include iphone6-plus-portrait{
+				font-size: 18px;
+				padding: 0;
+				margin: 15px 0 5px 0;
+			}
+			@include iphone6-landscape{
+				font-size: 18px;
+				padding: 0;
+				margin: 5px 0 0 0;
+			}
+			@include iphone6-portrait{
+				font-size: 18px;
+				padding: 0;
+				margin: 15px 0 5px 0;
+			}
+			@include iphone5-landscape{
+				font-size: 12px;
+				padding: 0;
+				margin: 0 0 0 0;
+			}
+			@include iphone5-portrait{
+				font-size: 16px;
+				padding: 0;
+				margin: 5px 0 0 0;
+			}
+		}
+		p{
+			font-size: $about-font-size;
+			// @include mobile { //redacted font size too small on ipad
+			// 	padding:0 20px; 
+			// 	font-size: 16px;
+			// 	padding: 0;
+			// }
+			@include iphone6-plus-landscape{ //type adjustments on phone
+				font-size: 14px;
+				line-height: 17px;
+				padding-top: 5px;
+			}
+			@include iphone6-plus-portrait{
+				font-size: 14px;
+				line-height: 17px;
+				padding-top: 5px;
+			}
+			@include iphone6-landscape{
+				font-size: 14px;
+				line-height: 17px;
+				padding-top: 5px;
+			}
+			@include iphone6-portrait{
+				font-size: 14px;
+				line-height: 17px;
+				padding-top: 5px;
+			}
+			@include iphone5-landscape{
+				font-size: 13px;
+				line-height: 17px;
+				padding-top: 2px;
+			}
+			@include iphone5-portrait{
+				font-size: 14px;
+				line-height: 17px;
+				padding-top: 5px;
 			}
 		}
 	}
@@ -538,24 +677,31 @@ $about-sections-height-ie: 87vh;
 	background-size: cover; //full width
 	background-repeat: no-repeat; //remove tiling of background image
 	background-position-x: 88%; //scoot image over to show it centered
-	// .col-sm-6{
-	// 	@include iphone6-plus-landscape{
-	// 		width: 50%;
-	// 	}
-	// }
-	// .col-sm-4{
-	// 	@include iphone6-plus-landscape{
-	// 		width: 50%;
-	// 		position: absolute;
-	// 		right: 0;
-	// 		top: 40px;
-	// 		z-index: 10;
-	// 		height: 245px;
-	// 		overflow-y: scroll;
-	// 		display: block;
-	// 		// background-color: rgba(255,255,255,.5);
-	// 	}
-	// }
+	@include ipad-portrait{
+		background-position-x: 65%; //centered image
+	}
+	.col-xs-6{
+		width: 46%;
+		margin-left: 2%;
+		@include iphone6-plus-portrait{ //manipulate column widths outside of bootstrap for vertical vs. horizontal
+			width: 96%;
+			margin-left: 2%;
+			padding: 0 8%;
+		}
+		@include iphone6-portrait{
+			width: 96%;
+			margin-left: 2%;
+			padding: 0 8%;
+		}
+		@include iphone5-landscape{
+			width: 47%;
+		}
+		@include iphone5-portrait{
+			width: 96%;
+			margin-left: 2%;
+			padding: 0 8%;
+		}
+	}
 	h1, h2, h3, h4, h5, h6{
 		margin-top: 0;
 		// @include mobile { //andre - note semicolon after mobile query
@@ -563,32 +709,101 @@ $about-sections-height-ie: 87vh;
 		// 	font-size: 24px;
 		// };
 	}
+	h2{
+		@include ipad-landscape{ //work heading to fit in copy below
+			font-size: 36px;
+		}
+		@include ipad-portrait{
+			font-size: 31px;
+		}
+		@include iphone6-landscape{
+			font-size: 24px;
+		}
+		@include iphone6-portrait{
+			font-size: 24px;
+			margin-bottom: 0;
+		}
+		@include iphone5-landscape{
+			font-size: 16px;
+			margin-bottom: 0;
+		}
+		@include iphone5-portrait{
+			font-size: 18px;
+			margin-bottom: 0;
+		}
+	}
 	p{
 		font-size: $about-font-size;
-		// @include mobile {
+		// @include mobile { //redacted
 		// 	padding: 0 20px;
 		// 	font-size: 16px;
 		// }
-		@include iphone6-plus-landscape{
+		@include iphone6-plus-landscape{ //control paragraph size per screen size
 			font-size: 14px;
+		}
+		@include iphone6-plus-portrait{
+			font-size: 16px;
+		}
+		@include iphone6-landscape{
+			font-size: 14px;
+			line-height: 17px;
+		}
+		@include iphone6-portrait{
+			font-size: 14px;
+			line-height: 17px;
+		}
+		@include iphone5-landscape{
+			font-size: 12px;
+			line-height: 15px;
+		}
+		@include iphone5-portrait{
+			font-size: 14px;
+			line-height: 17px;
 		}
 	}
 	.lenders-content{
 		padding-top: 7%;
-		@include iphone6-plus-landscape{
+		@include iphone6-plus-landscape{ //move copy up and down within the cell once height is set
 			padding-top: 5%;
+		}
+		@include iphone6-landscape{
+			padding-top: 3%;
+		}
+		@include iphone5-landscape{
+			padding-top: 3%;
 		}
 	}
 	.lenders-list{
 		background-color: rgba(255,255,255,0.7);
 		padding: 15px 15px;
-	}
-	@include ipad-portrait{
-		background-position-x: 65%; //centered image
+		@include iphone6-plus-landscape{ //control height of the list of lenders and scroll on short screens
+			height: 29vw;
+			overflow-y: scroll;
+		}
+		@include iphone6-plus-portrait{
+			height: 69vw;
+			overflow-y: scroll;
+		}
+		@include iphone6-landscape{
+			height: 29vw;
+			overflow-y: scroll;
+		}
+		@include iphone6-portrait{
+			height: 62vw;
+			overflow-y: scroll;
+		}
+		@include iphone5-landscape{
+			height: 25.5vw;
+			overflow-y: scroll;
+		}
+		@include iphone5-portrait{
+			height: 56vw;
+			overflow-y: scroll;
+		}
 	}
 }
 
-//contact section
+//contact section - last section go horsie!
 #contact{
 	p{
 		line-height: 1.25vw;
