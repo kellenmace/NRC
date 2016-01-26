@@ -46,22 +46,28 @@
 						?>
 						<div class="table-responsive">
 							<table class="table">
-								<tr>
-									<th>Financing Type: </th>
-									<td><?php the_field('financing_type'); ?></td>
-								</tr>
+								<?php if(get_field('financing_type')) : ?>
+									<tr>
+										<th>Financing Type: </th>
+										<td><?php the_field('financing_type'); ?></td>
+									</tr>
+								<?php endif; ?>
 								<tr>
 									<th>Property Type: </th>
 									<td><?php echo $property_label; ?></td>
 								</tr>
-								<tr>
-									<th>Term: </th>
-									<td><?php the_field('term'); ?></td>
-								</tr>
-								<tr>
-									<th>Amortization: </th>
-									<td><?php the_field('amortized'); ?></td>
-								</tr>
+								<?php if(get_field('term')) : ?>
+									<tr>
+										<th>Term: </th>
+										<td><?php the_field('term'); ?></td>
+									</tr>
+								<?php endif; ?>
+								<?php if(get_field('amortized')) : ?>
+									<tr>
+										<th>Amortization: </th>
+										<td><?php the_field('amortized'); ?></td>
+									</tr>
+								<?php endif; ?>
 							</table>
 						</div>
 
