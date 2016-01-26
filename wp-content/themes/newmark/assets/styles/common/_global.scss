@@ -11,7 +11,7 @@ body{
 		background-color: white;
 		min-height: 75px;
 		@include iphone6-plus-landscape{
-			min-height: 87px;
+			min-height: 67px;
 		}
 	}
 	&.home{
@@ -114,6 +114,9 @@ body{
 			float: right;
 			padding-top: 5px;
 			margin-right: 40px;
+			@include ipad-landscape{
+				padding-top: 12px;
+			}
 		}
 	}
 

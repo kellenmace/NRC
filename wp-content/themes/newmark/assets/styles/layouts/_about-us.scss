@@ -1,7 +1,12 @@
 $about-font-size: 22px;
-$about-sections-height: 65vh;
+$about-sections-height: 87vh;
 $about-sections-height-ie: 87vh;
 
+
+// Page notes
+// - long scrolling page with each section given an ID
+// - bootstrap elements are controlled within both in About page template, as well as individual section templates (see "_about-sections" sub directory)
+// - further control of bootstrap elements are controlled within WP edit About page
 
 //adjusting top padding to account for fixed subnav
 .about-us{
@@ -29,6 +34,29 @@ $about-sections-height-ie: 87vh;
 	margin-left: auto;
 	padding-left: 30px;
 	padding-right: 30px;
+	.navbar-nav{
+		@include mobile{ //rebuild static subnav bar to keep in tab format, override bootstrap stacked button nav
+			float: right;
+			margin: 0;
+			padding: 0;
+				li{
+					display: inline-block;
+				a{
+					padding-top: 10px;
+					padding-bottom: 10px;
+				}
+			}
+		}
+	}
+	@include mobile{
+		padding-right: 15px; //align tabs to the right on mobile devices
+	}
+	@include iphone6-plus-landscape{ //push static nav bar down below header bar
+		top: 68px;
+	}
+	@include iphone6-portrait{
+		padding-left: 0;
+	}
 	@media only screen and (min-width: 768px){
 		width: 750px;
 	}
@@ -41,7 +69,7 @@ $about-sections-height-ie: 87vh;
 	li{
 		&:nth-child(odd){
 			background-color: $light-gray;
-			@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+			@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){ //light gray too faded on PC, insert shade darker colors
 				background: $light-gray-ie;
 			}
 		}
@@ -61,7 +89,7 @@ $about-sections-height-ie: 87vh;
 			}
 		}
 		a{
-			padding: 5px 10px;
+			padding: 11px 10px 5px 10px;
 			&:focus{
 				background-color: $brand-primary;
 				color: white;
@@ -70,35 +98,127 @@ $about-sections-height-ie: 87vh;
 				background-color: $brand-primary;
 				color: white;
 			}
+			@include iphone5-portrait{ //fit subnav on this dern tiny screen
+				padding: 11px 5px 5px 5px;
+			}
 		}
-
 	}
 }
 
-//about section
+//applies to all sections  
+//moved up above sections for customization below on background positions
+#about-newmark, #transactions-and-rates, #services, #lenders, #contact {
+	height: $about-sections-height;
+	background-size: cover;
+	background-position: center center;
+	@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+		height: $about-sections-height-ie;
+	}
+	@include mobile { 
+		height: 91vh; //reset section heights to be the same for all mobile environments
+		background-position-x: 50%; //standard position of background image is centered in the middle
+	}
+	@include iphone6-plus-landscape{
+		height: 76vh;
+	}
+	@include iphone6-landscape{
+		height: 73vh;
+	}
+	@include iphone6-portrait{
+		height: 82vh;
+	}
+	@include iphone5-landscape{
+		height: 66vh;
+	}
+	@include iphone5-portrait{
+		height: 81vh;
+	}
+}
+
+//about section - first 
 #about-newmark{
 	background: url('../images/about-background.jpg');
+	background-size: cover; 
+	background-repeat: no-repeat; // added remove tiling of background image
+	background-position-x: 100%;
+	@include ipad-landscape{
+		background-position-x: 94%; //on all screens move over background to the left to see end of orange ribbon
+	}
+	@include ipad-portrait{
+		background-position-x: 100%; 
+	}
+	@include iphone6-plus-portrait{
+		background-position-x: 97%;
+	}
+	@include iphone6-landscape{
+		background-position-y: 60%;
+	}
+	@include iphone6-portrait{
+		background-position-x: 96%;
+	}
+	@include iphone5-portrait{
+		background-position-x: 98%;
+	}
 	.about-content{
 		@include center-center;
 		color: $brand-primary;
+		@include ipad-landscape {
+			top: 44%; //shorten center-center on top to move paragraph up slightly above center
+		}
+		@include mobile {
+			padding: 0px 7vw 21vw 7vw; //shorten length of paragraph and center it slightly higher for vertical screens
+		}
+		@include iphone6-plus-landscape{
+			padding-top: 18vw; // use padding to control position top to bottom in a section
+		}
+		@include iphone6-landscape{
+			padding-bottom: 7vw; 
+		}
+		@include iphone6-landscape{
+			padding-bottom: 0vw;
+		}
+		@include iphone6-portrait{
+			padding-bottom: 12vw;
+		}
+		@include iphone5-landscape{
+			padding: 13px 7vw 0vw 7vw;
+		}
 		h1{
 			margin-top: 0;
-			@include mobile {
-				padding:0 20px;
-				font-size: 24px;
-			};
-			// @include iphone5-landscape {
+			// @include mobile { //redacted, styling made text too small on ipad vertical, watch semi-colon
 			// 	padding:0 20px;
 			// 	font-size: 24px;
 			// };
+			// @include iphone5-landscape { 
+			// 	padding:0 20px;
+			// 	font-size: 24px;
+			// };
+			@include iphone{ //smaller size first on iphone
+				font-size: 24px;
+			}
+			@include iphone5-landscape{
+				font-size: 18px;
+			}
 		}
 		p{
 			font-size: $about-font-size;
-			@include mobile {
-				padding: 0 20px;
-				font-size: 16px;
-			};
-			// @include iphone5-landscape {
+			@include iphone{ //smaller size first on iphone
+				font-size: 15px;
+				line-height: 19px;
+			}
+			@include iphone5-landscape{
+				font-size: 13px;
+				line-height: 16px;
+			}
+			@include iphone5-portrait{
+				font-size: 13px;
+				line-height: 16px;
+			}
+			// @include mobile { //redacted, styling made text too small on ipad vertical, watch semi-colon
+			// 	padding: 0 20px;
+			// 	font-size: 16px;
+			// };
+			// @include iphone5-landscape { 
 			// 	padding: 0 20px;
 			// 	font-size: 16px;
 			// };
@@ -109,6 +229,9 @@ $about-sections-height-ie: 87vh;
 //transactions and rates section
 #transactions-and-rates{
 	background: url('../images/about-transactions-rates-background.jpg');
+	background-size: cover; //full width
+	background-repeat: no-repeat; //remove tiling of background image
+	background-position-x: 50%; //scoot image to be centered
 	.recent-transactions-box{
 		background-color: rgba(255,255,255,0.7);
 		padding: 10px 15px;
@@ -139,20 +262,27 @@ $about-sections-height-ie: 87vh;
 //services section
 #services{
 	background: url('../images/about-services-background.jpg');
+	background-size: cover; //full width
+	background-repeat: no-repeat; //remove tiling of background image
+	background-position-x: 75%; //scoot image over to show more blue and fill up bottom space
 	padding-top: 15px;
-	@include mobile {
-		height: 580px !important;
-	};
+	// @include mobile { //trying similar height for all sections on mobile
+	// 	height: 580px !important;
+	// };
+	@include iphone6-plus-landscape{
+		background-position-y: -185%;
+	}
 	.nav-tabs{
 		margin-left: 15px;
 		margin-right: 15px;
-		@include mobile {
-			margin: 0;
-		};
+		@include ipad-landscape, mobile{
+			border-bottom: none; //remove bottom line on stacked tabs
+			margin-top: 5px; //move tabs down for even spacing on the sides
+		}
 		li{
-			@include mobile {
-				width: 100%;
-			};
+			// @include mobile { leaving tab mode on ipad vertical
+			// 	width: 100%;
+			// };
 			width: (100% / 5);
 			&:nth-child(odd){
 				background-color: white;
@@ -182,28 +312,59 @@ $about-sections-height-ie: 87vh;
 					color: white;
 				}
 			}
+			@include mobile {
+				margin: 0;
+			}
+			@include ipad-landscape{
+				width: (100% / 3);
+			}
+			@include ipad-portrait{
+				width: (100% / 3);
+			}
 		}
 	}
 	.mortgage-content, .loan-content, .debt-content, .acquisition-content, .consulting-content{
 		padding-top: 7%;
+		@include mobile{
+			padding: 12% 8vw 0vw 8vw; //shorten length of paragraph and center it slightly higher for vertical screens
+		}
+		@include iphone6-plus-landscape{
+			padding-top: 0vw;
+		}
 		h1{
 			margin-top: 10px;
 			@include mobile {
-				padding:0 20px;
+				// padding:0 20px; //global padding above for the content div
+				font-size: 36px;
+			}
+			@include iphone6-plus-landscape{
 				font-size: 24px;
-			};
+				padding: 0;
+				margin: 0;
+			}
 		}
 		p{
 			font-size: $about-font-size;
 			@include mobile {
-				padding: 0 20px;
+				// padding:0 20px; //global padding above for the content div
 				font-size: 16px;
-			};
+				padding: 0;
+				
+			}
+			@include iphone6-plus-landscape{
+				font-size: 14px;
+				line-height: 17px;
+			}
 		}
 		h2 {
-			@include mobile {
-				padding: 0 20px;
-			};
+			// @include mobile {
+			// 	// padding:0 20px; //global padding above for the content div
+			// };
+			@include iphone6-plus-landscape{
+				font-size: 18px;
+				padding: 0;
+				margin: 15px 0 5px 0;
+			}
 		}
 	}
 }
@@ -211,39 +372,74 @@ $about-sections-height-ie: 87vh;
 //lenders section
 #lenders{
 	background: url('../images/about-lenders-background.jpg');
+	background-size: cover; //full width
+	background-repeat: no-repeat; //remove tiling of background image
+	background-position-x: 88%; //scoot image over to show it centered
+	// .col-sm-6{
+	// 	@include iphone6-plus-landscape{
+	// 		width: 50%;
+	// 	}
+	// }
+	// .col-sm-4{
+	// 	@include iphone6-plus-landscape{
+	// 		width: 50%;
+	// 		position: absolute;
+	// 		right: 0;
+	// 		top: 40px;
+	// 		z-index: 10;
+	// 		height: 245px;
+	// 		overflow-y: scroll;
+	// 		display: block;
+	// 		// background-color: rgba(255,255,255,.5);
+	// 	}
+	// }
 	h1, h2, h3, h4, h5, h6{
 		margin-top: 0;
-		@include mobile {
-			padding:0 20px;
-			font-size: 24px;
-		};
+		// @include mobile { //andre - note semicolon after mobile query
+		// 	padding:0 20px;
+		// 	font-size: 24px;
+		// };
 	}
 	p{
 		font-size: $about-font-size;
-		@include mobile {
-			padding: 0 20px;
-			font-size: 16px;
-		};
+		// @include mobile {
+		// 	padding: 0 20px;
+		// 	font-size: 16px;
+		// }
+		@include iphone6-plus-landscape{
+			font-size: 14px;
+		}
 	}
 	.lenders-content{
 		padding-top: 7%;
+		@include iphone6-plus-landscape{
+			padding-top: 5%;
+		}
 	}
 	.lenders-list{
 		background-color: rgba(255,255,255,0.7);
 		padding: 15px 15px;
 	}
+	@include ipad-portrait{
+		background-position-x: 65%; //centered image
+	}
 }
 
 //contact section
 #contact{
-	@include mobile {
-		padding: 0;
-	};
+	p{
+		line-height: 1.25vw;
+	}
 	background-color: white;
 	background-size: cover;
 	background-position: center center;
+	background-repeat: no-repeat; //sans tiling
 	padding-top: 15px;
 	transition: all 0.3s ease-in-out;
+	@include iphone6-plus-landscape{
+		padding-top: 0;
+		margin-top: 12px;
+	}
 	&.san-francisco{
 		background-image: url('../images/about-contact-san-francisco.jpg');
 		transition: all 0.3s ease-in-out;
@@ -279,13 +475,14 @@ $about-sections-height-ie: 87vh;
 	.nav-tabs{
 		margin-left: 15px;
 		margin-right: 15px;
-		@include mobile {
+		@include ipad-landscape, mobile {
 			margin: 0;
+			border-bottom: none; //remove bottom line on stacked tabs
 		};
 		li{
-			@include mobile {
-				width: 100%;
-			};
+			// @include mobile { //keep the cities as tabs
+			// 	width: 100%;
+			// };
 			width: (100% / 8);
 			text-align: center;
 			&:nth-child(odd){
@@ -315,6 +512,21 @@ $about-sections-height-ie: 87vh;
 					color: white;
 				}
 			}
+			@include mobile{
+				width: (100% /4);
+				&:nth-child(5){
+					background-color: $medium-gray;
+				}
+				&:nth-child(6){
+					background-color: white;
+				}
+				&:nth-child(7){
+					background-color: $medium-gray;
+				}
+				&:nth-child(8){
+					background-color: white;
+				}
+			}
 		}
 	}
 	.location-info-box{
@@ -326,8 +538,26 @@ $about-sections-height-ie: 87vh;
 		@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
 			top: ($about-sections-height-ie / 2.2);
 		}
+		@include ipad-portrait{
+			width: 47%;
+			float: left;
+			margin-left: 3%;
+		}
+		@include iphone6-plus-landscape{
+			top: 16vw;
+			width: 43%;
+		}
 		li{
 			font-size: 16px;
+			@include iphone6-plus-landscape{
+				font-size: 14px;
+				line-height: 17px;
+			}
+		}
+		h3 {
+			@include iphone6-plus-landscape{
+				margin: 10px 0;
+			}
 		}
 	}
 	.staff-contacts-info-box{
@@ -338,6 +568,18 @@ $about-sections-height-ie: 87vh;
 		transform: translateY(-50%);
 		padding: 10px 15px;
 		overflow-y: scroll;
+		@include ipad-landscape{
+			height: ($about-sections-height * .785);
+		}
+		@include ipad-portrait{
+			width: 44%;
+			float: right;
+			margin-right: 3%;
+			height: ($about-sections-height * .55);
+		}
+		@include iphone6-plus-landscape{
+			top: 16vw;
+		}
 		.staff-contacts-individual{
 			height: 130px;
 			background-color: $medium-gray;
@@ -347,22 +589,25 @@ $about-sections-height-ie: 87vh;
 			p{
 				// font-size: 14px;
 			}
-
 		}
 	}
+	@include mobile {
+		padding: 0;
+	};
 }
 
-//applies to all sections
-#about-newmark, #transactions-and-rates, #services, #lenders, #contact {
-	height: $about-sections-height;
-	background-size: cover;
-	background-position: center center;
-	@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
-		height: $about-sections-height-ie;
+//hacky hacky dirty shifts below
+.go-all-screens{
+	display: block;
+	@include iphone5-portrait{
+		display: none;
 	}
-	@include mobile {
-		height: 700px;
-	};
+}
+.go-iPhone-5-portrait{
+	display: none;
+	@include iphone5-portrait{
+		display: block;
+	}
 }
 
 // *{
