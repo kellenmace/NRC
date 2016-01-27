@@ -45,19 +45,22 @@
 	&.bg-2{
 		background-image: url(../images/homepage-hero-2.jpg);
 		@include ipad-landscape{
-			background-position-x: 85%;
+			background-position-x: 25%;
 		}
 		@include ipad-portrait{
-			background-position-x: 37%;
+			background-position-x: 8%;
 		}
 		@include iphone6-plus-landscape{
-			background-size: 100%;
+			background-size: 106%;
 		}
 		@include iphone6-plus-portrait{
-		    background-position-x: 33%;
+		    background-position-x: 9%;
+		}
+		@include iphone6-portrait{
+			background-position-x: 11%;
 		}
 		@include iphone5-portrait{
-			background-position-x: 31%;
+			background-position-x: 11%;
 		}
 	}
 	&.bg-3{

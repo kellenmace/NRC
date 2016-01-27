@@ -34,6 +34,9 @@
 		@include ipad-portrait{
 			width: 220px;
 		}
+		@include nexus-7-landscape{
+			width: 219px;
+		}
 		@include iphone6-plus-landscape{
 			width: 215px;
 		}
@@ -42,6 +45,9 @@
 		}
 		@include iphone5-landscape{
 			width: 253px;
+		}
+		@include nexus7-portrait{
+			width: 170px;
 		}
 		@include iphone6-plus-portrait{
 			width: 177px;
