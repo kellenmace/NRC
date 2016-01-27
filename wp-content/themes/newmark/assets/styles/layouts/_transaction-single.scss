@@ -38,6 +38,12 @@ $table-height: 4px;
 		top: -15px;
 		right: -45px;
 	}
+	p{
+		@include iphone6-plus-portrait{
+			font-size: 18px;
+			line-height: 25px;
+		}
+	}
 }
 
 .single-transaction-image-col {

@@ -5,16 +5,16 @@
 			    <!-- Nav tabs -->
 			    <ul class="nav nav-tabs" role="tablist">
 			        <li role="presentation" class="active">
-			            <a href="#san-francisco" aria-controls="san-francisco" role="tab" data-toggle="tab">San Francisco</a>
+			            <a href="#san-francisco" aria-controls="san-francisco" role="tab" data-toggle="tab"><span class="go-all-screens">San Francisco</span><span class="go-iPhone-6-Plus-portrait go-iPhone-6-portrait go-iPhone-5-portrait">SFO</span></a>
 			        </li>
 			        <li role="presentation">
 			            <a href="#sacramento" aria-controls="sacramento" role="tab" data-toggle="tab">Sacramento</a>
 			        </li>
 			        <li role="presentation">
-			            <a href="#los-angeles" aria-controls="los-angeles" role="tab" data-toggle="tab">Los Angeles</a>
+			            <a href="#los-angeles" aria-controls="los-angeles" role="tab" data-toggle="tab"><span class="go-all-screens">Los Angeles</span><span class="go-iPhone-6-Plus-portrait go-iPhone-6-portrait go-iPhone-5-portrait">LAX</span></a>
 			        </li>
 			        <li role="presentation">
-			            <a href="#newport-beach" aria-controls="newport-beach" role="tab" data-toggle="tab">Newport Beach</a>
+			            <a href="#newport-beach" aria-controls="newport-beach" role="tab" data-toggle="tab"><span class="go-all-screens">Newport Beach</span><span class="go-iPhone-6-Plus-portrait go-iPhone-6-portrait go-iPhone-5-portrait">Newport Bch</span></a>
 			        </li>
 			        <li role="presentation">
 			            <a href="#seattle" aria-controls="seattle" role="tab" data-toggle="tab">Seattle</a>
