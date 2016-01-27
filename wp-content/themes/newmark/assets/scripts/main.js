@@ -58,7 +58,7 @@
         });
 
         //change background image of location tabs
-        $('#contact li a').click(function(){
+        $('#contact .nav-tabs li a').click(function(){
           var lastClass = $('#contact').attr('class').split(' ').pop();
           var newClass = $(this).attr('aria-controls');
           console.log(newClass + " Class added");
