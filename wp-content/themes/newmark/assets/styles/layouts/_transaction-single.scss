@@ -20,6 +20,12 @@ $table-height: 4px;
 
 .modal{
 	top: 100px;
+	@include ipad-landscape{
+		top: 75px;
+	}
+	@include iphone6-plus-landscape{
+		top: 56px;
+	}
 	.modal-header{
 		border: none;
 	}
@@ -39,7 +45,35 @@ $table-height: 4px;
 		right: -45px;
 	}
 	p{
+		@include ipad-landscape{
+			font-size: 18px;
+			line-height: 25px;
+		}
+		@include ipad-portrait{
+			font-size: 18px;
+			line-height: 25px;
+		}
+		@include iphone6-plus-landscape{
+			font-size: 18px;
+			line-height: 25px;
+		}
 		@include iphone6-plus-portrait{
+			font-size: 18px;
+			line-height: 25px;
+		}
+		@include iphone6-landscape{
+			font-size: 18px;
+			line-height: 25px;
+		}
+		@include iphone6-portrait{
+			font-size: 18px;
+			line-height: 25px;
+		}
+		@include iphone5-landscape{
+			font-size: 18px;
+			line-height: 25px;
+		}
+		@include iphone5-portrait{
 			font-size: 18px;
 			line-height: 25px;
 		}
