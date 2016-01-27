@@ -99,6 +99,10 @@
 																$transaction_class = 'office';
 																$transaction_text = 'Office';
 																break;
+															case 'storage':
+																$transaction_class = 'storage';
+																$transaction_text = 'Storage';
+																break;
 															default:
 																$transaction_class = 'default';
 																$transaction_text = 'default';

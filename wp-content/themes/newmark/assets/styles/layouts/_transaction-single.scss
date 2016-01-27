@@ -236,6 +236,12 @@ $table-height: 4px;
 					background: $web-yellow-darker;
 				}
 			}
+			&.storage{
+				background: $web-purple;
+				.transaction-type-text{
+					background: $web-purple-darker;
+				}
+			}
 		}
 	}
 }

@@ -158,7 +158,8 @@
                 "multi": "Multi-Family",
                 "industrial": "Industrial",
                 "retail": "Retail",
-                "office": "Office"
+                "office": "Office",
+                "storage": "Storage"
             },
             "default_value": [
 
@@ -279,5 +280,9 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
+<<<<<<< HEAD
+    "modified": 1453911558
+=======
     "modified": 1453909672
+>>>>>>> 3c6294bf52d66d5ca6cfe033163958f656117907
 }
