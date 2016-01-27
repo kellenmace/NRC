@@ -2,6 +2,12 @@
 	display: none;
 }
 
+h4{
+	@include iphone6-plus-portrait{
+		font-size: 16px;
+	}
+}
+
 .search{
 	$input-font-size: 26px;
 	position: relative;

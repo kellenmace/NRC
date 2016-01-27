@@ -382,6 +382,19 @@ $about-sections-height-ie: 87vh;
 		top: ($about-sections-height / 2.1);
 		transform: translateY(-50%);
 		padding: 10px 30px 30px 30px;
+		// #WidgetTable{ //feeble attempt to control type in the financial table
+		// 	tbody{
+		// 		tr{
+		// 			td{
+		// 				font{
+		// 					@include font-medium;
+		// 					color: $newmark-gray;
+		// 					-webkit-font-smoothing: antialiased;
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+		// }			
 		@include ipad-portrait{ //position rates below on stacked version and overflow if not enough height
 			top: 32vw;
 		}
@@ -391,8 +404,8 @@ $about-sections-height-ie: 87vh;
 		    overflow-y: scroll;
 		}
 		@include iphone6-plus-portrait{
-		    top: 32vw;
-		    height: 60vw;
+		    top: 33vw;
+		    height: 62vw;
 			overflow-y: scroll;
 		}
 		@include iphone6-landscape{
@@ -778,7 +791,10 @@ $about-sections-height-ie: 87vh;
 	.lenders-content{
 		padding-top: 7%;
 		@include iphone6-plus-landscape{ //move copy up and down within the cell once height is set
-			padding-top: 5%;
+			padding-top: 5% 8vw 0vw 8vw;
+		}
+		@include iphone6-plus-portrait{
+			padding: 7% 
 		}
 		@include iphone6-landscape{
 			padding-top: 3%;
@@ -851,10 +867,16 @@ $about-sections-height-ie: 87vh;
 	&.san-francisco{
 		background-image: url('../images/about-contact-san-francisco.jpg');
 		transition: all 0.3s ease-in-out;
+		@include iphone6-plus-portrait{
+			background-position-x: 11%;
+		}
 	}
 	&.sacramento{
 		background-image: url('../images/about-contact-sacramento.jpg');
 		transition: all 0.3s ease-in-out;
+		@include iphone6-plus-portrait{
+			background-position-x: 60%;
+		}
 	}
 	&.los-angeles{
 		background-image: url('../images/about-contact-los-angeles.jpg');
@@ -863,14 +885,23 @@ $about-sections-height-ie: 87vh;
 	&.newport-beach{
 		background-image: url('../images/about-contact-newport-beach.jpg');
 		transition: all 0.3s ease-in-out;
+		@include iphone6-plus-portrait{
+			background-position-x: 89%;
+		}
 	}
 	&.seattle{
 		background-image: url('../images/about-contact-seattle.jpg');
 		transition: all 0.3s ease-in-out;
+		@include iphone6-plus-portrait{
+			background-position-x: 15%;
+		}
 	}
 	&.spokane{
 		background-image: url('../images/about-contact-spokane.jpg');
 		transition: all 0.3s ease-in-out;
+		@include iphone6-plus-portrait{
+			background-position-x: 77%;
+		}
 	}
 	&.phoenix{
 		background-image: url('../images/about-contact-phoenix.jpg');
