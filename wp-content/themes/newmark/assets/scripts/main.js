@@ -31,6 +31,10 @@
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
+        var homepageHeroArray = ["bg-1", "bg-2", "bg-3", "bg-4", "bg-5"];
+        var randomIndex = Math.floor(Math.random() * homepageHeroArray.length);
+
+        $('.homepage-figure').addClass(homepageHeroArray[randomIndex]);
       }
     },
     // About us page, note the change from about-us to about_us.

@@ -1,5 +1,5 @@
 .homepage-figure{
-	background: url(../images/newmark-paper-01.jpg);
+	background: url(../images/homepage-hero-1.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 100vh;
@@ -8,6 +8,21 @@
 	top: 0;
 	left: 0;
 	z-index: -1;
+	&.bg-1{
+		background-image: url(../images/homepage-hero-1.jpg);
+	}
+	&.bg-2{
+		background-image: url(../images/homepage-hero-2.jpg);
+	}
+	&.bg-3{
+		background-image: url(../images/homepage-hero-3.jpg);
+	}
+	&.bg-4{
+		background-image: url(../images/homepage-hero-4.jpg);
+	}
+	&.bg-5{
+		background-image: url(../images/homepage-hero-5.jpg);
+	}
 	@include ipad-landscape{
 		background-position-x: 55%;
 	}
@@ -28,10 +43,10 @@
 		background-position-x: 0;
 	}
 	@include iphone6-portrait{
-		background-position-x: 0; 
+		background-position-x: 0;
 	}
 	@include iphone5-portrait{
-		background-position-x: 0; 
+		background-position-x: 0;
 	}
 }
 
