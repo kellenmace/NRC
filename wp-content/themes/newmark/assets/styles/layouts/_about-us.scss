@@ -791,10 +791,10 @@ $about-sections-height-ie: 87vh;
 	.lenders-content{
 		padding-top: 7%;
 		@include iphone6-plus-landscape{ //move copy up and down within the cell once height is set
-			padding-top: 5% 8vw 0vw 8vw;
+			padding: 5% 8vw 0 8vw;
 		}
 		@include iphone6-plus-portrait{
-			padding: 7% 
+			padding: 7% 8vw 0 8vw;
 		}
 		@include iphone6-landscape{
 			padding-top: 3%;
@@ -807,7 +807,7 @@ $about-sections-height-ie: 87vh;
 		background-color: rgba(255,255,255,0.7);
 		padding: 15px 15px;
 		@include iphone6-plus-landscape{ //control height of the list of lenders and scroll on short screens
-			height: 29vw;
+			height: 19vw;
 			overflow-y: scroll;
 		}
 		@include iphone6-plus-portrait{
@@ -841,6 +841,9 @@ $about-sections-height-ie: 87vh;
 	background-repeat: no-repeat; //sans tiling
 	padding-top: 15px;
 	transition: all 0.3s ease-in-out;
+	tabpanel{
+
+	}
 	p{
 		line-height: 1.25vw;
 		@include iphone6-plus-portrait{ //fix line height on individual staff contact cards
@@ -867,6 +870,9 @@ $about-sections-height-ie: 87vh;
 	&.san-francisco{
 		background-image: url('../images/about-contact-san-francisco.jpg');
 		transition: all 0.3s ease-in-out;
+		@include iphone6-plus-landscape{
+			height: 100vh;
+		}
 		@include iphone6-plus-portrait{
 			background-position-x: 11%;
 		}
@@ -874,6 +880,9 @@ $about-sections-height-ie: 87vh;
 	&.sacramento{
 		background-image: url('../images/about-contact-sacramento.jpg');
 		transition: all 0.3s ease-in-out;
+		@include iphone6-plus-landscape{
+			height: 100vh;
+		}
 		@include iphone6-plus-portrait{
 			background-position-x: 60%;
 		}
@@ -881,10 +890,16 @@ $about-sections-height-ie: 87vh;
 	&.los-angeles{
 		background-image: url('../images/about-contact-los-angeles.jpg');
 		transition: all 0.3s ease-in-out;
+		@include iphone6-plus-landscape{
+			height: 100vh;
+		}
 	}
 	&.newport-beach{
 		background-image: url('../images/about-contact-newport-beach.jpg');
 		transition: all 0.3s ease-in-out;
+		@include iphone6-plus-landscape{
+			height: 100vh;
+		}
 		@include iphone6-plus-portrait{
 			background-position-x: 89%;
 		}
@@ -892,6 +907,9 @@ $about-sections-height-ie: 87vh;
 	&.seattle{
 		background-image: url('../images/about-contact-seattle.jpg');
 		transition: all 0.3s ease-in-out;
+		@include iphone6-plus-landscape{
+			height: 100vh;
+		}
 		@include iphone6-plus-portrait{
 			background-position-x: 15%;
 		}
@@ -899,6 +917,9 @@ $about-sections-height-ie: 87vh;
 	&.spokane{
 		background-image: url('../images/about-contact-spokane.jpg');
 		transition: all 0.3s ease-in-out;
+		@include iphone6-plus-landscape{
+			height: 100vh;
+		}
 		@include iphone6-plus-portrait{
 			background-position-x: 77%;
 		}
@@ -906,10 +927,16 @@ $about-sections-height-ie: 87vh;
 	&.phoenix{
 		background-image: url('../images/about-contact-phoenix.jpg');
 		transition: all 0.3s ease-in-out;
+		@include iphone6-plus-landscape{
+			height: 100vh;
+		}
 	}
 	&.las-vegas{
 		background-image: url('../images/about-contact-las-vegas.jpg');
 		transition: all 0.3s ease-in-out;
+		@include iphone6-plus-landscape{
+			height: 100vh;
+		}
 	}
 	.nav-tabs{
 		margin-left: 15px;
@@ -1122,10 +1149,10 @@ $about-sections-height-ie: 87vh;
 			top: 33vw;
 		}
 		@include iphone6-plus-landscape{
-		    top: 23vw;
+		    top: 26vw;
 		    width: 43%;
 		    margin-left: 1%;
-		    height: 22vw;
+		    height: 29vw;
 		    overflow-y: scroll;
 		}
 		@include iphone6-plus-portrait{
@@ -1237,10 +1264,10 @@ $about-sections-height-ie: 87vh;
 			height: ($about-sections-height * .55);
 		}
 		@include iphone6-plus-landscape{
-			top: 1vw;
+			top: -3vw;
 			width: 53%;
 			float: right;
-			height: 22vw;
+			height: 29vw;
 			margin-right: 1%
 		}
 		@include iphone6-plus-portrait{
