@@ -2,6 +2,9 @@ $menu-bars-spacing: -6px;
 
 nav{
 	li{
+		@include mobile{
+			background-color: rgba(255,255,255,.85);
+		}
 		a{
 			&:hover{
 				background-color: none;

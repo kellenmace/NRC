@@ -2,7 +2,7 @@
 	<div class="col-md-12">
 		<div id="transactions-and-rates" class="about-section">
 			<div class="row">
-				<div class="col-md-offset-1 col-md-5">
+				<div class="col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-5">
 					<div class="recent-transactions-box">
 						<h3>Recent Transactions</h3>
 						<div id="recent-transactions-carousel" class="carousel slide" data-ride="carousel">
@@ -26,10 +26,10 @@
 						    	?>
 						    				<div class="row">
 						    					<a href="<?php the_permalink(); ?>">
-							    					<div class="col-md-offset-1 col-md-4">
+							    					<div class="col-md-offset-1 col-md-4 col-sm-6 col-xs-6">
 							    						<img class="img-responsive" src="<?php the_post_thumbnail_url('small'); ?>">
 							    					</div>
-							    					<div class="col-md-6">
+							    					<div class="col-md-6 col-sm-6 col-xs-6">
 							    						<p><?php the_title(); ?></p>
 							    					</div>
 						    					</a>
@@ -48,7 +48,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-offset-1 col-md-4">
+				<div class="col-md-offset-1 col-md-4 col-sm-offset-1 col-sm-10 col-xs-5">
 					<div class="transaction-rates">
 						<h3>Current Rates</h3>
 						<!--START theFinancials.com Content-TINY WIDGET PART 1-->
