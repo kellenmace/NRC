@@ -108,7 +108,7 @@ $about-sections-height-ie: 87vh;
 	}
 }
 
-//applies to all sections  
+//applies to all sections
 //moved up above sections for customization below on background positions
 #about-newmark, #transactions-and-rates, #services, #lenders, #contact {
 	height: $about-sections-height;
@@ -117,7 +117,7 @@ $about-sections-height-ie: 87vh;
 	@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
 		height: $about-sections-height-ie;
 	}
-	@include mobile { 
+	@include mobile {
 		height: 91vh; //reset section heights to be the same for all mobile environments
 		background-position-x: 50%; //standard position of background image is centered in the middle
 	}
@@ -144,14 +144,14 @@ $about-sections-height-ie: 87vh;
 //about section - first section on page above scroll to subnav sections
 #about-newmark{
 	background: url('../images/about-background.jpg');
-	background-size: cover; 
+	background-size: cover;
 	background-repeat: no-repeat; // added remove tiling of background image
 	background-position-x: 100%;
 	@include ipad-landscape{
 		background-position-x: 94%; //on all screens move over background to the left to see end of orange ribbon
 	}
 	@include ipad-portrait{
-		background-position-x: 100%; 
+		background-position-x: 100%;
 	}
 	@include iphone6-plus-portrait{
 		background-position-x: 97%;
@@ -178,7 +178,7 @@ $about-sections-height-ie: 87vh;
 			padding-top: 18vw; // use padding to control position top to bottom in a section
 		}
 		@include iphone6-landscape{
-			padding-bottom: 7vw; 
+			padding-bottom: 7vw;
 		}
 		@include iphone6-landscape{
 			padding-bottom: 0vw;
@@ -195,7 +195,7 @@ $about-sections-height-ie: 87vh;
 			// 	padding:0 20px;
 			// 	font-size: 24px;
 			// };
-			// @include iphone5-landscape { 
+			// @include iphone5-landscape {
 			// 	padding:0 20px;
 			// 	font-size: 24px;
 			// };
@@ -224,7 +224,7 @@ $about-sections-height-ie: 87vh;
 			// 	padding: 0 20px;
 			// 	font-size: 16px;
 			// };
-			// @include iphone5-landscape { 
+			// @include iphone5-landscape {
 			// 	padding: 0 20px;
 			// 	font-size: 16px;
 			// };
@@ -394,7 +394,7 @@ $about-sections-height-ie: 87vh;
 		// 			}
 		// 		}
 		// 	}
-		// }			
+		// }
 		@include ipad-portrait{ //position rates below on stacked version and overflow if not enough height
 			top: 32vw;
 		}
@@ -521,7 +521,7 @@ $about-sections-height-ie: 87vh;
 					color: white;
 				}
 			}
-			// @include mobile { 
+			// @include mobile {
 			// 	margin: 0;
 			// }
 			@include ipad-landscape{ //adjust tabs to show more per device
@@ -550,12 +550,14 @@ $about-sections-height-ie: 87vh;
 			}
 		}
 	}
-	
+
 	.mortgage-content-iphone5-landscape, .loan-content-iphone5-landscape, .debt-content-iphone5-landscape, .acquisition-content-iphone5-landscape, .consulting-content-iphone5-landscape{
 		@include iphone5-landscape{
 			position: relative;
 		}
 	}
+
+
 	.mortgage-content, .loan-content, .debt-content, .acquisition-content, .consulting-content{
 		padding-top: 7%;
 		@include mobile{
@@ -588,7 +590,7 @@ $about-sections-height-ie: 87vh;
 		h1{
 			margin-top: 10px;
 			// @include mobile { //redacted font size too small on ipad
-			// padding:0 20px; 
+			// padding:0 20px;
 			// 	font-size: 36px;
 			// }
 			@include iphone6-plus-landscape{ //type adjustments on phone
@@ -596,27 +598,27 @@ $about-sections-height-ie: 87vh;
 				padding: 0;
 				margin: 0;
 			}
-			@include iphone6-plus-portrait{ 
+			@include iphone6-plus-portrait{
 				font-size: 24px;
 				padding: 0;
 				margin: 0;
 			}
-			@include iphone6-landscape{ 
+			@include iphone6-landscape{
 				font-size: 24px;
 				padding: 0;
 				margin: 0;
 			}
-			@include iphone6-portrait{ 
+			@include iphone6-portrait{
 				font-size: 24px;
 				padding: 0;
 				margin: 0;
 			}
-			@include iphone5-landscape{ 
+			@include iphone5-landscape{
 				font-size: 16px;
 				padding: 0;
 				margin: 0;
 			}
-			@include iphone5-portrait{ 
+			@include iphone5-portrait{
 				font-size: 22px;
 				padding: 0;
 				margin: 0;
@@ -660,7 +662,7 @@ $about-sections-height-ie: 87vh;
 		p{
 			font-size: $about-font-size;
 			// @include mobile { //redacted font size too small on ipad
-			// 	padding:0 20px; 
+			// 	padding:0 20px;
 			// 	font-size: 16px;
 			// 	padding: 0;
 			// }
@@ -790,6 +792,9 @@ $about-sections-height-ie: 87vh;
 	}
 	.lenders-content{
 		padding-top: 7%;
+		@include mobile {
+			padding: 12% 8vw 0vw 8vw;
+		};
 		@include iphone6-plus-landscape{ //move copy up and down within the cell once height is set
 			padding: 5% 8vw 0 8vw;
 		}
@@ -950,7 +955,7 @@ $about-sections-height-ie: 87vh;
 		    position: absolute;
 		    padding-right: 15px;
 		    z-index: 10;
-		}    
+		}
 		@include iphone6-plus-landscape{
 			top: 12px;
 		    position: absolute;
