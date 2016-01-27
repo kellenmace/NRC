@@ -537,6 +537,12 @@ $about-sections-height-ie: 87vh;
 			}
 		}
 	}
+	
+	.mortgage-content-iphone5-landscape, .loan-content-iphone5-landscape, .debt-content-iphone5-landscape, .acquisition-content-iphone5-landscape, .consulting-content-iphone5-landscape{
+		@include iphone5-landscape{
+			position: relative;
+		}
+	}
 	.mortgage-content, .loan-content, .debt-content, .acquisition-content, .consulting-content{
 		padding-top: 7%;
 		@include mobile{
@@ -555,8 +561,13 @@ $about-sections-height-ie: 87vh;
 			padding-top: 3%;
 		}
 		@include iphone5-landscape{
-			padding: 11% 0 0 4vw;
-		    margin-left: 4vw;
+			// padding: 11% 0 0 4vw;
+		 //    margin-left: 4vw;
+			padding: 0;
+			position: absolute;
+			z-index: 10;
+			left: 43%;
+			top: -151px;
 		}
 		@include iphone5-portrait{
 			padding-top: 0;
