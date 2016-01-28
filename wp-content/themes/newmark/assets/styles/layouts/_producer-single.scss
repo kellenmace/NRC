@@ -17,6 +17,11 @@ $producer-image-height: 205.188px;
 		}
 	}
 	.grid {
+		p {
+			@include mobile {
+				padding-left: 15px;
+			};
+		}
 		margin-top: 30px;
 		.transaction-card {
 			margin-left: 0;
@@ -76,7 +81,7 @@ $producer-image-height: 205.188px;
 	padding: 15px;
 	height: $producer-image-height;
 	@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
-		background: $light-gray-ie;	
+		background: $light-gray-ie;
 	}
 	@media only screen and (max-width: 1199px){
 		height: ($producer-image-height - 38);
@@ -130,13 +135,13 @@ $producer-image-height: 205.188px;
 			&:nth-child(odd){
 				background-color: $light-gray;
 				@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
-					background: $light-gray-ie;	
+					background: $light-gray-ie;
 				}
 			}
 			&:nth-child(even){
 				background-color: #eee;
 				// @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
-				// 	background: #efefef;	
+				// 	background: #efefef;
 				// }
 			}
 			h3{
@@ -178,7 +183,7 @@ $producer-image-height: 205.188px;
 	ul{
 		padding: 0;
 		margin: 0;
-		width: 102%;		
+		width: 102%;
 		a{
 			@include responsive-font(1.7vw, 16px);
 			display: block;
@@ -202,7 +207,7 @@ $producer-image-height: 205.188px;
 				height: 13vw;
 				float: left;
 				@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
-					background: $light-gray-ie;	
+					background: $light-gray-ie;
 				}
 				&:hover, &:visited, &:active, &:link{
 					text-decoration: none;
