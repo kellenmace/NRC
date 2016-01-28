@@ -1233,7 +1233,7 @@ $about-sections-height-ie: 87vh;
 		top: ($about-sections-height / 2.2);
 		transform: translateY(-50%);
 		padding: 10px 15px;
-		overflow-y: scroll;
+		overflow-y: auto;
 		h3 {
 			@include iphone6-plus-landscape{ //keep title spacing the same
 				margin: 10px 0;

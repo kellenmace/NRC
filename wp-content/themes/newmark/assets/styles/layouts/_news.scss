@@ -1,0 +1,27 @@
+.news{
+	background: url('../images/news-background.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+#news-page-wrapper{
+	min-height: 100vh;
+	padding-bottom: 100px;
+}
+
+.archive-divider{
+	height: 15px;
+	background-image: linear-gradient(to right,
+	                                  $light-gray,
+	                                  $light-gray 50%,
+	                                  $medium-gray 50%,
+	                                  $medium-gray 100%
+	                                  );
+}
+
+.news-stories-archive{
+	li{
+		font-size: 16px;
+	}
+}
