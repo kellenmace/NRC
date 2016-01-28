@@ -8,21 +8,6 @@
 	top: 0;
 	left: 0;
 	z-index: -1;
-	&.bg-1{
-		background-image: url(../images/homepage-hero-1.jpg);
-	}
-	&.bg-2{
-		background-image: url(../images/homepage-hero-2.jpg);
-	}
-	&.bg-3{
-		background-image: url(../images/homepage-hero-3.jpg);
-	}
-	&.bg-4{
-		background-image: url(../images/homepage-hero-4.jpg);
-	}
-	&.bg-5{
-		background-image: url(../images/homepage-hero-5.jpg);
-	}
 	@include ipad-landscape{
 		background-position-x: 55%;
 	}
@@ -47,6 +32,109 @@
 	}
 	@include iphone5-portrait{
 		background-position-x: 0;
+	}
+	&.bg-1{
+		background-image: url(../images/homepage-hero-1.jpg);
+		@include iphone6-plus-portrait{
+			background-position-x: 35%;
+		}
+		@include iphone6-portrait{
+			background-position-x: 29%;
+		}
+	}
+	&.bg-2{
+		background-image: url(../images/homepage-hero-2.jpg);
+		@include ipad-landscape{
+			background-position-x: 25%;
+		}
+		@include ipad-portrait{
+			background-position-x: 8%;
+		}
+		@include iphone6-plus-landscape{
+			background-size: 106%;
+		}
+		@include iphone6-plus-portrait{
+		    background-position-x: 9%;
+		}
+		@include iphone6-portrait{
+			background-position-x: 11%;
+		}
+		@include iphone5-portrait{
+			background-position-x: 11%;
+		}
+	}
+	&.bg-3{
+		background-image: url(../images/homepage-hero-3.jpg);
+		@include ipad-portrait{
+			background-position-x: 55%;
+		}
+		@include iphone6-plus-landscape{
+			background-size: 106%;
+		}
+		@include iphone6-landscape{
+			background-size: 106%;
+		}
+		@include iphone6-plus-portrait{
+			background-position-x: 52%;
+		}
+		@include iphone6-portrait{
+			background-position-x: 52%;
+		}
+		@include iphone5-portrait{
+			background-position-x: 55%;
+		}
+	}
+	&.bg-4{
+		background-image: url(../images/homepage-hero-4.jpg);
+		@include ipad-landscape{
+			background-position-x: 85%;
+		}
+		@include ipad-portrait{
+			background-position-x: 52%;
+		}
+		@include iphone6-plus-landscape{
+			background-size: 106%;
+		}
+		@include iphone6-landscape{
+			background-size: 105%;
+		    background-position-x: 100%;
+		}
+		@include iphone5-landscape{
+			background-size: 102%;
+		}
+		@include iphone6-plus-portrait{
+			background-position-x: 74%;
+		}
+		@include iphone6-portrait{
+			background-position-x: 66%;
+		}
+		@include iphone5-portrait{
+			background-position-x: 54%;
+		}
+	}
+	&.bg-5{
+		background-image: url(../images/homepage-hero-5.jpg);
+		@include ipad-portrait{
+			background-position-x: 73%;
+		}
+		@include iphone6-plus-landscape{
+			background-size: 106%;
+		}
+		@include iphone6-landscape{
+			background-size: 102%;
+		}
+		@include iphone5-landscape{
+			background-size: 102%;
+		}
+		@include iphone6-plus-portrait{
+			background-position-x: 74%;
+		}
+		@include iphone6-portrait{
+			background-position-x: 66%;
+		}
+		@include iphone5-portrait{
+			background-position-x: 54%;
+		}
 	}
 }
 

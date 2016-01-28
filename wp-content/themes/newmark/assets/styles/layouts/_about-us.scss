@@ -19,6 +19,7 @@ $about-sections-height-ie: 87vh;
 	padding-bottom: 100px;
 	@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
 		overflow-x: hidden;
+		overflow-y: hidden;
 	}
 	@include mobile{
 		padding-bottom: 15px;
@@ -275,7 +276,8 @@ $about-sections-height-ie: 87vh;
 		background-color: rgba(255,255,255,0.7);
 		padding: 10px 15px;
 		position: relative;
-		height: ($about-sections-height / 2.2);
+		// height: ($about-sections-height / 2.2); //not working on chrome & firefox on pc
+		height: 21vw;
 		top: ($about-sections-height / 2.2);
 		transform: translateY(-50%);
 		@include ipad-landscape{ //adjust height and top position per screen
@@ -310,7 +312,9 @@ $about-sections-height-ie: 87vh;
 			height: 70vw;
 		    top: 38vw;
 		}
-
+		@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+			height: 21vw;
+		}
 		h3{
 			margin-bottom: 20px; //spacing between recent transactions and carousel
 			@include iphone6-plus-landscape{
@@ -757,6 +761,9 @@ $about-sections-height-ie: 87vh;
 		@include iphone5-portrait{
 			font-size: 18px;
 			margin-bottom: 0;
+		}
+		@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+			font-size: 31px;
 		}
 	}
 	p{
