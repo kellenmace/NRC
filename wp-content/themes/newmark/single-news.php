@@ -1,12 +1,7 @@
-<?php
-/**
- * Template Name: News Template
- */
-?>
 <div id="news-page-wrapper">
 <div class="row">
 	<div class="col-md-12">
-		<h2 class="page-title"><?php echo get_the_title(); ?></h2>
+		<h2 class="page-title">News</h2>
 	</div>
 </div>
 
@@ -29,14 +24,9 @@
 		</div>
 	</div>
 	<div class="col-md-8">
-		<?php
-			$current_news_loop = new WP_Query(array('post_type' => 'news', 'posts_per_page' => 1));
-			while($current_news_loop->have_posts()) : $current_news_loop->the_post();
-		?>
 			<h1><?php the_title(); ?></h1>
 			<p><?php echo get_the_date(); ?></p>
 			<p><?php the_content(); ?></p>
-		<?php endwhile; wp_reset_postdata(); ?>
 		<div class="row">
 			<div class="col-xs-5">
 				<div class="archive-divider"></div>
