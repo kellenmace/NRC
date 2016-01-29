@@ -713,6 +713,9 @@ $about-sections-height-ie: 87vh;
 	@include ipad-portrait{
 		background-position-x: 65%; //centered image
 	}
+	@include iphone6-portrait{
+		height: 115vh;
+	}
 	.col-xs-6{
 		width: 46%;
 		margin-left: 2%;
@@ -831,8 +834,8 @@ $about-sections-height-ie: 87vh;
 			overflow-y: scroll;
 		}
 		@include iphone6-portrait{
-			height: 62vw;
-			overflow-y: scroll;
+			height: 75vh;
+			// overflow-y: scroll;
 		}
 		@include iphone5-landscape{
 			height: 25.5vw;
@@ -1146,7 +1149,7 @@ $about-sections-height-ie: 87vh;
 		}
 	}
 	.location-info-box{
-		background-color: rgba(255,255,255,0.7);
+		background-color: rgba(255,255,255,0.9);
 		padding: 10px 15px;
 		position: relative;
 		top: ($about-sections-height / 2.2);
@@ -1239,7 +1242,7 @@ $about-sections-height-ie: 87vh;
 		}
 	}
 	.staff-contacts-info-box{
-		background-color: rgba(255,255,255,0.7);
+		background-color: rgba(255,255,255,0.9);
 		height: ($about-sections-height * .70);
 		position: relative;
 		top: ($about-sections-height / 2.2);
