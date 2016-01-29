@@ -71,8 +71,8 @@
 								$state_label = $state_field['choices'][$state_value];
 							?>
 							<h3>$<?php the_field('amount'); ?></h3>
-							<p>For <?php the_title(); ?></p>
-							<p>in <?php the_field('city'); ?>, <?php echo $state_label; ?></p>
+							<p><?php the_title(); ?></p>
+							<p><?php the_field('city'); ?>, <?php echo $state_label; ?></p>
 							<div class="hidden-tags">
 								<?php
 									$producers = get_field('transaction_contacts');
