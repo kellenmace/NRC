@@ -5,16 +5,16 @@
 			    <!-- Nav tabs -->
 			    <ul class="nav nav-tabs" role="tablist">
 			        <li role="presentation" class="active">
-			            <a href="#san-francisco" aria-controls="san-francisco" role="tab" data-toggle="tab"><span class="go-all-screens">San Francisco</span><span class="go-iPhone-6-Plus-portrait go-iPhone-6-portrait go-iPhone-5-portrait">SFO</span></a>
+			            <a href="#san-francisco" aria-controls="san-francisco" role="tab" data-toggle="tab">San Francisco</a>
 			        </li>
 			        <li role="presentation">
 			            <a href="#sacramento" aria-controls="sacramento" role="tab" data-toggle="tab">Sacramento</a>
 			        </li>
 			        <li role="presentation">
-			            <a href="#los-angeles" aria-controls="los-angeles" role="tab" data-toggle="tab"><span class="go-all-screens">Los Angeles</span><span class="go-iPhone-6-Plus-portrait go-iPhone-6-portrait go-iPhone-5-portrait">LAX</span></a>
+			            <a href="#los-angeles" aria-controls="los-angeles" role="tab" data-toggle="tab">Los Angeles</a>
 			        </li>
 			        <li role="presentation">
-			            <a href="#newport-beach" aria-controls="newport-beach" role="tab" data-toggle="tab"><span class="go-all-screens">Newport Beach</span><span class="go-iPhone-6-Plus-portrait go-iPhone-6-portrait go-iPhone-5-portrait">Newport Bch</span></a>
+			            <a href="#newport-beach" aria-controls="newport-beach" role="tab" data-toggle="tab">Newport Beach</a>
 			        </li>
 			        <li role="presentation">
 			            <a href="#seattle" aria-controls="seattle" role="tab" data-toggle="tab">Seattle</a>
@@ -51,8 +51,7 @@
 											<li>Fax <?php echo $fax_number['value']; ?></li>
 											<li><a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
 											<br>
-											<li>If interested in a career at Newmark, please email<br>
-											<a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
+											<li>If interested in a career at Newmark, please email <a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
 										</ul>
 									</div>
 			        		</div>
@@ -61,7 +60,7 @@
 			        			<div class="staff-contacts-info-box">
 			        				<h3>Staff Contacts</h3>
 			        					<div class="row">
-				        					<?php $producers = get_posts( array('post_type' => 'producer', 'posts_per_page' => -1, 'meta_key' => 'last_name', 'order_by' => 'meta_value', 'order' => 'ASC', 'meta_query' => array( array( 'key' => 'office_location', 'value' => $post_id, 'compare' => 'like') ) ) ); ?>
+				        					<?php $producers = get_posts( array('post_type' => 'producer', 'posts_per_page' => -1, 'meta_key' => 'last_name', 'order_by' => 'meta_value', 'order' => 'ASC', 'meta_query' => array( array( 'key' => 'office_location', 'value' => $post_id, 'compare' => 'LIKE') ) ) ); ?>
 				        					<?php if($producers) : ?>
 				        						<?php foreach( $producers as $producer ) : ?>
 				        							<?php
@@ -119,8 +118,7 @@
 										<li>Fax <?php echo $fax_number['value']; ?></li>
 										<li><a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
 										<br>
-										<li>If interested in a career at Newmark, please email<br>
-										<a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
+										<li>If interested in a career at Newmark, please email <a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
 									</ul>
 								</div>
 			        		</div>
@@ -187,8 +185,7 @@
 										<li>Fax <?php echo $fax_number['value']; ?></li>
 										<li><a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
 										<br>
-										<li>If interested in a career at Newmark, please email<br>
-										<a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
+										<li>If interested in a career at Newmark, please email <a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
 									</ul>
 								</div>
 			        		</div>
@@ -255,8 +252,7 @@
 										<li>Fax <?php echo $fax_number['value']; ?></li>
 										<li><a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
 										<br>
-										<li>If interested in a career at Newmark, please email<br>
-										<a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
+										<li>If interested in a career at Newmark, please email <a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
 									</ul>
 								</div>
 			        		</div>
@@ -323,8 +319,7 @@
 										<li>Fax <?php echo $fax_number['value']; ?></li>
 										<li><a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
 										<br>
-										<li>If interested in a career at Newmark, please email<br>
-										<a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
+										<li>If interested in a career at Newmark, please email <a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
 									</ul>
 								</div>
 			        		</div>
@@ -391,8 +386,7 @@
 										<li>Fax <?php echo $fax_number['value']; ?></li>
 										<li><a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
 										<br>
-										<li>If interested in a career at Newmark, please email<br>
-										<a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
+										<li>If interested in a career at Newmark, please email <a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
 									</ul>
 								</div>
 			        		</div>
@@ -459,8 +453,7 @@
 										<li>Fax <?php echo $fax_number['value']; ?></li>
 										<li><a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
 										<br>
-										<li>If interested in a career at Newmark, please email<br>
-										<a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
+										<li>If interested in a career at Newmark, please email <a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
 									</ul>
 								</div>
 			        		</div>
@@ -514,7 +507,7 @@
 			        		<div class="col-md-offset-1 col-md-4">
 			        			<div class="location-info-box">
 									<?php
-										$post_id = 152;
+										$post_id = 783;
 										$lv = get_post($post_id);
 										$address = get_field_object('field_56942bb523e31', $post_id);
 										$phone_number = get_field_object('field_56942c317fbe6', $post_id);
@@ -527,8 +520,7 @@
 										<li>Fax <?php echo $fax_number['value']; ?></li>
 										<li><a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
 										<br>
-										<li>If interested in a career at Newmark, please email<br>
-										<a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
+										<li>If interested in a career at Newmark, please email <a href="mailto:<?php echo $newmark_email; ?>"><?php echo $newmark_email ?></a></li>
 									</ul>
 								</div>
 			        		</div>
