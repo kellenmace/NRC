@@ -142,6 +142,12 @@ $about-sections-height-ie: 87vh;
 	}
 }
 
+#contact{
+	@include iphone6-portrait{
+		height: 120vh;
+	}
+}
+
 //about section - first section on page above scroll to subnav sections
 #about-newmark{
 	background: url('../images/about-background.jpg');
@@ -985,7 +991,7 @@ $about-sections-height-ie: 87vh;
 		    z-index: 10;
 		}
 		@include iphone6-portrait{
-			top: 9px;
+			// top: 9px;
 		    position: absolute;
 		    padding-right: 15px;
 		    z-index: 10;
@@ -1114,19 +1120,19 @@ $about-sections-height-ie: 87vh;
 				}
 			}
 			@include iphone6-portrait{
-				width: (100% /4);
-				&:nth-child(5){
-					background-color: $medium-gray; //change alternation of tab background colors for mobile
-				}
-				&:nth-child(6){
-					background-color: white;
-				}
-				&:nth-child(7){
-					background-color: $medium-gray;
-				}
-				&:nth-child(8){
-					background-color: white;
-				}
+				width: (100% /3);
+				// &:nth-child(5){
+				// 	background-color: $medium-gray; //change alternation of tab background colors for mobile
+				// }
+				// &:nth-child(6){
+				// 	background-color: white;
+				// }
+				// &:nth-child(7){
+				// 	background-color: $medium-gray;
+				// }
+				// &:nth-child(8){
+				// 	background-color: white;
+				// }
 			}
 			@include iphone5-landscape{
 				width: (100% /4);
@@ -1189,8 +1195,8 @@ $about-sections-height-ie: 87vh;
 		  	width: 93%;
 		  	float: left;
 		  	margin-left: 3%;
-		  	top: 47vw;
-		  	height: 40vw;
+		  	top: 42vh;
+		  	height: auto;
 		  	overflow-y: scroll;
 		}
 		@include iphone5-landscape{
@@ -1303,8 +1309,8 @@ $about-sections-height-ie: 87vh;
 			width: 93%;
 			float: left;
 			margin-left: 3%;
-			height: 49vw;
-			top: 55vw;
+			height: 52vh;
+			top: 50vh;
 		}
 		@include iphone5-landscape{
 			top: 4vw;
