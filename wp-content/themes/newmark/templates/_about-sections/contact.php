@@ -58,7 +58,7 @@
 			        		<div class="col-md-offset-1 col-md-5">
 		        				<?php if( have_rows('staff_contacts', $post_id) ): ?>
 			        			<div class="staff-contacts-info-box">
-			        				<h3>Staff Contacts</h3>
+			        				<h3>Contacts</h3>
 			        					<div class="row">
 				        					<?php $producers = get_posts( array('post_type' => 'producer', 'posts_per_page' => -1, 'meta_key' => 'last_name', 'order_by' => 'meta_value', 'order' => 'ASC', 'meta_query' => array( array( 'key' => 'office_location', 'value' => $post_id, 'compare' => 'LIKE') ) ) ); ?>
 				        					<?php if($producers) : ?>
