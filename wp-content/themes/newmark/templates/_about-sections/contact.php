@@ -44,7 +44,7 @@
 										$fax_number = get_field_object('field_569d0d1a1a67d', $post_id);
 										$staff_contacts = get_field_object('field_56a2b2d464a37', $post_id);
 									?>
-										<h3 class="location-title"><?php echo $sf->post_title; ?> - Headquarters</h3>
+										<h3 class="location-title"><?php echo $sf->post_title; ?></h3>
 										<ul class="list-unstyled">
 											<li><?php echo $address['value']; ?></li>
 											<li>Phone <?php echo $phone_number['value']; ?></li>

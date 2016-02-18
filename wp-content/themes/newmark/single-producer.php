@@ -122,8 +122,8 @@
 																				$state_label = $state_field['choices'][$state_value];
 																			?>
 																			<h3>$<?php the_field('amount', $t->ID); ?></h3>
-																			<p>For <?php echo get_the_title($t->ID); ?></p>
-																			<p>in <?php the_field('city', $t->ID); ?>, <?php echo $state_label; ?></p>
+																			<p><?php echo get_the_title($t->ID); ?></p>
+																			<p><?php the_field('city', $t->ID); ?>, <?php echo $state_label; ?></p>
 																		</figcaption>
 																		<div class="row">
 																			<div class="col-md-12">
