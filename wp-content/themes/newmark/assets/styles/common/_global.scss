@@ -14,11 +14,11 @@ body{
 			min-height: 67px;
 		}
 	}
-	&.home{
-		.navbar-fixed-top{
-			background-color: transparent;
-		}
-	}
+	// &.home{
+	// 	.navbar-fixed-top{
+	// 		background-color: transparent;
+	// 	}
+	// }
 	.page-title{
 		color: $brand-primary;
 		@include mobile{
