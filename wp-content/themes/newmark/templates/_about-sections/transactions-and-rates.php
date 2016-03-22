@@ -26,10 +26,10 @@
 						    	?>
 						    				<div class="row">
 						    					<a href="<?php the_permalink(); ?>">
-							    					<div class="col-md-offset-1 col-md-4 col-sm-6 col-xs-6">
+							    					<div class="col-md-offset-2 col-md-8 col-sm-6 col-xs-6">
 							    						<img class="img-responsive" src="<?php the_post_thumbnail_url('small'); ?>">
 							    					</div>
-							    					<div class="col-md-6 col-sm-6 col-xs-6">
+							    					<div class="col-md-offset-2 col-md-8 col-sm-6 col-xs-6">
 							    						<p><?php the_title(); ?></p>
 							    					</div>
 						    					</a>

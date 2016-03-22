@@ -283,9 +283,10 @@ $about-sections-height-ie: 87vh;
 		padding: 10px 15px;
 		position: relative;
 		// height: ($about-sections-height / 2.2); //not working on chrome & firefox on pc
-		height: 21vw;
-		top: ($about-sections-height / 2.2);
-		transform: translateY(-50%);
+		height: 650px;
+		top: 80px;
+		// top: ($about-sections-height / 2.2);
+		// transform: translateY(-50%);
 		@include ipad-landscape{ //adjust height and top position per screen
 			height: ($about-sections-height / 2.6);
 		}
@@ -346,7 +347,7 @@ $about-sections-height-ie: 87vh;
 			}
 		}
 		.carousel-indicators{
-			top: 13.5vw; // position indicators below transactions
+			top: 500px; // position indicators below transactions
 			// margin-left: -10%;
 			// margin-bottom: 0;
 			@include ipad-landscape{
