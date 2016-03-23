@@ -82,12 +82,29 @@
           }
         });
 
+        // get all contact tab panes
+        var contactTabPane = $('#contact .tab-pane');
+        // var tabArray = contactTabPane.toArray();
+        //get all contact tabs
+        var contactPane = $('#contact .nav-tabs li');
+        // length of contact tab array
+        var contactTabPaneLength = contactTabPane.length;
+        //random index number
+        var randIndex = Math.floor(Math.random() * contactTabPaneLength);
+        //remove active class from tab & pane
+        contactTabPane.removeClass('active');
+        var randElem = contactTabPane[randIndex];
+        console.log(randElem);
+        // randElem.addClass('active');
+
+
+
         //change background image of location tabs
         $('#contact .nav-tabs li a').click(function(){
           var lastClass = $('#contact').attr('class').split(' ').pop();
           var newClass = $(this).attr('aria-controls');
-          console.log(newClass + " Class added");
-          console.log(lastClass + " class removed");
+          // console.log(newClass + " Class added");
+          // console.log(lastClass + " class removed");
 
           $('#contact').removeClass(lastClass);
           $('#contact').addClass(newClass);
