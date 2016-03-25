@@ -20,6 +20,7 @@
 	</div>
 	</div>
 
+	<?php include('_about-sections/splash.php'); ?>
 	<?php include('_about-sections/about-section.php'); ?>
 	<?php include('_about-sections/transactions-and-rates.php'); ?>
 	<?php include('_about-sections/services.php'); ?>
