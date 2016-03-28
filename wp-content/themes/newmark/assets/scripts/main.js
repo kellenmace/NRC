@@ -60,6 +60,40 @@
           $('#contact').addClass(newClass);
 
         });
+
+        // get all contact tab panes length
+        var randomContactLength = Math.floor(Math.random() * $('#contact .tab-pane').length);
+        //get last class on #contact section (i.e. san-francisco) and pop it off
+        var lastClass = $('#contact').attr('class').split(' ').pop();
+        //get random element which eq number above to make sure the 2 numbers are consistent
+        $.fn.random = function(){
+          return this.eq(randomContactLength);
+        };
+        //remove active tab
+        $('#contact .nav-tabs li').removeClass('active');
+        $('#contact .tab-pane').removeClass('active in');
+        //activate random tab
+        $('#contact .nav-tabs li').random().addClass('active');
+        $('#contact .tab-pane').random().addClass('active in');
+        //remove fallback bg-img
+        $('#contact').removeClass(lastClass);
+        //get id of active tab which is same name as class with bg-img tied to it
+        var locationBgImg = $('#contact .tab-content').find('.in').attr('id');
+        //add class to tab with bg-img tied to it
+        $('#contact').addClass(locationBgImg);
+
+        //change background image of location tabs
+        $('#contact .nav-tabs li a').click(function(){
+          // change value of last class on click to make sure bg img changes
+          lastClass = $('#contact').attr('class').split(' ').pop();
+          //get location from aria-controls attr which is same as class that has bg-img applied to it
+          var newClass = $(this).attr('aria-controls');
+          //remove class with bg-img
+          $('#contact').removeClass(lastClass);
+          //add class with bg-img
+          $('#contact').addClass(newClass);
+
+        });
       }
     },
     // About us page, note the change from about-us to about_us.

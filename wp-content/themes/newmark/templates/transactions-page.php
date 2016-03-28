@@ -76,6 +76,7 @@
 							<div class="hidden-tags">
 								<?php
 									$producers = get_field('transaction_contacts');
+
 									$financing_type = get_field('financing_type');
 									foreach($producers as $p){
 										echo get_field('first_name', $p->ID) . get_field('last_name', $p->ID) . ' ';
