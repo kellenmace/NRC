@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.9.5//EN
+N:Perez;Jessica;;;
+FN:Jessica Perez
+ORG:Newmark Realty Capital\, Inc.;
+TITLE:Loan Administrator
+EMAIL;type=INTERNET;type=pref:jperez@newmarkrealtycapital.com
+TEL;type=WORK;type=VOICE;type=pref:(415) 946-6096
+ADR;type=WORK;type=pref:;;595 Market Street\, Suite 2500;San Francisco;CA;94105;United States of America
+X-ABUID:8C226E95-6F4B-4E7E-9386-DEE6D358DA7F:ABPerson
+X-MS-OL-DEFAULT-POSTAL-ADDRESS:2
+LABEL;WORK;PREF;ENCODING=QUOTED-PRINTABLE:595 Market Street, Suite 2550=0D=0A=
+San Francisco, CA 94105
+X-MS-OL-DESIGN;CHARSET=utf-8:<card xmlns="http://schemas.microsoft.com/office/outlook/12/electronicbusinesscards" ver="1.0" layout="left" bgcolor="ffffff"><img xmlns="" align="fit" area="16" use="cardpicture"/><fld xmlns="" prop="name" align="left" dir="ltr" style="b" color="000000" size="10"/><fld xmlns="" prop="org" align="left" dir="ltr" color="000000" size="8"/><fld xmlns="" prop="title" align="left" dir="ltr" color="000000" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="telwork" align="left" dir="ltr" color="000000" size="8"><label align="right" color="626262">Work</label></fld><fld xmlns="" prop="email" align="left" dir="ltr" color="000000" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="addrwork" align="left" dir="ltr" color="000000" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/></card>
+END:VCARD

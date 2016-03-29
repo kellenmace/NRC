@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.9.5//EN
+N:Flagg;Jesse;;;
+FN:Jesse Flagg
+EMAIL;type=INTERNET;type=WORK;type=pref:jflagg@newmarkrealtycapital.com
+TEL;type=WORK;type=VOICE;type=pref:602-344-9978
+ADR;type=WORK;type=pref:;;3133 East Camelback Road\, Suite 220;Phoenix;AZ;85016;USA
+X-ABUID:1FF36B88-19DB-4285-9147-A6FD6FD4EBD1:ABPerson
+END:VCARD

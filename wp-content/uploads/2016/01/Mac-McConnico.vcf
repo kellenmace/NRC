@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.9.5//EN
+N:McConnico;Mac;;;
+FN:Mac McConnico
+EMAIL;type=INTERNET;type=WORK;type=pref:mmcconnico@newmarkrealtycapital.com
+TEL;type=WORK;type=VOICE;type=pref:4159569853
+ADR;type=WORK;type=pref:;;595 Market Street\, Suite 2500;San Francisco;CA;94105;United States of America
+X-ABUID:27990E61-DDAD-4787-A4A8-89E150F4DC00:ABPerson
+END:VCARD

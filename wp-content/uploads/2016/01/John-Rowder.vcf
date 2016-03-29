@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.9.5//EN
+N:Rowder;John;;;
+FN:John Rowder
+EMAIL;type=INTERNET;type=HOME;type=pref:jrowder@newmarkrealtycapital.com
+TEL;type=WORK;type=VOICE;type=pref:9165652650
+ADR;type=HOME;type=pref:;;2700 Morley Way;Sacramento;CA;95864;
+X-ABUID:EDA5222F-A6DE-468A-853E-7A26FBFBAC1A:ABPerson
+END:VCARD

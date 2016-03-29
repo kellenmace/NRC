@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.9.5//EN
+N:Siebert;Hans;;;
+FN:Hans Siebert
+EMAIL;type=INTERNET;type=WORK;type=pref:hsiebert@newmarkrealtycapital.com
+TEL;type=WORK;type=VOICE;type=pref:2068166811
+ADR;type=HOME;type=pref:;;1500 Fourth Avenue\, Suite 601;Seattle;WA;98101;
+X-ABUID:F268D127-CEB6-4867-8CF7-92A8EDDB9DA2:ABPerson
+END:VCARD

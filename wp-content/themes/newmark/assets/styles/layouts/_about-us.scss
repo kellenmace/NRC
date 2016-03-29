@@ -54,6 +54,7 @@ $about-sections-height-ie: 87vh;
 	}
 	@include mobile{
 		padding-right: 15px; //align tabs to the right on mobile devices
+		padding-left: 0;
 	}
 	@include iphone6-plus-landscape{ //push static nav bar down below header bar
 		top: 67px;

@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.9.5//EN
+N:Nielsen;Steen;;;
+FN:Steen Nielsen
+EMAIL;type=INTERNET;type=WORK;type=pref:snielsen@newmarkrealtycapital.com
+TEL;type=WORK;type=VOICE;type=pref:4159466233
+ADR;type=HOME;type=pref:;;595 Market Street\, Suite 2500;San Francisco;CA;94105;
+X-ABUID:C5E9D38F-F114-43CC-83D4-D67E25BF2A28:ABPerson
+END:VCARD
