@@ -17,16 +17,19 @@
 				<div class="photo-caption">
 					<div class="col-sm-offset-1 col-sm-11">
 							<a href="<?php the_permalink(); ?>">
-								<h2><?php the_title(); ?></h2>
+								<h1>$<?php the_field('amount'); ?></h1>
 								<?php
 									$state_field = get_field_object('state', $query->ID);
 									$state_value = get_field('state', $query->ID);
 									$state_label = $state_field['choices'][$state_value];
 								?>
-								<p><?php the_field('city', $query->ID); ?>, <?php echo $state_label; ?></p>
+								<p><?php the_title(); ?><br>
+									<?php the_field('city', $query->ID); ?>, <?php echo $state_label; ?>
+								</p>
 							</a>
 					</div>
 				</div>
+				<i class="fa fa-arrow-circle-o-down scroll-indicator"></i>
 			</div>
 		</div>
 		<?php endwhile; wp_reset_postdata(); ?>
