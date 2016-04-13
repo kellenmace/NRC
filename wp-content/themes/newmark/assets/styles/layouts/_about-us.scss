@@ -166,6 +166,11 @@ $about-sections-height-ie: 87vh;
 		width: 40%;
 		background-color: rgba(255,255,255,0.8);
 		padding-bottom: 20px;
+		@include iphone {
+			h1 {
+				font-size: 22px
+			}
+		};
 	}
 	.scroll-indicator{
 		position: absolute;
@@ -466,9 +471,10 @@ $about-sections-height-ie: 87vh;
 		    overflow-y: scroll;
 		}
 		@include iphone6-portrait{
-		    top: 40vw;
-		    height: 46vw;
-			overflow-y: scroll;
+
+		    top: 64vw;
+				height: 400px;
+			// overflow-y: scroll;
 		}
 		@include iphone5-landscape{
 		    height: 31vw;
