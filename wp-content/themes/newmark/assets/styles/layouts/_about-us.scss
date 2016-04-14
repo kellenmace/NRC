@@ -179,7 +179,7 @@ $about-sections-height-ie: 87vh;
 		height: 157vh;
 	}
 	@include iphone5-portrait{
-		height: 169vh;
+		height: 185vh;
 	}
 }
 
@@ -187,7 +187,41 @@ $about-sections-height-ie: 87vh;
 	@include iphone6-portrait{
 		height: 120vh;
 	}
+	.contact-mobile {
+		.mobile-button {
+			background: $brand-primary;
+			height: 40px;
+			color: white;
+			width: 40vw;
+			// text-align: center;
+			// padding-top: 7px;
+			// padding-left: 15px;
+			p {
+				position: relative;
+				left: 48px;
+				top: -18px;
+			}
+			i {
+				position: relative;
+				left: 10px;
+				top: 7px;
+			}
+		}
+		ul {
+			@include iphone5-portrait {
+				margin-top: 30px;
+			};
+			display: none;
+			li {
+				width: 100%;
+			}
+		}
+	}
 }
+
+
+
+
 
 #splash{
 	// background: url('../images/about-bluxome.jpg');

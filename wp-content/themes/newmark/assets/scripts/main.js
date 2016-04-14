@@ -28,6 +28,18 @@
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+        if ( screen.width < 420 ) {
+          $('.contact-desk').hide();
+        } else {
+          $('.contact-mobile').hide();
+        }
+
+        $('.mobile-button').on( 'click', function() {
+          $('.contact-mobile ul').fadeIn()
+        });
+        $('.contact-mobile ul li').on( 'click', function() {
+          $('.contact-mobile ul').fadeOut();
+        });
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
