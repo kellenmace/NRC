@@ -158,10 +158,10 @@ $about-sections-height-ie: 87vh;
 		background-position-x: 50%; //standard position of background image is centered in the middle
 	}
 	@include ipad-portrait {
-		height: 145vh;
+		height: 150vh;
 	};
 	@include ipad-landscape {
-		height: 100vh;
+		height: 110vh;
 	};
 	@include iphone6-plus-landscape{
 		height: 76vh;
@@ -170,16 +170,16 @@ $about-sections-height-ie: 87vh;
 		height: 86vh;
 	}
 	@include iphone6-landscape{
-		height: 125vh;
+		height: 145vh;
 	}
 	@include iphone6-portrait{
-		height: 98vh;
+		height: 160vh;
 	}
 	@include iphone5-landscape{
-		height: 135vh;
+		height: 157vh;
 	}
 	@include iphone5-portrait{
-		height: 89vh;
+		height: 169vh;
 	}
 }
 
@@ -391,10 +391,11 @@ $about-sections-height-ie: 87vh;
 			height: 535px;
 		}
 		@include ipad-landscape{ //adjust height and top position per screen
-			height: 63vw;
+			height: 70vw;
+			top: 40px;
 		}
 		@include ipad-portrait{
-			height: 125vw;
+			height: 133vw;
 			top: 6vw;
 		}
 		@include iphone6-plus-landscape{
@@ -406,20 +407,20 @@ $about-sections-height-ie: 87vh;
 		    top: 15vw;
 		}
 		@include iphone6-landscape{
-			height: 65vw;
+			height: 76vw;
 	    top: 3.5vw;
 		}
 		@include iphone6-portrait{
-			height: 155vw;
+			height: 178vw;
 		    top: 10vw;
 		}
 		@include iphone5-landscape{
-		    height: 73vw;
+		    height: 90vw;
 		    top: 2vw;
 		    padding-top: 0;
 		}
 		@include iphone5-portrait{
-			height: 150vw;
+			height: 175vw;
 		    top: 8vw;
 		}
 		@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
@@ -457,10 +458,10 @@ $about-sections-height-ie: 87vh;
 				top: 420px;
 			}
 			@include ipad-landscape{
-				top: 52vw;
+				top: 60vw;
 			}
 			@include ipad-portrait{
-				top: 110vw;
+				top: 120vw;
 			}
 			@include iphone6-plus-landscape{
 				top: 23vw;
@@ -469,16 +470,16 @@ $about-sections-height-ie: 87vh;
 				top: 57vw;
 			}
 			@include iphone6-landscape{
-				top: 55vw;
+				top: 66vw;
 			}
 			@include iphone6-portrait{
-				top: 133vw;
+				top: 158vw;
 			}
 			@include iphone5-landscape{
-				top: 65vw;
+				top: 77vw;
 			}
 			@include iphone5-portrait{
-				top: 130vw;
+				top: 155vw;
 			}
 			li{ //mess with indicators to match design
 				width: 8px;
@@ -512,6 +513,9 @@ $about-sections-height-ie: 87vh;
 		// 		}
 		// 	}
 		// }
+		@include ipad-landscape {
+			top: 29.5vh;
+		};
 		@include ipad-portrait{ //position rates below on stacked version and overflow if not enough height
 			top: 32vw;
 		}

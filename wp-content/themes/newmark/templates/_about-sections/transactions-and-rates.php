@@ -15,6 +15,7 @@
 						    </ol>
 						    <div class="carousel-inner">
 						    	<?php
+										$state_label = $state_field['choices'][$state_value];
 						    		$args = array('posts_per_page' => 10, 'post_type' => 'transaction');
 						    		$transactions = new WP_Query($args);
 						    		if($transactions->have_posts()) :
@@ -30,7 +31,11 @@
 							    						<img class="img-responsive" src="<?php the_post_thumbnail_url('small'); ?>">
 							    					</div>
 							    					<div class="col-md-12 col-sm-12 col-xs-12">
-							    						<p><?php the_title(); ?></p>
+							    						<p><?php the_title(); ?><br>
+																 <?php echo get_field('amount'); ?><br>
+																 <?php echo get_field('city'); ?>, <?php echo $state_label ?>
+
+															 </p>
 							    					</div>
 						    					</a>
 						    				</div>
