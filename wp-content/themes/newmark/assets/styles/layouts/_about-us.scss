@@ -112,7 +112,7 @@ $about-sections-height-ie: 87vh;
 
 //applies to all sections
 //moved up above sections for customization below on background positions
-#about-newmark, #transactions-and-rates, #services, #lenders, #contact, #splash {
+#about-newmark, #services, #lenders, #contact, #splash {
 	height: $about-sections-height;
 	background-size: cover;
 	background-position: center center;
@@ -123,6 +123,9 @@ $about-sections-height-ie: 87vh;
 		height: 91vh; //reset section heights to be the same for all mobile environments
 		background-position-x: 50%; //standard position of background image is centered in the middle
 	}
+	@include ipad-portrait {
+		// height: 140vh;
+	};
 	@include iphone6-plus-landscape{
 		height: 76vh;
 	}
@@ -130,16 +133,50 @@ $about-sections-height-ie: 87vh;
 		height: 86vh;
 	}
 	@include iphone6-landscape{
-		height: 73vh;
+		height: 125vh;
 	}
 	@include iphone6-portrait{
-		height: 82vh;
+		height: 92vh;
 	}
 	@include iphone5-landscape{
-		height: 66vh;
+		height: 135vh;
 	}
 	@include iphone5-portrait{
-		height: 81vh;
+		height: 89vh;
+	}
+}
+
+#transactions-and-rates {
+	height: $about-sections-height;
+	background-size: cover;
+	background-position: center center;
+	@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+		height: $about-sections-height-ie;
+	}
+	@include mobile {
+		height: 91vh; //reset section heights to be the same for all mobile environments
+		background-position-x: 50%; //standard position of background image is centered in the middle
+	}
+	@include ipad-portrait {
+		height: 140vh;
+	};
+	@include iphone6-plus-landscape{
+		height: 76vh;
+	}
+	@include iphone6-plus-portrait{
+		height: 86vh;
+	}
+	@include iphone6-landscape{
+		height: 125vh;
+	}
+	@include iphone6-portrait{
+		height: 92vh;
+	}
+	@include iphone5-landscape{
+		height: 135vh;
+	}
+	@include iphone5-portrait{
+		height: 89vh;
 	}
 }
 
@@ -159,16 +196,36 @@ $about-sections-height-ie: 87vh;
 	@include  iphone6-portrait{
 		background-position-x: 50%;
 	}
-	.photo-caption{
+	.photo-caption {
 		position: absolute;
 		bottom: 0;
 		right: 0;
 		width: 40%;
 		background-color: rgba(255,255,255,0.8);
 		padding-bottom: 20px;
-		@include iphone {
+		@include ipad-portrait {
+			width: 35%;
+		};
+		@include iphone6-landscape {
+			width: 30%;
+			h1 {
+				font-size: 30px;
+			}
+		};
+		@include iphone5-landscape {
+			width: 30%;
+			h1 {
+				font-size: 26px;
+			}
+		};
+		@include iphone6-portrait {
 			h1 {
 				font-size: 22px
+			}
+		};
+		@include iphone5-portrait {
+			h1 {
+				font-size: 18px;
 			}
 		};
 	}
@@ -281,7 +338,7 @@ $about-sections-height-ie: 87vh;
 	background-repeat: no-repeat; //remove tiling of background image
 	background-position-x: 50%; //scoot image to be centered
 	@media (min-width: 435px) and (max-width: 991px){
-		height: 135vh;
+		// height: 135vh;
 	}
 	@media (min-device-width: 376px) and (max-device-width: 435px) and (orientation: portrait){
 		height: 135vh;
@@ -334,8 +391,8 @@ $about-sections-height-ie: 87vh;
 			height: 500px;
 		}
 		@include ipad-portrait{
-			height: 63vw;
-			top: 39vw;
+			height: 125vw;
+			top: 6vw;
 		}
 		@include iphone6-plus-landscape{
 			height: 34vw;
@@ -346,21 +403,21 @@ $about-sections-height-ie: 87vh;
 		    top: 15vw;
 		}
 		@include iphone6-landscape{
-			height: 30vw;
-		    top: 19vw;
+			height: 65vw;
+	    top: 3.5vw;
 		}
 		@include iphone6-portrait{
-			height: 76vw;
+			height: 155vw;
 		    top: 10vw;
 		}
 		@include iphone5-landscape{
-		    height: 31vw;
-		    top: 17vw;
+		    height: 73vw;
+		    top: 2vw;
 		    padding-top: 0;
 		}
 		@include iphone5-portrait{
-			height: 70vw;
-		    top: 5vw;
+			height: 150vw;
+		    top: 8vw;
 		}
 		@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
 			height: 21vw;
@@ -400,7 +457,7 @@ $about-sections-height-ie: 87vh;
 				top: 400px;
 			}
 			@include ipad-portrait{
-				top: 50vw;
+				top: 110vw;
 			}
 			@include iphone6-plus-landscape{
 				top: 23vw;
@@ -409,16 +466,16 @@ $about-sections-height-ie: 87vh;
 				top: 57vw;
 			}
 			@include iphone6-landscape{
-				top: 21vw;
+				top: 55vw;
 			}
 			@include iphone6-portrait{
-				top: 57vw;
+				top: 133vw;
 			}
 			@include iphone5-landscape{
-				top: 23.5vw;
+				top: 65vw;
 			}
 			@include iphone5-portrait{
-				top: 53.5vw;
+				top: 130vw;
 			}
 			li{ //mess with indicators to match design
 				width: 8px;
@@ -458,17 +515,17 @@ $about-sections-height-ie: 87vh;
 		@include iphone6-plus-landscape{
 			height: 34vw;
 		    top: 20vw;
-		    overflow-y: scroll;
+		    // overflow-y: scroll;
 		}
 		@include iphone6-plus-portrait{
 		    top: 72vw;
 		    height: 89vw;
-			overflow-y: scroll;
+			// overflow-y: scroll;
 		}
 		@include iphone6-landscape{
-			height: 30vw;
-		    top: 19vw;
-		    overflow-y: scroll;
+			height: 54vw;
+	    top: 30.5vw;
+		    // overflow-y: scroll;
 		}
 		@include iphone6-portrait{
 
@@ -477,15 +534,15 @@ $about-sections-height-ie: 87vh;
 			// overflow-y: scroll;
 		}
 		@include iphone5-landscape{
-		    height: 31vw;
-		    top: 17vw;
-		    overflow-y: scroll;
+		    height: 58vw;
+		    top: 31vw;
+		    // overflow-y: scroll;
 		    padding-top: 0;
 		}
 		@include iphone5-portrait{
-		    top: 40vw;
-		    height: 58vw;
-			overflow-y: scroll;
+		    top: 75vw;
+		    height: 400px;
+			// overflow-y: scroll;
 		}
 		h3{
 			color: white;
