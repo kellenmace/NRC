@@ -158,7 +158,10 @@ $about-sections-height-ie: 87vh;
 		background-position-x: 50%; //standard position of background image is centered in the middle
 	}
 	@include ipad-portrait {
-		height: 140vh;
+		height: 145vh;
+	};
+	@include ipad-landscape {
+		height: 100vh;
 	};
 	@include iphone6-plus-landscape{
 		height: 76vh;
@@ -170,7 +173,7 @@ $about-sections-height-ie: 87vh;
 		height: 125vh;
 	}
 	@include iphone6-portrait{
-		height: 92vh;
+		height: 98vh;
 	}
 	@include iphone5-landscape{
 		height: 135vh;
@@ -388,7 +391,7 @@ $about-sections-height-ie: 87vh;
 			height: 535px;
 		}
 		@include ipad-landscape{ //adjust height and top position per screen
-			height: 500px;
+			height: 63vw;
 		}
 		@include ipad-portrait{
 			height: 125vw;
@@ -454,7 +457,7 @@ $about-sections-height-ie: 87vh;
 				top: 420px;
 			}
 			@include ipad-landscape{
-				top: 400px;
+				top: 52vw;
 			}
 			@include ipad-portrait{
 				top: 110vw;
