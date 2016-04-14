@@ -185,7 +185,7 @@ $about-sections-height-ie: 87vh;
 
 #contact{
 	@include iphone6-portrait{
-		height: 120vh;
+		height: 100vh;
 	}
 	.contact-mobile {
 		.mobile-button {
@@ -1007,9 +1007,6 @@ $about-sections-height-ie: 87vh;
 	background-position: center center;
 	background-repeat: no-repeat; //sans tiling
 	transition: all 0.3s ease-in-out;
-	tabpanel{
-
-	}
 	p{
 		line-height: 1.25vw;
 		@include iphone6-plus-portrait{ //fix line height on individual staff contact cards
@@ -1340,7 +1337,7 @@ $about-sections-height-ie: 87vh;
 		  	width: 93%;
 		  	float: left;
 		  	margin-left: 3%;
-		  	top: 42vh;
+		  	top: 20vh;
 		  	height: auto;
 		  	overflow-y: scroll;
 		}
@@ -1355,8 +1352,8 @@ $about-sections-height-ie: 87vh;
 		  	width: 93%;
 		  	float: left;
 		  	margin-left: 3%;
-		  	top: 61vw;
-		  	height: 35vw;
+		  	top: 32vw;
+		  	height: 56vw;
 		  	overflow-y: scroll;
 		}
 		li{
@@ -1455,7 +1452,7 @@ $about-sections-height-ie: 87vh;
 			float: left;
 			margin-left: 3%;
 			height: 52vh;
-			top: 50vh;
+			top: 28vh;
 		}
 		@include iphone5-landscape{
 			top: 4vw;
@@ -1468,8 +1465,8 @@ $about-sections-height-ie: 87vh;
 			width: 93%;
 			float: left;
 			margin-left: 3%;
-			height: 42vw;
-		    top: 67vw;
+			height: 60vw;
+		    top: 36vw;
 		}
 		.staff-contacts-individual{
 			height: 130px;
