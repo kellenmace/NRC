@@ -32,7 +32,7 @@
 							    					</div>
 							    					<div class="col-md-12 col-sm-12 col-xs-12">
 							    						<p><?php the_title(); ?><br>
-																 <?php echo get_field('amount'); ?><br>
+																 $<?php echo get_field('amount'); ?><br>
 																 <?php echo get_field('city'); ?>, <?php echo $state_label ?>
 
 															 </p>

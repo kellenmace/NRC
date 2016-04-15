@@ -240,8 +240,12 @@ $about-sections-height-ie: 87vh;
 		width: 40%;
 		background-color: rgba(255,255,255,0.8);
 		padding-bottom: 20px;
+		@include mobile {
+			width: 100%;
+		};
 		@include ipad-portrait {
 			width: 35%;
+			width: 100%;
 		};
 		@include iphone6-landscape {
 			width: 30%;
