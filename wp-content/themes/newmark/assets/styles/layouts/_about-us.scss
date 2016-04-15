@@ -29,18 +29,39 @@ $about-sections-height-ie: 87vh;
 //fixed subnav styles
 .about-us-fixed-nav{
 	background-color: white;
-	position: fixed;
-	z-index: 100;
-	top: 70px;
-	left: 0;
-	right: 0;
-	margin-right: auto;
-	margin-left: auto;
-	padding-left: 30px;
-	padding-right: 30px;
+	// position: fixed;
+	// z-index: 100;
+	// top: 70px;
+	// left: 0;
+	// right: 0;
+	// margin-right: auto;
+	// margin-left: auto;
+	// padding-left: 30px;
+	// padding-right: 30px;
+	&.fixed{
+		position: fixed;
+		top: 70px;
+		// left: 0;
+		z-index: 100;
+		margin: 0 -15px;
+		padding-left: 15px;
+		padding-right: 15px;
+		@include mobile{
+			left: 16px;
+		}
+		@media only screen and (min-width: 768px){
+			width: 720px;
+		}
+		@media only screen and (min-width: 992px){
+			width: 930px;
+		}
+		@media only screen and (min-width: 1200px){
+			width: 1140px;
+		}
+	}
 	.navbar-nav{
 		@include mobile{ //rebuild static subnav bar to keep in tab format, override bootstrap stacked button nav
-			float: right;
+			// float: right;
 			margin: 0;
 			padding: 0;
 				li{
@@ -53,24 +74,17 @@ $about-sections-height-ie: 87vh;
 		}
 	}
 	@include mobile{
-		padding-right: 15px; //align tabs to the right on mobile devices
-		padding-left: 0;
+		// padding-right: 15px; //align tabs to the right on mobile devices
+		// padding-left: 0;
+		margin: 0 -15px;
 	}
 	@include iphone6-plus-landscape{ //push static nav bar down below header bar
 		top: 67px;
 	}
 	@include iphone6-portrait{
-		padding-left: 0;
+		// padding-left: 0;
 	}
-	@media only screen and (min-width: 768px){
-		width: 750px;
-	}
-	@media only screen and (min-width: 992px){
-		width: 970px;
-	}
-	@media only screen and (min-width: 1200px){
-		width: 1170px;
-	}
+
 	li{
 		&:nth-child(odd){
 			background-color: $light-gray;
@@ -104,7 +118,7 @@ $about-sections-height-ie: 87vh;
 				color: white;
 			}
 			@include iphone5-portrait{ //fit subnav on this dern tiny screen
-				padding: 11px 5px 5px 5px;
+				// padding: 11px 5px 5px 5px;
 			}
 		}
 	}
@@ -1237,18 +1251,18 @@ $about-sections-height-ie: 87vh;
 			}
 			@include iphone6-plus-portrait{
 				width: (100% /4);
-				&:nth-child(5){
-					background-color: $medium-gray; //change alternation of tab background colors for mobile
-				}
-				&:nth-child(6){
-					background-color: white;
-				}
-				&:nth-child(7){
-					background-color: $medium-gray;
-				}
-				&:nth-child(8){
-					background-color: white;
-				}
+				// &:nth-child(5){
+				// 	background-color: $medium-gray; //change alternation of tab background colors for mobile
+				// }
+				// &:nth-child(6){
+				// 	background-color: white;
+				// }
+				// &:nth-child(7){
+				// 	background-color: $medium-gray;
+				// }
+				// &:nth-child(8){
+				// 	background-color: white;
+				// }
 			}
 			@include iphone6-landscape{
 				width: (100% /4);
