@@ -28,8 +28,40 @@
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+        if ( screen.width < 420 ) {
+          $('.contact-desk').hide();
+        } else {
+          $('.contact-mobile').hide();
+        }
+
+        $('.mobile-button').on( 'click', function() {
+          $('.contact-mobile ul').fadeIn();
+        });
+        $('.contact-mobile ul li').on( 'click', function() {
+          $('.contact-mobile ul').fadeOut();
+        });
       },
       finalize: function() {
+        var aboutUsSub = $('.about-us-fixed-nav');
+        //offset of nav from top
+        var subnavOffset = aboutUsSub.offset().top;
+
+        aboutUsSub.wrap('<div class="about-us-nav-placeholder"></div>');
+        $('.about-us-nav-placeholder').height($('.about-us-fixed-nav ul').outerHeight() - 2);
+        //position of scroll to update on scroll
+        $(window).scroll(function(){
+          var scrollY = $(window).scrollTop();
+
+          //make subnav sticky when it hits top of page
+          if(scrollY >= subnavOffset - 75){
+            $('.about-us-fixed-nav').addClass('fixed');
+          } else {
+            $('.about-us-fixed-nav').removeClass('fixed');
+          }
+        });
+
+
+
         // JavaScript to be fired on the home page, after the init JS
         var homepageHeroArray = ["bg-1", "bg-2", "bg-3", "bg-4", "bg-5"];
         var randomIndex = Math.floor(Math.random() * homepageHeroArray.length);
@@ -42,7 +74,7 @@
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
             if (target.length) {
               $('html,body').animate({
-                scrollTop: target.offset().top - 100
+                scrollTop: target.offset().top - 105
               }, 800);
               return false;
             }
@@ -53,8 +85,6 @@
         $('#contact .nav-tabs li a').click(function(){
           var lastClass = $('#contact').attr('class').split(' ').pop();
           var newClass = $(this).attr('aria-controls');
-          console.log(newClass + " Class added");
-          console.log(lastClass + " class removed");
 
           $('#contact').removeClass(lastClass);
           $('#contact').addClass(newClass);

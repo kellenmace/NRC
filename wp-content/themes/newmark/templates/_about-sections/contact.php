@@ -3,32 +3,73 @@
 		<div id="contact" class="about-section san-francisco">
 			<div role="tabpanel">
 			    <!-- Nav tabs -->
-			    <ul class="nav nav-tabs" role="tablist">
-			        <li role="presentation" class="active">
-			            <a href="#san-francisco" aria-controls="san-francisco" role="tab" data-toggle="tab">San Francisco</a>
-			        </li>
-			        <li role="presentation">
-			            <a href="#sacramento" aria-controls="sacramento" role="tab" data-toggle="tab">Sacramento</a>
-			        </li>
-			        <li role="presentation">
-			            <a href="#los-angeles" aria-controls="los-angeles" role="tab" data-toggle="tab">Los Angeles</a>
-			        </li>
-			        <li role="presentation">
-			            <a href="#newport-beach" aria-controls="newport-beach" role="tab" data-toggle="tab">Newport Beach</a>
-			        </li>
-			        <li role="presentation">
-			            <a href="#seattle" aria-controls="seattle" role="tab" data-toggle="tab">Seattle</a>
-			        </li>
-			        <li role="presentation">
-			            <a href="#spokane" aria-controls="spokane" role="tab" data-toggle="tab">Spokane</a>
-			        </li>
-			        <li role="presentation">
-			            <a href="#phoenix" aria-controls="phoenix" role="tab" data-toggle="tab">Phoenix</a>
-			        </li>
-			        <li role="presentation">
-			            <a href="#las-vegas" aria-controls="las-vegas" role="tab" data-toggle="tab">Las Vegas</a>
-			        </li>
-			    </ul>
+
+					<!-- Desktop Nav -->
+					<div class="contact-desk">
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active">
+								<a href="#san-francisco" aria-controls="san-francisco" role="tab" data-toggle="tab">San Francisco</a>
+							</li>
+							<li role="presentation">
+								<a href="#sacramento" aria-controls="sacramento" role="tab" data-toggle="tab">Sacramento</a>
+							</li>
+							<li role="presentation">
+								<a href="#los-angeles" aria-controls="los-angeles" role="tab" data-toggle="tab">Los Angeles</a>
+							</li>
+							<li role="presentation">
+								<a href="#newport-beach" aria-controls="newport-beach" role="tab" data-toggle="tab">Newport Beach</a>
+							</li>
+							<li role="presentation">
+								<a href="#seattle" aria-controls="seattle" role="tab" data-toggle="tab">Seattle</a>
+							</li>
+							<li role="presentation">
+								<a href="#spokane" aria-controls="spokane" role="tab" data-toggle="tab">Spokane</a>
+							</li>
+							<li role="presentation">
+								<a href="#phoenix" aria-controls="phoenix" role="tab" data-toggle="tab">Phoenix</a>
+							</li>
+							<li role="presentation">
+								<a href="#las-vegas" aria-controls="las-vegas" role="tab" data-toggle="tab">Las Vegas</a>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Mobile Nav -->
+					<div class="contact-mobile">
+						<div class="mobile-button">
+							<i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+							<p>Location</p>
+						</div>
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active">
+								<a href="#san-francisco" aria-controls="san-francisco" role="tab" data-toggle="tab">San Francisco</a>
+							</li>
+							<li role="presentation">
+								<a href="#sacramento" aria-controls="sacramento" role="tab" data-toggle="tab">Sacramento</a>
+							</li>
+							<li role="presentation">
+								<a href="#los-angeles" aria-controls="los-angeles" role="tab" data-toggle="tab">Los Angeles</a>
+							</li>
+							<li role="presentation">
+								<a href="#newport-beach" aria-controls="newport-beach" role="tab" data-toggle="tab">Newport Beach</a>
+							</li>
+							<li role="presentation">
+								<a href="#seattle" aria-controls="seattle" role="tab" data-toggle="tab">Seattle</a>
+							</li>
+							<li role="presentation">
+								<a href="#spokane" aria-controls="spokane" role="tab" data-toggle="tab">Spokane</a>
+							</li>
+							<li role="presentation">
+								<a href="#phoenix" aria-controls="phoenix" role="tab" data-toggle="tab">Phoenix</a>
+							</li>
+							<li role="presentation">
+								<a href="#las-vegas" aria-controls="las-vegas" role="tab" data-toggle="tab">Las Vegas</a>
+							</li>
+						</ul>
+					</div>
+
+
+
 			    <!-- Tab panes -->
 			    <?php $newmark_email = "info@newmarkrealtycapital.com"; ?>
 			    <div class="tab-content">

@@ -29,7 +29,7 @@
 							</a>
 					</div>
 				</div>
-				<i class="fa fa-arrow-circle-o-down scroll-indicator"></i>
+				<a href="#about-newmark"><i class="fa fa-arrow-circle-o-down scroll-indicator"></i></a>
 			</div>
 		</div>
 		<?php endwhile; wp_reset_postdata(); ?>

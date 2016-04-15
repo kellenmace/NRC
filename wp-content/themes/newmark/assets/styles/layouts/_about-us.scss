@@ -29,18 +29,39 @@ $about-sections-height-ie: 87vh;
 //fixed subnav styles
 .about-us-fixed-nav{
 	background-color: white;
-	position: fixed;
-	z-index: 100;
-	top: 70px;
-	left: 0;
-	right: 0;
-	margin-right: auto;
-	margin-left: auto;
-	padding-left: 30px;
-	padding-right: 30px;
+	// position: fixed;
+	// z-index: 100;
+	// top: 70px;
+	// left: 0;
+	// right: 0;
+	// margin-right: auto;
+	// margin-left: auto;
+	// padding-left: 30px;
+	// padding-right: 30px;
+	&.fixed{
+		position: fixed;
+		top: 70px;
+		// left: 0;
+		z-index: 100;
+		margin: 0 -15px;
+		padding-left: 15px;
+		padding-right: 15px;
+		@include mobile{
+			left: 16px;
+		}
+		@media only screen and (min-width: 768px){
+			width: 720px;
+		}
+		@media only screen and (min-width: 992px){
+			width: 930px;
+		}
+		@media only screen and (min-width: 1200px){
+			width: 1140px;
+		}
+	}
 	.navbar-nav{
 		@include mobile{ //rebuild static subnav bar to keep in tab format, override bootstrap stacked button nav
-			float: right;
+			// float: right;
 			margin: 0;
 			padding: 0;
 				li{
@@ -53,24 +74,17 @@ $about-sections-height-ie: 87vh;
 		}
 	}
 	@include mobile{
-		padding-right: 15px; //align tabs to the right on mobile devices
-		padding-left: 0;
+		// padding-right: 15px; //align tabs to the right on mobile devices
+		// padding-left: 0;
+		margin: 0 -15px;
 	}
 	@include iphone6-plus-landscape{ //push static nav bar down below header bar
 		top: 67px;
 	}
 	@include iphone6-portrait{
-		padding-left: 0;
+		// padding-left: 0;
 	}
-	@media only screen and (min-width: 768px){
-		width: 750px;
-	}
-	@media only screen and (min-width: 992px){
-		width: 970px;
-	}
-	@media only screen and (min-width: 1200px){
-		width: 1170px;
-	}
+
 	li{
 		&:nth-child(odd){
 			background-color: $light-gray;
@@ -104,7 +118,7 @@ $about-sections-height-ie: 87vh;
 				color: white;
 			}
 			@include iphone5-portrait{ //fit subnav on this dern tiny screen
-				padding: 11px 5px 5px 5px;
+				// padding: 11px 5px 5px 5px;
 			}
 		}
 	}
@@ -112,7 +126,7 @@ $about-sections-height-ie: 87vh;
 
 //applies to all sections
 //moved up above sections for customization below on background positions
-#about-newmark, #transactions-and-rates, #services, #lenders, #contact, #splash {
+#about-newmark, #services, #lenders, #contact, #splash {
 	height: $about-sections-height;
 	background-size: cover;
 	background-position: center center;
@@ -123,6 +137,9 @@ $about-sections-height-ie: 87vh;
 		height: 91vh; //reset section heights to be the same for all mobile environments
 		background-position-x: 50%; //standard position of background image is centered in the middle
 	}
+	@include ipad-portrait {
+		// height: 140vh;
+	};
 	@include iphone6-plus-landscape{
 		height: 76vh;
 	}
@@ -130,24 +147,95 @@ $about-sections-height-ie: 87vh;
 		height: 86vh;
 	}
 	@include iphone6-landscape{
-		height: 73vh;
+		height: 125vh;
 	}
 	@include iphone6-portrait{
-		height: 82vh;
+		height: 92vh;
 	}
 	@include iphone5-landscape{
-		height: 66vh;
+		height: 135vh;
 	}
 	@include iphone5-portrait{
-		height: 81vh;
+		height: 89vh;
+	}
+}
+
+#transactions-and-rates {
+	height: $about-sections-height;
+	background-size: cover;
+	background-position: center center;
+	@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+		height: $about-sections-height-ie;
+	}
+	@include mobile {
+		height: 91vh; //reset section heights to be the same for all mobile environments
+		background-position-x: 50%; //standard position of background image is centered in the middle
+	}
+	@include ipad-portrait {
+		height: 150vh;
+	};
+	@include ipad-landscape {
+		height: 110vh;
+	};
+	@include iphone6-plus-landscape{
+		height: 76vh;
+	}
+	@include iphone6-plus-portrait{
+		height: 86vh;
+	}
+	@include iphone6-landscape{
+		height: 145vh;
+	}
+	@include iphone6-portrait{
+		height: 170vh;
+	}
+	@include iphone5-landscape{
+		height: 157vh;
+	}
+	@include iphone5-portrait{
+		height: 185vh;
 	}
 }
 
 #contact{
 	@include iphone6-portrait{
-		height: 120vh;
+		height: 100vh;
+	}
+	.contact-mobile {
+		.mobile-button {
+			background: $brand-primary;
+			height: 40px;
+			color: white;
+			width: 40vw;
+			// text-align: center;
+			// padding-top: 7px;
+			// padding-left: 15px;
+			p {
+				position: relative;
+				left: 48px;
+				top: -18px;
+			}
+			i {
+				position: relative;
+				left: 10px;
+				top: 7px;
+			}
+		}
+		ul {
+			@include iphone5-portrait {
+				margin-top: 30px;
+			};
+			display: none;
+			li {
+				width: 100%;
+			}
+		}
 	}
 }
+
+
+
+
 
 #splash{
 	// background: url('../images/about-bluxome.jpg');
@@ -159,13 +247,42 @@ $about-sections-height-ie: 87vh;
 	@include  iphone6-portrait{
 		background-position-x: 50%;
 	}
-	.photo-caption{
+	.photo-caption {
 		position: absolute;
 		bottom: 0;
 		right: 0;
 		width: 40%;
 		background-color: rgba(255,255,255,0.8);
 		padding-bottom: 20px;
+		@include mobile {
+			width: 100%;
+		};
+		@include ipad-portrait {
+			width: 35%;
+			width: 100%;
+		};
+		@include iphone6-landscape {
+			width: 30%;
+			h1 {
+				font-size: 30px;
+			}
+		};
+		@include iphone5-landscape {
+			width: 30%;
+			h1 {
+				font-size: 26px;
+			}
+		};
+		@include iphone6-portrait {
+			h1 {
+				font-size: 22px
+			}
+		};
+		@include iphone5-portrait {
+			h1 {
+				font-size: 18px;
+			}
+		};
 	}
 	.scroll-indicator{
 		position: absolute;
@@ -276,7 +393,7 @@ $about-sections-height-ie: 87vh;
 	background-repeat: no-repeat; //remove tiling of background image
 	background-position-x: 50%; //scoot image to be centered
 	@media (min-width: 435px) and (max-width: 991px){
-		height: 135vh;
+		// height: 135vh;
 	}
 	@media (min-device-width: 376px) and (max-device-width: 435px) and (orientation: portrait){
 		height: 135vh;
@@ -326,11 +443,12 @@ $about-sections-height-ie: 87vh;
 			height: 535px;
 		}
 		@include ipad-landscape{ //adjust height and top position per screen
-			height: 500px;
+			height: 70vw;
+			top: 40px;
 		}
 		@include ipad-portrait{
-			height: 63vw;
-			top: 39vw;
+			height: 133vw;
+			top: 6vw;
 		}
 		@include iphone6-plus-landscape{
 			height: 34vw;
@@ -341,21 +459,21 @@ $about-sections-height-ie: 87vh;
 		    top: 15vw;
 		}
 		@include iphone6-landscape{
-			height: 30vw;
-		    top: 19vw;
+			height: 76vw;
+	    top: 3.5vw;
 		}
 		@include iphone6-portrait{
-			height: 76vw;
+			height: 178vw;
 		    top: 10vw;
 		}
 		@include iphone5-landscape{
-		    height: 31vw;
-		    top: 17vw;
+		    height: 90vw;
+		    top: 2vw;
 		    padding-top: 0;
 		}
 		@include iphone5-portrait{
-			height: 70vw;
-		    top: 5vw;
+			height: 175vw;
+		    top: 8vw;
 		}
 		@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
 			height: 21vw;
@@ -392,10 +510,10 @@ $about-sections-height-ie: 87vh;
 				top: 420px;
 			}
 			@include ipad-landscape{
-				top: 400px;
+				top: 60vw;
 			}
 			@include ipad-portrait{
-				top: 50vw;
+				top: 120vw;
 			}
 			@include iphone6-plus-landscape{
 				top: 23vw;
@@ -404,16 +522,16 @@ $about-sections-height-ie: 87vh;
 				top: 57vw;
 			}
 			@include iphone6-landscape{
-				top: 21vw;
+				top: 66vw;
 			}
 			@include iphone6-portrait{
-				top: 57vw;
+				top: 158vw;
 			}
 			@include iphone5-landscape{
-				top: 23.5vw;
+				top: 77vw;
 			}
 			@include iphone5-portrait{
-				top: 53.5vw;
+				top: 155vw;
 			}
 			li{ //mess with indicators to match design
 				width: 8px;
@@ -447,39 +565,43 @@ $about-sections-height-ie: 87vh;
 		// 		}
 		// 	}
 		// }
+		@include ipad-landscape {
+			top: 29.5vh;
+		};
 		@include ipad-portrait{ //position rates below on stacked version and overflow if not enough height
 			top: 32vw;
 		}
 		@include iphone6-plus-landscape{
 			height: 34vw;
 		    top: 20vw;
-		    overflow-y: scroll;
+		    // overflow-y: scroll;
 		}
 		@include iphone6-plus-portrait{
 		    top: 72vw;
 		    height: 89vw;
-			overflow-y: scroll;
+			// overflow-y: scroll;
 		}
 		@include iphone6-landscape{
-			height: 30vw;
-		    top: 19vw;
-		    overflow-y: scroll;
+			height: 54vw;
+	    top: 30.5vw;
+		    // overflow-y: scroll;
 		}
 		@include iphone6-portrait{
-		    top: 40vw;
-		    height: 46vw;
-			overflow-y: scroll;
+
+		    top: 64vw;
+				height: 400px;
+			// overflow-y: scroll;
 		}
 		@include iphone5-landscape{
-		    height: 31vw;
-		    top: 17vw;
-		    overflow-y: scroll;
+		    height: 58vw;
+		    top: 31vw;
+		    // overflow-y: scroll;
 		    padding-top: 0;
 		}
 		@include iphone5-portrait{
-		    top: 40vw;
-		    height: 58vw;
-			overflow-y: scroll;
+		    top: 75vw;
+		    height: 400px;
+			// overflow-y: scroll;
 		}
 		h3{
 			color: white;
@@ -903,9 +1025,6 @@ $about-sections-height-ie: 87vh;
 	background-position: center center;
 	background-repeat: no-repeat; //sans tiling
 	transition: all 0.3s ease-in-out;
-	tabpanel{
-
-	}
 	p{
 		line-height: 1.25vw;
 		@include iphone6-plus-portrait{ //fix line height on individual staff contact cards
@@ -1132,18 +1251,18 @@ $about-sections-height-ie: 87vh;
 			}
 			@include iphone6-plus-portrait{
 				width: (100% /4);
-				&:nth-child(5){
-					background-color: $medium-gray; //change alternation of tab background colors for mobile
-				}
-				&:nth-child(6){
-					background-color: white;
-				}
-				&:nth-child(7){
-					background-color: $medium-gray;
-				}
-				&:nth-child(8){
-					background-color: white;
-				}
+				// &:nth-child(5){
+				// 	background-color: $medium-gray; //change alternation of tab background colors for mobile
+				// }
+				// &:nth-child(6){
+				// 	background-color: white;
+				// }
+				// &:nth-child(7){
+				// 	background-color: $medium-gray;
+				// }
+				// &:nth-child(8){
+				// 	background-color: white;
+				// }
 			}
 			@include iphone6-landscape{
 				width: (100% /4);
@@ -1236,7 +1355,7 @@ $about-sections-height-ie: 87vh;
 		  	width: 93%;
 		  	float: left;
 		  	margin-left: 3%;
-		  	top: 42vh;
+		  	top: 20vh;
 		  	height: auto;
 		  	overflow-y: scroll;
 		}
@@ -1251,8 +1370,8 @@ $about-sections-height-ie: 87vh;
 		  	width: 93%;
 		  	float: left;
 		  	margin-left: 3%;
-		  	top: 61vw;
-		  	height: 35vw;
+		  	top: 32vw;
+		  	height: 56vw;
 		  	overflow-y: scroll;
 		}
 		li{
@@ -1351,7 +1470,7 @@ $about-sections-height-ie: 87vh;
 			float: left;
 			margin-left: 3%;
 			height: 52vh;
-			top: 50vh;
+			top: 28vh;
 		}
 		@include iphone5-landscape{
 			top: 4vw;
@@ -1364,8 +1483,8 @@ $about-sections-height-ie: 87vh;
 			width: 93%;
 			float: left;
 			margin-left: 3%;
-			height: 42vw;
-		    top: 67vw;
+			height: 60vw;
+		    top: 36vw;
 		}
 		.staff-contacts-individual{
 			height: 130px;
