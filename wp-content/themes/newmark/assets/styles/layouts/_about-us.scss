@@ -256,33 +256,34 @@ $about-sections-height-ie: 87vh;
 		padding-bottom: 20px;
 		@include mobile {
 			width: 100%;
-		};
+		}
 		@include ipad-portrait {
 			width: 35%;
 			width: 100%;
-		};
+		}
 		@include iphone6-landscape {
 			width: 30%;
 			h1 {
 				font-size: 30px;
 			}
-		};
+		}
 		@include iphone5-landscape {
 			width: 30%;
 			h1 {
 				font-size: 26px;
 			}
-		};
+		}
 		@include iphone6-portrait {
+			bottom: 49px;
 			h1 {
-				font-size: 22px
+				font-size: 22px;
 			}
-		};
+		}
 		@include iphone5-portrait {
 			h1 {
 				font-size: 18px;
 			}
-		};
+		}
 	}
 	.scroll-indicator{
 		position: absolute;
@@ -291,6 +292,9 @@ $about-sections-height-ie: 87vh;
 		transform: translateX(-50%);
 		font-size: 50px;
 		color: $brand-primary;
+		@include iphone6-portrait {
+			bottom: 54px;
+		}
 	}
 }
 
@@ -435,7 +439,7 @@ $about-sections-height-ie: 87vh;
 		padding: 10px 15px;
 		position: relative;
 		// height: ($about-sections-height / 2.2); //not working on chrome & firefox on pc
-		height: 650px;
+		height: 690px;
 		top: 80px;
 		// top: ($about-sections-height / 2.2);
 		// transform: translateY(-50%);
@@ -455,8 +459,8 @@ $about-sections-height-ie: 87vh;
 		    top: 20vw;
 		}
 		@include iphone6-plus-portrait{
-			height: 80vw;
-		    top: 15vw;
+			height: 85vh;
+		    top: 2vw;
 		}
 		@include iphone6-landscape{
 			height: 76vw;
@@ -464,7 +468,7 @@ $about-sections-height-ie: 87vh;
 		}
 		@include iphone6-portrait{
 			height: 178vw;
-		    top: 10vw;
+		    top: 2vw;
 		}
 		@include iphone5-landscape{
 		    height: 90vw;
@@ -501,9 +505,12 @@ $about-sections-height-ie: 87vh;
 			@include iphone5-landscape{
 				margin-top: 5px;
 			}
+			@include iphone6-portrait{
+				margin-top: 0;
+			}
 		}
 		.carousel-indicators{
-			top: 500px; // position indicators below transactions
+			top: 575px; // position indicators below transactions
 			// margin-left: -10%;
 			// margin-bottom: 0;
 			@media (max-width: 1199px){
@@ -577,8 +584,8 @@ $about-sections-height-ie: 87vh;
 		    // overflow-y: scroll;
 		}
 		@include iphone6-plus-portrait{
-		    top: 72vw;
-		    height: 89vw;
+		    top: 45vw;
+		    height: 80vw;
 			// overflow-y: scroll;
 		}
 		@include iphone6-landscape{

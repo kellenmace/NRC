@@ -27,10 +27,10 @@
 						    	?>
 						    				<div class="row">
 						    					<a href="<?php the_permalink(); ?>">
-							    					<div class="col-md-12 col-sm-12 col-xs-12">
+							    					<div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-10">
 							    						<img class="img-responsive" src="<?php the_post_thumbnail_url('small'); ?>">
 							    					</div>
-							    					<div class="col-md-12 col-sm-12 col-xs-12">
+							    					<div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-10">
 							    						<p><?php the_title(); ?><br>
 																 $<?php echo get_field('amount'); ?><br>
 																 <?php echo get_field('city'); ?>, <?php echo $state_label ?>
