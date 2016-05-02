@@ -658,7 +658,7 @@ $about-sections-height-ie: 87vh;
 			// @include mobile { redacted leaving tab mode on ipad vertical
 			// 	width: 100%;
 			// };
-			width: (100% / 5);
+			width: (100% / 6);
 			&:nth-child(odd){
 				background-color: white;
 			}

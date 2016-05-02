@@ -68,7 +68,7 @@
 
         $('.homepage-figure').addClass(homepageHeroArray[randomIndex]);
 
-        $('a[href*=#]:not([href=#mortgage-banking], [href=#loan-servicing], [href=#debt-advisory], [href=#acquisition-brokerage], [href=#consulting], [href=#san-francisco], [href=#sacramento], [href=#los-angeles], [href=#newport-beach], [href=#seattle], [href=#spokane], [href=#phoenix], [href=#las-vegas])').click(function() {
+        $('a[href*=#]:not([href=#mortgage-banking], [href=#loan-servicing], [href=#debt-advisory], [href=#acquisition-brokerage], [href=#affiliations], [href=#consulting], [href=#san-francisco], [href=#sacramento], [href=#los-angeles], [href=#newport-beach], [href=#seattle], [href=#spokane], [href=#phoenix], [href=#las-vegas])').click(function() {
           if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');

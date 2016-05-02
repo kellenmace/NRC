@@ -5,7 +5,7 @@
 			    <!-- Nav tabs -->
 			    <ul class="nav nav-tabs" role="tablist">
 			        <li role="presentation" class="active">
-			            <a href="#mortgage-banking" aria-controls="home" role="tab" data-toggle="tab">Mortgage Banking &amp; Brokerage</a>
+			            <a href="#mortgage-banking" aria-controls="home" role="tab" data-toggle="tab">Mortgage Banking</a>
 			        </li>
 			        <li role="presentation">
 			            <a href="#loan-servicing" aria-controls="tab" role="tab" data-toggle="tab">Loan Servicing</a>
@@ -14,7 +14,10 @@
 			            <a href="#debt-advisory" aria-controls="tab" role="tab" data-toggle="tab">Debt Advisory</a>
 			        </li>
 			        <li role="presentation">
-			            <a href="#acquisition-brokerage" aria-controls="tab" role="tab" data-toggle="tab">Acquisition Brokerage &amp; Note Sales</a>
+			            <a href="#acquisition-brokerage" aria-controls="tab" role="tab" data-toggle="tab">Acquisition Brokerage</a>
+			        </li>
+			        <li role="presentation">
+			            <a href="#affiliations" aria-controls="tab" role="tab" data-toggle="tab">Affiliations</a>
 			        </li>
 			        <li role="presentation">
 			            <a href="#consulting" aria-controls="tab" role="tab" data-toggle="tab">Consulting</a>
@@ -55,6 +58,30 @@
 			        		<div class="col-md-offset-1 col-md-10">
 			        			<div class="acquisition-content-iphone5-landscape">
 				        			<div class="acquisition-content"><?php the_field('acquisition_brokerage'); ?></div>
+			        			</div>
+			        		</div>
+			        	</div>
+			        </div>
+			        <div role="tabpanel" class="tab-pane" id="affiliations">
+						<div class="row">
+			        		<div class="col-md-offset-1 col-md-10">
+			        			<div class="consulting-content-iphone5-landscape">
+				        			<div class="consulting-content">
+				        				<h2>Newmark Services</h2>
+				        				<h1>Affiliations</h1>
+				        				<?php
+				        					$images = get_field('affiliations');
+				        					if($images):
+				        				?>
+				        					<div class="row">
+				        						<?php foreach( $images as $image): ?>
+				        							<div class="col-md-6">
+				        								<img src="<?php echo $image['sizes']['large'] ?>" class="img-responsive">
+				        							</div>
+				        						<?php endforeach; ?>
+				        					</div>
+				        				<?php endif; ?>
+				        			</div>
 			        			</div>
 			        		</div>
 			        	</div>
