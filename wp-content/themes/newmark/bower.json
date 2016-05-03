@@ -10,7 +10,7 @@
     "bootstrap-sass": "3.3.6",
     "isotope": "~2.2.2",
     "font-awesome": "~4.5.0",
-    "imagesloaded": "~4.1.0",
+    "imagesloaded": "^4.1.0",
     "masonry": "^4.1.0"
   },
   "overrides": {

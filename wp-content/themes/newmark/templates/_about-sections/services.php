@@ -69,18 +69,20 @@
 				        			<div class="consulting-content">
 				        				<h2>Newmark Services</h2>
 				        				<h1>Affiliations</h1>
+			        					<div class="row-grid row">
 				        				<?php
 				        					$images = get_field('affiliations');
 				        					if($images):
 				        				?>
-				        					<div class="row">
 				        						<?php foreach( $images as $image): ?>
-				        							<div class="col-md-6">
-				        								<img src="<?php echo $image['sizes']['large'] ?>" class="img-responsive">
-				        							</div>
+			        								<div class="row-item col-sm-3 col-xs-6">
+					        							<a href="<?php echo $image['description'] ?>" target="_blank">
+					        								<img src="<?php echo $image['sizes']['large'] ?>" class="img-responsive">
+				        								</a>
+			        								</div>
 				        						<?php endforeach; ?>
-				        					</div>
 				        				<?php endif; ?>
+			        					</div>
 				        			</div>
 			        			</div>
 			        		</div>

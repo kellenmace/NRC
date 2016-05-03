@@ -42,6 +42,7 @@
         });
       },
       finalize: function() {
+        //scroll to sticky navbar
         var aboutUsSub = $('.about-us-fixed-nav');
         //offset of nav from top
         var subnavOffset = aboutUsSub.offset().top;
@@ -59,6 +60,21 @@
             $('.about-us-fixed-nav').removeClass('fixed');
           }
         });
+
+        $('[href=#affiliations]').click(function(){
+          $affiliationsGrid = $('.row-grid').imagesLoaded( function(){
+            $affiliationsGrid.isotope({
+              itemSelector: '.row-item',
+              layoutMode: 'fitRows',
+              fitRows: {
+                columnWidth: '.col-sm-3',
+              },
+              percentPosition: true,
+            });
+          });
+
+        });
+
 
 
 

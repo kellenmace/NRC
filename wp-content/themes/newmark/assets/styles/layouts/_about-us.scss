@@ -629,6 +629,9 @@ $about-sections-height-ie: 87vh;
 	// @include mobile { // redacted trying similar height for all sections on mobile
 	// 	height: 580px !important;
 	// };
+	.row-item{
+		margin-bottom: 15px;
+	}
 	@include iphone6-plus-landscape{
 		background-position-y: 0%; //adjust ribbon to similar position
 		padding-top: 3px;
