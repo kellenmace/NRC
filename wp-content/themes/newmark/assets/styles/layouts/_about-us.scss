@@ -638,6 +638,7 @@ $about-sections-height-ie: 87vh;
 	}
 	@include iphone6-portrait{
 	    background-position-x: 62%;
+	    height: auto;
 	}
 	@include iphone5-landscape{
 		padding-top: 10px;

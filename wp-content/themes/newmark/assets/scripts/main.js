@@ -65,8 +65,8 @@
           $affiliationsGrid = $('.row-grid').imagesLoaded( function(){
             $affiliationsGrid.isotope({
               itemSelector: '.row-item',
-              layoutMode: 'fitRows',
-              fitRows: {
+              layoutMode: 'masonry',
+              masonry: {
                 columnWidth: '.col-sm-3',
               },
               percentPosition: true,
