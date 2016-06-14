@@ -15,7 +15,7 @@
 						    </ol>
 						    <div class="carousel-inner">
 						    	<?php
-										$state_label = $state_field['choices'][$state_value];
+									// $state_label = $state_field['choices'][$state_value];
 						    		$args = array('posts_per_page' => 10, 'post_type' => 'transaction');
 						    		$transactions = new WP_Query($args);
 						    		if($transactions->have_posts()) :
@@ -24,6 +24,9 @@
 						    				if($i == 1){
 						    					echo '<div class="item active">';
 						    				}
+						    				$state_field = get_field_object('state');
+						    				$state_value = get_field('state');
+						    				$state_label = $state_field['choices'][$state_value];
 						    	?>
 						    				<div class="row">
 						    					<a href="<?php the_permalink(); ?>">
