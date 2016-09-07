@@ -113,7 +113,7 @@
 				        							?>
 				        							<div class="col-sm-6">
 						        				    	<div class="staff-contacts-individual">
-							        				        <p><?php echo $name; ?></p>
+							        				        <p><a href="<?php echo the_permalink($producer->ID); ?>"><?php echo $name; ?></a></p>
 							        				        <ul class="list-unstyled">
 							        				        	<li><?php echo $title; ?></li>
 							        				        	<li><?php echo $phone; ?></li>
@@ -180,7 +180,7 @@
 			        							?>
 			        							<div class="col-sm-6">
 					        				    	<div class="staff-contacts-individual">
-						        				        <p><?php echo $name; ?></p>
+						        				        <p><a href="<?php echo the_permalink($producer->ID); ?>"><?php echo $name; ?></a></p>
 						        				        <ul class="list-unstyled">
 						        				        	<li><?php echo $title; ?></li>
 						        				        	<li><?php echo $phone; ?></li>
@@ -247,7 +247,7 @@
 			        							?>
 			        							<div class="col-sm-6">
 					        				    	<div class="staff-contacts-individual">
-						        				        <p><?php echo $name; ?></p>
+						        				        <p><a href="<?php echo the_permalink($producer->ID); ?>"><?php echo $name; ?></a></p>
 						        				        <ul class="list-unstyled">
 						        				        	<li><?php echo $title; ?></li>
 						        				        	<li><?php echo $phone; ?></li>
@@ -314,7 +314,7 @@
 			        							?>
 			        							<div class="col-sm-6">
 					        				    	<div class="staff-contacts-individual">
-						        				        <p><?php echo $name; ?></p>
+						        				        <p><a href="<?php echo the_permalink($producer->ID); ?>"><?php echo $name; ?></a></p>
 						        				        <ul class="list-unstyled">
 						        				        	<li><?php echo $title; ?></li>
 						        				        	<li><?php echo $phone; ?></li>
@@ -381,7 +381,7 @@
 			        							?>
 			        							<div class="col-sm-6">
 					        				    	<div class="staff-contacts-individual">
-						        				        <p><?php echo $name; ?></p>
+						        				        <p><a href="<?php echo the_permalink($producer->ID); ?>"><?php echo $name; ?></a></p>
 						        				        <ul class="list-unstyled">
 						        				        	<li><?php echo $title; ?></li>
 						        				        	<li><?php echo $phone; ?></li>
@@ -447,7 +447,7 @@
 			        							?>
 			        							<div class="col-sm-6">
 					        				    	<div class="staff-contacts-individual">
-						        				        <p><?php echo $name; ?></p>
+						        				        <p><a href="<?php echo the_permalink($producer->ID); ?>"><?php echo $name; ?></a></p>
 						        				        <ul class="list-unstyled">
 						        				        	<li><?php echo $title; ?></li>
 						        				        	<li><?php echo $phone; ?></li>
@@ -514,7 +514,7 @@
 			        							?>
 			        							<div class="col-sm-6">
 					        				    	<div class="staff-contacts-individual">
-						        				        <p><?php echo $name; ?></p>
+						        				        <p><a href="<?php echo the_permalink($producer->ID); ?>"><?php echo $name; ?></a></p>
 						        				        <ul class="list-unstyled">
 						        				        	<li><?php echo $title; ?></li>
 						        				        	<li><?php echo $phone; ?></li>
@@ -581,7 +581,7 @@
 				        							?>
 				        							<div class="col-sm-6">
 						        				    	<div class="staff-contacts-individual">
-							        				        <p><?php echo $name; ?></p>
+							        				        <p><a href="<?php echo the_permalink($producer->ID); ?>"><?php echo $name; ?></a></p>
 							        				        <ul class="list-unstyled">
 							        				        	<li><?php echo $title; ?></li>
 							        				        	<li><?php echo $phone; ?></li>
