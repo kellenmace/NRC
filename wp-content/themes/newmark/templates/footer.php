@@ -3,8 +3,14 @@
     <?php //dynamic_sidebar('sidebar-footer'); ?>
     	<div class="container">
 	    	<div class="row">
+	    		<div class="col-md-6">
+			    	<p>NEWMARK is a trademark of Newmark Realty Capital, Inc.</p>
+		    	</div>
+          <div class="col-md-6">
+            <p>&copy; 2015-2016 Newmark Realty Capital. All Rights Reserved.</p>
+          </div>
 	    		<div class="col-md-12">
-			    	<p>&copy; 2015-2016 Newmark Realty Capital. All Rights Reserved.</p>
+            <p>NEWMARK & Design and NEWMARK REALTY CAPITAL are registered trademarks of Newmark Realty Capital, Inc.</p>
 		    	</div>
 	    	</div>
     	</div>
