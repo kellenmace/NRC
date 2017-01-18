@@ -19,6 +19,12 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+
+        // Sets footer Date
+        var date = new Date();
+        var year = date.getFullYear();
+        $('span.year').html(year);
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

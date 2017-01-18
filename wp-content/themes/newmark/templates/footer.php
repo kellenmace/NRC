@@ -7,7 +7,7 @@
 			    	<p>NEWMARK is a trademark of Newmark Realty Capital, Inc.</p>
 		    	</div>
           <div class="col-md-6">
-            <p>&copy; 2015-2016 Newmark Realty Capital. All Rights Reserved.</p>
+            <p>&copy; 2015 - <span class="year"></span> Newmark Realty Capital. All Rights Reserved.</p>
           </div>
 	    		<div class="col-md-12">
             <p>NEWMARK & Design and NEWMARK REALTY CAPITAL are registered trademarks of Newmark Realty Capital, Inc.</p>
