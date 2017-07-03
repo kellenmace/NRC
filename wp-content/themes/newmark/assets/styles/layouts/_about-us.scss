@@ -662,7 +662,7 @@ $about-sections-height-ie: 87vh;
 			// @include mobile { redacted leaving tab mode on ipad vertical
 			// 	width: 100%;
 			// };
-			width: (100% / 6);
+			width: (100% / 7);
 			&:nth-child(odd){
 				background-color: white;
 			}
@@ -678,6 +678,7 @@ $about-sections-height-ie: 87vh;
 				padding-right: 0;
 				margin-right: 0;
 				border-radius: 0;
+				font-size: 13px;
 				&:hover{
 					background-color: $brand-primary;
 					border-color: $brand-primary;
