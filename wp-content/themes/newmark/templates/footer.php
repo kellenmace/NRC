@@ -9,9 +9,14 @@
           <div class="col-md-6">
             <p>&copy; 2015 - <span class="year"></span> Newmark Realty Capital. All Rights Reserved.</p>
           </div>
-	    		<div class="col-md-12">
+	    		<div class="col-md-8">
             <p>NEWMARK & Design and NEWMARK REALTY CAPITAL are registered trademarks of Newmark Realty Capital, Inc.</p>
 		    	</div>
+          <div class="col-md-4 social-icons">
+            <a href="https://www.linkedin.com/company-beta/84647/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/NewmarkRC" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/newmarkrc/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </div>
 	    	</div>
     	</div>
   <!-- </div> -->
