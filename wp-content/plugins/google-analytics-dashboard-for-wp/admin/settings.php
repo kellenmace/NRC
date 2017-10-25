@@ -24,15 +24,18 @@ final class GADWP_Settings {
 				$options['ga_dash_anonim'] = 0;
 				$options['ga_event_tracking'] = 0;
 				$options['ga_enhanced_links'] = 0;
+				$options['ga_event_precision'] = 0;
 				$options['ga_dash_remarketing'] = 0;
 				$options['ga_event_bouncerate'] = 0;
 				$options['ga_crossdomain_tracking'] = 0;
 				$options['ga_aff_tracking'] = 0;
 				$options['ga_hash_tracking'] = 0;
 				$options['ga_formsubmit_tracking'] = 0;
+				$options['ga_force_ssl'] = 0;
 				$options['ga_pagescrolldepth_tracking'] = 0;
 				$options['tm_pagescrolldepth_tracking'] = 0;
 				$options['amp_tracking_analytics'] = 0;
+				$options['amp_tracking_clientidapi'] = 0;
 				$options['amp_tracking_tagmanager'] = 0;
 				$options['optimize_pagehiding'] = 0;
 				$options['optimize_tracking'] = 0;
@@ -691,11 +694,21 @@ final class GADWP_Settings {
 								</tr>
 								<tr>
 									<td class="gadwp-settings-title">
-										<label for="ga_speed_samplerate"><?php _e("Page Speed SR:", 'google-analytics-dashboard-for-wp'); ?>
+										<label for="ga_speed_samplerate"><?php _e("Speed Sample Rate:", 'google-analytics-dashboard-for-wp'); ?>
 										</label>
 									</td>
 									<td>
 										<input type="number" id="ga_speed_samplerate" name="options[ga_speed_samplerate]" value="<?php echo (int)($options['ga_speed_samplerate']); ?>" max="100" min="1">
+										%
+									</td>
+								</tr>
+								<tr>
+									<td class="gadwp-settings-title">
+										<label for="ga_user_samplerate"><?php _e("User Sample Rate:", 'google-analytics-dashboard-for-wp'); ?>
+										</label>
+									</td>
+									<td>
+										<input type="number" id="ga_user_samplerate" name="options[ga_user_samplerate]" value="<?php echo (int)($options['ga_user_samplerate']); ?>" max="100" min="1">
 										%
 									</td>
 								</tr>
@@ -732,7 +745,7 @@ final class GADWP_Settings {
 												<div class="gadwp-settings-switchoo-switch"></div>
 											</label>
 										</div>
-										<div class="switch-desc"><?php echo " ".__("exclude events from bounce-rate calculation", 'google-analytics-dashboard-for-wp' );?></div>
+										<div class="switch-desc"><?php echo " ".__("exclude events from bounce-rate and time on page calculation", 'google-analytics-dashboard-for-wp' );?></div>
 									</td>
 								</tr>
 								<tr>
@@ -745,6 +758,30 @@ final class GADWP_Settings {
 											</label>
 										</div>
 										<div class="switch-desc"><?php echo " ".__("enable enhanced link attribution", 'google-analytics-dashboard-for-wp' );?></div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2" class="gadwp-settings-title">
+										<div class="button-primary gadwp-settings-switchoo">
+											<input type="checkbox" name="options[ga_event_precision]" value="1" class="gadwp-settings-switchoo-checkbox" id="ga_event_precision" <?php checked( $options['ga_event_precision'], 1 ); ?>>
+											<label class="gadwp-settings-switchoo-label" for="ga_event_precision">
+												<div class="gadwp-settings-switchoo-inner"></div>
+												<div class="gadwp-settings-switchoo-switch"></div>
+											</label>
+										</div>
+										<div class="switch-desc"><?php echo " ".__("use hitCallback to increase event tracking accuracy", 'google-analytics-dashboard-for-wp' );?></div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2" class="gadwp-settings-title">
+										<div class="button-primary gadwp-settings-switchoo">
+											<input type="checkbox" name="options[ga_force_ssl]" value="1" class="gadwp-settings-switchoo-checkbox" id="ga_force_ssl" <?php checked( $options['ga_force_ssl'], 1 ); ?>>
+											<label class="gadwp-settings-switchoo-label" for="ga_force_ssl">
+												<div class="gadwp-settings-switchoo-inner"></div>
+												<div class="gadwp-settings-switchoo-switch"></div>
+											</label>
+										</div>
+										<div class="switch-desc"><?php echo " ".__("enable Force SSL", 'google-analytics-dashboard-for-wp' );?></div>
 									</td>
 								</tr>
 								<tr>
@@ -819,6 +856,18 @@ final class GADWP_Settings {
 											</label>
 										</div>
 										<div class="switch-desc"><?php echo " ".__("enable tracking for Accelerated Mobile Pages (AMP)", 'google-analytics-dashboard-for-wp' );?></div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2" class="gadwp-settings-title">
+										<div class="button-primary gadwp-settings-switchoo">
+											<input type="checkbox" name="options[amp_tracking_clientidapi]" value="1" class="gadwp-settings-switchoo-checkbox" id="amp_tracking_clientidapi" <?php checked( $options['amp_tracking_clientidapi'], 1 ); ?>>
+											<label class="gadwp-settings-switchoo-label" for="amp_tracking_clientidapi">
+												<div class="gadwp-settings-switchoo-inner"></div>
+												<div class="gadwp-settings-switchoo-switch"></div>
+											</label>
+										</div>
+										<div class="switch-desc"><?php echo " ".__("enable Google AMP Client Id API", 'google-analytics-dashboard-for-wp' );?></div>
 									</td>
 								</tr>
 								<tr>
@@ -1071,10 +1120,10 @@ final class GADWP_Settings {
 			$gadwp->gapi_controller = new GADWP_GAPI_Controller();
 		}
 		echo '<script type="text/javascript">jQuery("#gapi-warning").hide()</script>';
-		if ( isset( $_POST['ga_dash_code'] ) ) {
-			if ( 1 == ! stripos( 'x' . $_POST['ga_dash_code'], 'UA-', 1 ) ) {
+		if ( isset( $_POST['gadwp_access_code'] ) ) {
+			if ( 1 == ! stripos( 'x' . $_POST['gadwp_access_code'], 'UA-', 1 ) ) {
 				try {
-					$gadwp->gapi_controller->client->authenticate( $_POST['ga_dash_code'] );
+					$gadwp->gapi_controller->client->authenticate( $_POST['gadwp_access_code'] );
 					$gadwp->config->options['ga_dash_token'] = $gadwp->gapi_controller->client->getAccessToken();
 					$gadwp->config->options['automatic_updates_minorversion'] = 1;
 					$gadwp->config->set_plugin_options();
@@ -1099,10 +1148,10 @@ final class GADWP_Settings {
 							$options = self::update_options( 'general' );
 						}
 					}
-				} catch ( Google_IO_Exception $e ) {
+				} catch ( Deconf_IO_Exception $e ) {
 					GADWP_Tools::set_cache( 'last_error', date( 'Y-m-d H:i:s' ) . ': ' . esc_html( $e ), $gadwp->gapi_controller->error_timeout );
 					return false;
-				} catch ( Google_Service_Exception $e ) {
+				} catch ( Deconf_Service_Exception $e ) {
 					GADWP_Tools::set_cache( 'last_error', date( 'Y-m-d H:i:s' ) . ': ' . esc_html( "(" . $e->getCode() . ") " . $e->getMessage() ), $gadwp->gapi_controller->error_timeout );
 					GADWP_Tools::set_cache( 'gapi_errors', $e->getErrors(), $gadwp->gapi_controller->error_timeout );
 					return $e->getCode();
@@ -1358,10 +1407,10 @@ final class GADWP_Settings {
 		}
 
 		echo '<script type="text/javascript">jQuery("#gapi-warning").hide()</script>';
-		if ( isset( $_POST['ga_dash_code'] ) ) {
-			if ( 1 == ! stripos( 'x' . $_POST['ga_dash_code'], 'UA-', 1 ) ) {
+		if ( isset( $_POST['gadwp_access_code'] ) ) {
+			if ( 1 == ! stripos( 'x' . $_POST['gadwp_access_code'], 'UA-', 1 ) ) {
 				try {
-					$gadwp->gapi_controller->client->authenticate( $_POST['ga_dash_code'] );
+					$gadwp->gapi_controller->client->authenticate( $_POST['gadwp_access_code'] );
 					$gadwp->config->options['ga_dash_token'] = $gadwp->gapi_controller->client->getAccessToken();
 					$gadwp->config->options['automatic_updates_minorversion'] = 1;
 					$gadwp->config->set_plugin_options( true );
@@ -1393,10 +1442,10 @@ final class GADWP_Settings {
 							$options = self::update_options( 'network' );
 						}
 					}
-				} catch ( Google_IO_Exception $e ) {
+				} catch ( Deconf_IO_Exception $e ) {
 					GADWP_Tools::set_cache( 'last_error', date( 'Y-m-d H:i:s' ) . ': ' . esc_html( $e ), $gadwp->gapi_controller->error_timeout );
 					return false;
-				} catch ( Google_Service_Exception $e ) {
+				} catch ( Deconf_Service_Exception $e ) {
 					GADWP_Tools::set_cache( 'last_error', date( 'Y-m-d H:i:s' ) . ': ' . esc_html( "(" . $e->getCode() . ") " . $e->getMessage() ), $gadwp->gapi_controller->error_timeout );
 					GADWP_Tools::set_cache( 'gapi_errors', $e->getErrors(), $gadwp->gapi_controller->error_timeout );
 					return $e->getCode();

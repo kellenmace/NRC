@@ -42,6 +42,7 @@ class GADWP_Install {
 			$options['ga_dash_frontend_stats'] = 0;
 			$options['ga_dash_network'] = 0;
 			$options['ga_speed_samplerate'] = 1;
+			$options['ga_user_samplerate'] = 100;
 			$options['ga_event_bouncerate'] = 0;
 			$options['ga_crossdomain_tracking'] = 0;
 			$options['ga_crossdomain_list'] = '';
@@ -73,6 +74,7 @@ class GADWP_Install {
 			$options['amp_containerid'] = '';
 			$options['amp_tracking_tagmanager'] = 0;
 			$options['amp_tracking_analytics'] = 0;
+			$options['amp_tracking_clientidapi'] = 0;
 			$options['trackingcode_infooter'] = 0;
 			$options['trackingevents_infooter'] = 0;
 			$options['ecommerce_mode'] = 'disabled';
@@ -83,6 +85,8 @@ class GADWP_Install {
 			$options['ga_dash_excludesa'] = 0;
 			$options['ga_pagescrolldepth_tracking'] = 0;
 			$options['tm_pagescrolldepth_tracking'] = 0;
+			$options['ga_event_precision'] = 0;
+			$options['ga_force_ssl'] = 0;
 		} else {
 			$options = array();
 			$options['ga_dash_clientid'] = get_option( 'ga_dash_clientid' );
@@ -141,6 +145,7 @@ class GADWP_Install {
 			$options['amp_containerid'] = '';
 			$options['amp_tracking_tagmanager'] = 0;
 			$options['amp_tracking_analytics'] = 0;
+			$options['amp_tracking_clientidapi'] = 0;
 			$options['trackingcode_infooter'] = 0;
 			$options['trackingevents_infooter'] = 0;
 			$options['ecommerce_mode'] = 'disabled';
@@ -151,6 +156,10 @@ class GADWP_Install {
 			$options['ga_dash_excludesa'] = 0;
 			$options['ga_pagescrolldepth_tracking'] = 0;
 			$options['tm_pagescrolldepth_tracking'] = 0;
+			$options['ga_speed_samplerate'] = 1;
+			$options['ga_user_samplerate'] = 100;
+			$options['ga_event_precision'] = 0;
+			$options['ga_force_ssl'] = 0;
 
 			delete_option( 'ga_dash_clientid' );
 			delete_option( 'ga_dash_clientsecret' );
